@@ -1,0 +1,11 @@
+.python-version
+.venv/
+.env
+logs/
+
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+dbt/.user.yml
+dbt/*.duckdb
+dbt/*.duckdb.wal

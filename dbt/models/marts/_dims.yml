@@ -1,0 +1,106 @@
+version: 2
+
+models:
+  - name: dim_projects
+    description: Project dimension.
+    columns:
+      - name: project_sk
+        data_tests:
+          - unique
+          - not_null
+      - name: project_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_resources
+    description: People dimension. resource_id and resource_name are unique across the company.
+    columns:
+      - name: resource_sk
+        data_tests:
+          - unique
+          - not_null
+      - name: resource_id
+        data_tests:
+          - unique
+          - not_null
+      - name: resource_name
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_task_types
+    description: Work-type dimension.
+    columns:
+      - name: task_type_sk
+        data_tests:
+          - unique
+          - not_null
+      - name: task_type_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_tasks
+    description: Task dimension, including done, cancelled, and overdue flags.
+    columns:
+      - name: task_sk
+        data_tests:
+          - unique
+          - not_null
+      - name: task_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_allocations
+    description: Resource-to-task assignment dimension. Source completion_date is exposed as due_date.
+    columns:
+      - name: allocation_sk
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_time_logs
+    description: Daily actual-hours dimension.
+    columns:
+      - name: time_log_sk
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_budgets
+    description: Planned spend by project and cost category.
+    columns:
+      - name: budget_sk
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_spend
+    description: Monthly actual spend by project and cost category.
+    columns:
+      - name: spend_sk
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_milestones
+    description: Milestone dimension with planned vs actual dates and delay flags.
+    columns:
+      - name: milestone_sk
+        data_tests:
+          - unique
+          - not_null
+      - name: milestone_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_kpis
+    description: Portfolio KPI dimension. Baseline rows have a null period_date.
+    columns:
+      - name: kpi_sk
+        data_tests:
+          - unique
+          - not_null

@@ -30,3 +30,5 @@ models:
   bi_portfolio:
     staging:
       +materialized: view
+    marts:
+      +materialized: table

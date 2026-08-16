@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: fct_resource_utilization
+    description: >
+      Weekly resource utilization. Planned hours are spread evenly across
+      weekdays in each allocation window. Actual hours come from time logs.
+      Utilization is actual hours divided by weekly capacity. Grain is week
+      and resource; every resource appears in every week that has any
+      planned or actual activity.
+    columns:
+      - name: resource_utilization_sk
+        data_tests:
+          - unique
+          - not_null
+      - name: week
+        description: Monday of the ISO week.
+        data_tests:
+          - not_null
+      - name: resource
+        data_tests:
+          - not_null
+      - name: team
+        data_tests:
+          - not_null
+      - name: capacity
+        description: Weekly capacity in hours.
+      - name: planned
+        description: Planned hours falling in this week.
+      - name: actual
+        description: Logged hours falling in this week.
+      - name: utilization
+        description: Actual hours divided by weekly capacity.
