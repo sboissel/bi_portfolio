@@ -1,64 +1,49 @@
-Example plain HTML site using GitLab Pages.
+# Biotech Portfolio Dataset
 
-Learn more about GitLab Pages at https://pages.gitlab.io and the official
-documentation https://docs.gitlab.com/ce/user/project/pages/.
+Synthetic project-management data for a biotech R&D portfolio dashboard. The generator models a mid-size lab organization running strain development, process optimization, assay development, platform, and customer programs.
 
----
+All data is fictional. It is meant for BI prototypes, dashboard mockups, and analysis practice — not as a record of real work.
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [GitLab CI](#gitlab-ci)
-- [GitLab User or Group Pages](#gitlab-user-or-group-pages)
-- [Did you fork this project?](#did-you-fork-this-project)
-- [Troubleshooting](#troubleshooting)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## GitLab CI
-
-This project's static Pages are built by [GitLab CI][ci], following the steps
-defined in [`.gitlab-ci.yml`](.gitlab-ci.yml):
+## What's included
 
 ```
-image: busybox
-
-pages:
-  stage: deploy
-  script:
-  - echo 'Nothing to do...'
-  artifacts:
-    paths:
-    - public
-    expire_in: 1 day
-  rules:
-    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+src/data_generation.py   # generator
+data/                    # exported CSVs
+requirements.txt         # pandas, numpy
 ```
 
-The above example expects to put all your HTML files in the `public/` directory.
+The snapshot is frozen as of **2026-05-01** (about four months after the portfolio start date of 2026-01-01). Task status, time logs, and KPI actuals are simulated relative to that date.
 
-## GitLab User or Group Pages
+## Dataset
 
-To use this project as your user/group website, you will need one additional
-step: just rename your project to `namespace.gitlab.io`, where `namespace` is
-your `username` or `groupname`. This can be done by navigating to your
-project's **Settings**.
+| File | Description |
+| --- | --- |
+| `projects.csv` | 12 projects: type, priority, status, dates, total budget |
+| `resources.csv` | People by team and role, with weekly capacity (hours) |
+| `task_types.csv` | Work types (e.g. DNA Assembly, Fermentation Run) and default team |
+| `tasks.csv` | 200 tasks with status, dates, and estimated hours |
+| `allocations.csv` | Resource assignments to tasks (fraction of effort and planned hours) |
+| `time_logs.csv` | Weekday actual hours for in-progress and completed work |
+| `budgets.csv` | Planned Labor vs External spend per project |
+| `spend.csv` | Monthly actual spend by cost category |
+| `milestones.csv` | Planned vs actual milestone dates |
+| `kpis.csv` | Monthly portfolio KPIs with baseline, target, and actuals through Q1 |
 
-Read more about [user/group Pages][userpages] and [project Pages][projpages].
+**Project types:** Strain Development, Process Optimization, Assay Development, Platform Build, Customer Program
 
-## Did you fork this project?
+**Teams:** Strain Engineering, Molecular Biology, Analytical, Process Development, Data Science, Automation, Quality, Program Management
 
-If you forked this project for your own use, please go to your project's
-**Settings** and remove the forking relationship, which won't be necessary
-unless you want to contribute back to the upstream project.
+**Portfolio KPIs:** on-time milestone delivery, resource utilization, budget variance, cycle time, quality success rate
 
-## Troubleshooting
+Budgets split roughly 60% labor / 40% external. Spend and logged hours include some overrun so variance analysis is interesting.
 
-1. CSS is missing! That means that you have wrongly set up the CSS URL in your
-   HTML files. Have a look at the [index.html] for an example.
+## Generate data
 
-[ci]: https://about.gitlab.com/gitlab-ci/
-[index.html]: https://gitlab.com/pages/plain-html/blob/master/public/index.html
-[userpages]: https://docs.gitlab.com/ce/user/project/pages/introduction.html#user-or-group-pages
-[projpages]: https://docs.gitlab.com/ce/user/project/pages/introduction.html#project-pages
+Python 3 with pandas and numpy:
+
+```bash
+pip install -r requirements.txt
+python src/data_generation.py
+```
+
+This overwrites the CSVs in `data/`. Scale, dates, teams, and task types are configured at the top of `src/data_generation.py`.
