@@ -7,9 +7,11 @@ All data is fictional. It is meant for BI prototypes, dashboard mockups, and ana
 ## What's included
 
 ```
-src/data_generation.py   # generator
-data/                    # exported CSVs
-requirements.txt         # pandas, numpy
+src/data_generation.py   # CSV generator
+src/create_database.py   # load CSVs into DuckDB
+data/raw/                # exported CSVs
+data/biotech_ops.duckdb  # DuckDB database
+requirements.txt         # pandas, numpy, duckdb
 ```
 
 The snapshot is frozen as of **2026-05-01** (about four months after the portfolio start date of 2026-01-01). Task status, time logs, and KPI actuals are simulated relative to that date.
@@ -46,4 +48,12 @@ pip install -r requirements.txt
 python src/data_generation.py
 ```
 
-This overwrites the CSVs in `data/`. Scale, dates, teams, and task types are configured at the top of `src/data_generation.py`.
+This overwrites the CSVs in `data/raw/`. Scale, dates, teams, and task types are configured at the top of `src/data_generation.py`.
+
+Load those CSVs into DuckDB (one table per file, named after the CSV stem):
+
+```bash
+python src/create_database.py
+```
+
+This replaces `data/biotech_ops.duckdb`.

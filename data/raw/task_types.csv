@@ -1,0 +1,16 @@
+task_type_id,task_type_name,default_team
+0,DNA Assembly,Molecular Biology
+1,Strain Construction,Strain Engineering
+2,PCR / Cloning,Molecular Biology
+3,Fermentation Run,Process Development
+4,Downstream Processing,Process Development
+5,Assay Development,Analytical
+6,Sample Testing,Analytical
+7,Data Analysis,Data Science
+8,Model Development,Data Science
+9,Automation Workflow Setup,Automation
+10,Lab Equipment Maintenance,Automation
+11,Quality Review,Quality
+12,Deviation Investigation,Quality
+13,Project Planning,Program Management
+14,Stakeholder Update,Program Management

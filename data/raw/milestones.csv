@@ -1,0 +1,51 @@
+milestone_id,project_id,milestone_name,planned_date,actual_date,status
+0,3,Milestone 0,2026-04-23,2026-04-25,Delayed
+1,0,Milestone 1,2026-05-12,2026-05-30,Delayed
+2,5,Milestone 2,2026-02-12,2026-03-03,Delayed
+3,10,Milestone 3,2026-03-18,2026-03-22,Delayed
+4,6,Milestone 4,2026-06-23,2026-06-27,Delayed
+5,3,Milestone 5,2026-05-28,2026-06-12,Delayed
+6,0,Milestone 6,2026-06-24,2026-06-24,On Time
+7,0,Milestone 7,2026-04-21,2026-04-24,Delayed
+8,5,Milestone 8,2026-05-30,2026-06-01,Delayed
+9,10,Milestone 9,2026-05-06,2026-04-30,On Time
+10,11,Milestone 10,2026-05-20,2026-05-10,On Time
+11,2,Milestone 11,2026-05-16,2026-06-01,Delayed
+12,1,Milestone 12,2026-02-20,2026-02-15,On Time
+13,9,Milestone 13,2026-06-15,2026-06-23,Delayed
+14,3,Milestone 14,2026-02-07,2026-02-10,Delayed
+15,7,Milestone 15,2026-03-17,2026-03-25,Delayed
+16,11,Milestone 16,2026-02-17,2026-02-17,On Time
+17,9,Milestone 17,2026-06-29,2026-06-28,On Time
+18,0,Milestone 18,2026-04-28,2026-05-15,Delayed
+19,8,Milestone 19,2026-04-19,2026-04-27,Delayed
+20,11,Milestone 20,2026-04-09,2026-04-29,Delayed
+21,4,Milestone 21,2026-06-26,2026-07-05,Delayed
+22,4,Milestone 22,2026-02-03,2026-02-21,Delayed
+23,2,Milestone 23,2026-05-17,2026-05-22,Delayed
+24,8,Milestone 24,2026-02-26,2026-03-07,Delayed
+25,9,Milestone 25,2026-02-07,2026-02-25,Delayed
+26,2,Milestone 26,2026-03-05,2026-03-08,Delayed
+27,11,Milestone 27,2026-03-16,2026-03-13,On Time
+28,6,Milestone 28,2026-05-22,2026-05-31,Delayed
+29,10,Milestone 29,2026-02-09,2026-02-16,Delayed
+30,4,Milestone 30,2026-02-08,2026-02-14,Delayed
+31,1,Milestone 31,2026-05-17,2026-06-02,Delayed
+32,8,Milestone 32,2026-04-18,2026-04-21,Delayed
+33,3,Milestone 33,2026-04-01,2026-03-25,On Time
+34,0,Milestone 34,2026-04-26,2026-05-16,Delayed
+35,9,Milestone 35,2026-03-02,2026-03-19,Delayed
+36,0,Milestone 36,2026-03-22,2026-03-28,Delayed
+37,2,Milestone 37,2026-03-11,2026-03-03,On Time
+38,6,Milestone 38,2026-05-30,2026-06-05,Delayed
+39,9,Milestone 39,2026-04-12,2026-04-27,Delayed
+40,11,Milestone 40,2026-04-13,2026-04-29,Delayed
+41,10,Milestone 41,2026-03-18,2026-04-03,Delayed
+42,4,Milestone 42,2026-06-19,2026-06-16,On Time
+43,11,Milestone 43,2026-03-23,2026-03-25,Delayed
+44,11,Milestone 44,2026-02-23,2026-03-06,Delayed
+45,1,Milestone 45,2026-05-08,2026-05-05,On Time
+46,3,Milestone 46,2026-04-26,2026-04-29,Delayed
+47,1,Milestone 47,2026-02-28,2026-02-21,On Time
+48,1,Milestone 48,2026-02-22,2026-02-27,Delayed
+49,1,Milestone 49,2026-04-07,2026-03-30,On Time

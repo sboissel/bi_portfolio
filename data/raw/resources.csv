@@ -1,0 +1,25 @@
+resource_id,name,team,role,capacity_hours_per_week
+0,Person 0,Strain Engineering,Senior Scientist,24.0
+1,Person 1,Strain Engineering,Scientist,30.0
+2,Person 2,Strain Engineering,Scientist,30.0
+3,Person 3,Strain Engineering,Senior Scientist,24.0
+0,Person 0,Molecular Biology,Scientist,30.0
+1,Person 1,Molecular Biology,Research Associate,36.0
+2,Person 2,Molecular Biology,Scientist,30.0
+3,Person 3,Molecular Biology,Research Associate,36.0
+0,Person 0,Analytical,Lab Technician,36.0
+1,Person 1,Analytical,Scientist,30.0
+0,Person 0,Process Development,Associate Engineer,36.0
+1,Person 1,Process Development,Associate Engineer,36.0
+2,Person 2,Process Development,Senior Engineer,26.0
+0,Person 0,Data Science,Data Scientist,28.0
+1,Person 1,Data Science,Data Scientist,28.0
+2,Person 2,Data Science,Data Scientist,28.0
+0,Person 0,Automation,Automation Engineer,32.0
+1,Person 1,Automation,Automation Engineer,32.0
+2,Person 2,Automation,Automation Engineer,32.0
+0,Person 0,Quality,QA Specialist,26.0
+1,Person 1,Quality,QA Specialist,26.0
+2,Person 2,Quality,QA Specialist,26.0
+0,Person 0,Program Management,Program Manager,20.0
+1,Person 1,Program Management,Program Manager,20.0
