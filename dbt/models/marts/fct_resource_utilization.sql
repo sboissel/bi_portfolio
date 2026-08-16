@@ -22,7 +22,7 @@ allocation_weekdays as (
 
     select
         a.allocation_sk,
-        a.resource_name,
+        a.resource_id,
         gs.work_date::date as work_date,
         a.planned_hours
     from allocations as a,
@@ -34,7 +34,7 @@ allocation_weekdays as (
 allocation_days as (
 
     select
-        resource_name,
+        resource_id,
         work_date,
         planned_hours / count(*) over (partition by allocation_sk) as planned_hours_daily
     from allocation_weekdays
@@ -45,7 +45,7 @@ planned_weekly as (
 
     select
         date_trunc('week', work_date)::date as week_start,
-        resource_name,
+        resource_id,
         sum(planned_hours_daily) as planned
     from allocation_days
     group by 1, 2
@@ -56,7 +56,7 @@ actual_weekly as (
 
     select
         date_trunc('week', log_date)::date as week_start,
-        resource_name,
+        resource_id,
         sum(actual_hours) as actual
     from time_logs
     group by 1, 2
@@ -75,6 +75,7 @@ spine as (
 
     select
         weeks.week_start,
+        resources.resource_id,
         resources.resource_name,
         resources.team,
         resources.capacity_hours_per_week as capacity
@@ -84,7 +85,7 @@ spine as (
 )
 
 select
-    md5(concat_ws('|', spine.week_start, spine.resource_name)) as resource_utilization_sk,
+    md5(concat_ws('|', spine.week_start, spine.resource_id)) as resource_utilization_sk,
     spine.week_start as week,
     spine.resource_name as resource,
     spine.team,
@@ -98,7 +99,7 @@ select
 from spine
 left join planned_weekly
     on spine.week_start = planned_weekly.week_start
-    and spine.resource_name = planned_weekly.resource_name
+    and spine.resource_id = planned_weekly.resource_id
 left join actual_weekly
     on spine.week_start = actual_weekly.week_start
-    and spine.resource_name = actual_weekly.resource_name
+    and spine.resource_id = actual_weekly.resource_id

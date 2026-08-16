@@ -1,6 +1,22 @@
 version: 2
 
 models:
+  - name: dim_date
+    description: >
+      Calendar dimension covering observed source dates, padded to the
+      Monday of the first ISO week through the end of that year.
+    columns:
+      - name: date_day
+        description: Calendar date.
+        data_tests:
+          - unique
+          - not_null
+      - name: date_key
+        description: Date as YYYYMMDD integer.
+        data_tests:
+          - unique
+          - not_null
+
   - name: dim_projects
     description: Project dimension.
     columns:

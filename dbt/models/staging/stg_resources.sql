@@ -7,7 +7,7 @@ with source as (
 renamed as (
 
     select
-        md5(concat_ws('|', team, name)) as resource_sk,
+        md5(resource_id::varchar) as resource_sk,
         resource_id::integer as resource_id,
         trim(name) as resource_name,
         trim(team) as team,

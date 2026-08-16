@@ -31,3 +31,166 @@ models:
         description: Logged hours falling in this week.
       - name: utilization
         description: Actual hours divided by weekly capacity.
+
+  - name: fct_project_performance
+    description: >
+      Executive project performance. One row per project, combining task
+      progress, planned vs actual hours, milestone delivery, and budget vs
+      spend. Variance percents are (actual - planned) / planned; positive
+      means over plan.
+    columns:
+      - name: project_sk
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_projects')
+                field: project_sk
+      - name: project_id
+        data_tests:
+          - unique
+          - not_null
+      - name: task_completion_pct
+        description: Completed tasks as a share of non-cancelled tasks.
+      - name: hours_variance_pct
+        description: (actual hours - planned hours) / planned hours.
+      - name: on_time_milestone_pct
+        description: On-time milestones as a share of all milestones.
+      - name: budget_variance_pct
+        description: (actual spend - planned budget) / planned budget.
+
+  - name: fct_task_performance
+    description: >
+      One row per task. Compares estimated vs actual hours and planned vs
+      actual duration. cycle_time is weekday count from start to completion
+      for done tasks; actual_days is calendar days to completion or to the
+      as-of date for in-progress work.
+    columns:
+      - name: task_sk
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_tasks')
+                field: task_sk
+      - name: task_id
+        data_tests:
+          - unique
+          - not_null
+      - name: hour_variance
+        description: actual_hours minus estimated_hours.
+      - name: planned_days
+        description: Calendar days from start_date to due_date.
+      - name: actual_days
+        description: Calendar days from start to completion, or to as-of for in-progress tasks.
+      - name: cycle_time
+        description: Weekdays from start_date to completion_date for completed tasks.
+
+  - name: fct_project_financials
+    description: >
+      Monthly project financials by cost category. Planned budget is spread
+      evenly across spend installments, then both planned and actual are
+      rolled up to calendar month. Variance is actual minus planned.
+    columns:
+      - name: project_financials_sk
+        data_tests:
+          - unique
+          - not_null
+      - name: month
+        description: Calendar month (first of month).
+        data_tests:
+          - not_null
+      - name: project
+        data_tests:
+          - not_null
+      - name: cost_category
+        data_tests:
+          - not_null
+      - name: planned
+        description: Share of total planned budget allocated to this month.
+      - name: actual
+        description: Actual spend in this month.
+      - name: variance
+        description: actual minus planned.
+
+  - name: fct_milestone_performance
+    description: >
+      One row per milestone. Compares planned vs actual dates. variance_days
+      is actual minus planned; positive means late.
+    columns:
+      - name: milestone_sk
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_milestones')
+                field: milestone_sk
+      - name: milestone_id
+        data_tests:
+          - unique
+          - not_null
+      - name: planned
+        description: Planned milestone date.
+      - name: actual
+        description: Actual milestone date.
+      - name: variance_days
+        description: actual minus planned, in calendar days.
+      - name: on_time
+        description: True when the milestone was not delayed.
+
+  - name: fct_resource_allocation
+    description: >
+      One row per resource assignment to a task. Allocation is the fraction
+      of the task assigned to that person; planned_hours is that share of
+      estimated hours.
+    columns:
+      - name: allocation_sk
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_allocations')
+                field: allocation_sk
+      - name: resource
+        data_tests:
+          - not_null
+      - name: task
+        data_tests:
+          - not_null
+      - name: project
+        data_tests:
+          - not_null
+      - name: allocation
+        description: Fraction of the task assigned to this resource.
+      - name: planned_hours
+        description: Planned hours for this resource on this task.
+
+  - name: fct_kpi_monthly
+    description: >
+      One row per KPI and calendar month. Baseline rows are excluded.
+      Variance is actual minus monthly target; future months may have a
+      null actual.
+    columns:
+      - name: kpi_sk
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_kpis')
+                field: kpi_sk
+      - name: kpi
+        data_tests:
+          - not_null
+      - name: month
+        data_tests:
+          - not_null
+      - name: monthly_target
+        data_tests:
+          - not_null
+      - name: variance
+        description: actual minus monthly_target.

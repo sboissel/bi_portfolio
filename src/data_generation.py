@@ -222,7 +222,7 @@ def generate_resource_allocation(task_dict):
 
     # allocate 1-3 resources per task
     team = task_types_df.loc[task_dict["task_type_id"], "default_team"]
-    team_resources = resources_df.loc[resources_df["team"] == team, "name"].tolist()
+    team_resources = resources_df.loc[resources_df["team"] == team, "resource_id"].tolist()
     n_alloc = random.randint(1, min(3, len(team_resources)))
     task_resources = random.sample(team_resources, n_alloc)
     resource_allocations = [x/20 for x in sorted(random.sample(range(1, 18), n_alloc))]
@@ -246,7 +246,7 @@ for _, row in tasks_df.iterrows():
     allocations.extend(generate_resource_allocation(row.to_dict()))
 
 alloc_df = pd.DataFrame(allocations, columns=[
-    "resource_name", "task_id", "project_id", "task_type_name", 
+    "resource_id", "task_id", "project_id", "task_type_name", 
     "team", "start_date", "completion_date", "status", "allocation", 
     "planned_hours"
 ])
@@ -283,7 +283,8 @@ def generate_time_logs(allocation_dict):
     daily_hours = actual_hours / bdays
     for single_date in pd.bdate_range(start=start_date, end=end_date):
         task_logs.append([
-            allocation_dict["resource_name"], allocation_dict["project_id"],
+            allocation_dict["resource_id"], allocation_dict["project_id"],
+            allocation_dict["task_id"],
             single_date, round(daily_hours, 2)
         ])
 
@@ -294,7 +295,7 @@ for _, row in alloc_df.iterrows():
     time_logs.extend(generate_time_logs(row.to_dict()))
 
 time_logs_df = pd.DataFrame(time_logs, columns=[
-    "resource_name", "project_id",
+    "resource_id", "project_id", "task_id",
     "date", "actual_hours"
 ])
 

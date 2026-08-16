@@ -7,9 +7,9 @@ with source as (
 renamed as (
 
     select
-        md5(concat_ws('|', resource_name, team, task_id)) as allocation_sk,
-        md5(concat_ws('|', team, resource_name)) as resource_sk,
-        trim(resource_name) as resource_name,
+        md5(concat_ws('|', resource_id, task_id)) as allocation_sk,
+        md5(resource_id::varchar) as resource_sk,
+        resource_id::integer as resource_id,
         task_id::integer as task_id,
         project_id::integer as project_id,
         trim(task_type_name) as task_type_name,

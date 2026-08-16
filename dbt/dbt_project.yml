@@ -26,6 +26,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
+vars:
+  as_of_date: "2026-05-01"
+
 models:
   bi_portfolio:
     staging:

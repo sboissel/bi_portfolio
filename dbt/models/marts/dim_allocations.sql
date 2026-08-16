@@ -1,7 +1,7 @@
 select
     allocation_sk,
     resource_sk,
-    resource_name,
+    resource_id,
     task_id,
     project_id,
     task_type_name,
