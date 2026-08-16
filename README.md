@@ -9,9 +9,10 @@ All data is fictional. It is meant for BI prototypes, dashboard mockups, and ana
 ```
 src/data_generation.py   # CSV generator
 src/create_database.py   # load CSVs into DuckDB
+dbt/                     # staging models
 data/raw/                # exported CSVs
 data/biotech_ops.duckdb  # DuckDB database
-requirements.txt         # pandas, numpy, duckdb
+requirements.txt         # pandas, numpy, duckdb, dbt
 ```
 
 The snapshot is frozen as of **2026-05-01** (about four months after the portfolio start date of 2026-01-01). Task status, time logs, and KPI actuals are simulated relative to that date.
@@ -57,3 +58,32 @@ python src/create_database.py
 ```
 
 This replaces `data/biotech_ops.duckdb`.
+
+Build staging views (one `stg_*` model per raw table) in that same database:
+
+```bash
+cd dbt
+dbt run --profiles-dir .
+dbt test --profiles-dir .
+```
+
+## Development environment (pyenv)
+
+This project uses `pyenv` rather than a virtualenv. Set the local Python version with `pyenv` and install dependencies into that interpreter.
+
+Steps:
+
+```bash
+# install the desired Python (if not already installed)
+pyenv install 3.14.4
+# set local version for the project (creates .python-version)
+pyenv local 3.14.4
+# install dependencies into the pyenv-managed interpreter
+python -m pip install -r requirements.txt
+# run generators and DB loader using the pyenv python
+python src/data_generation.py
+python src/create_database.py
+cd dbt && dbt run --profiles-dir .
+```
+
+Do not create or activate a `venv` for this project; using `pyenv local` ensures the correct interpreter is used when you run `python` commands.

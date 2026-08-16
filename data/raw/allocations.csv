@@ -1,320 +1,344 @@
 resource_name,task_id,project_id,task_type_name,team,start_date,completion_date,status,allocation,planned_hours
-Person 1,0,0,Project Planning,Program Management,2026-03-04,2026-03-10,Cancelled,0.35,9.8
-Person 0,0,0,Project Planning,Program Management,2026-03-04,2026-03-10,Cancelled,0.4,11.2
-Person 0,1,4,Stakeholder Update,Program Management,2026-03-26,2026-03-28,Done,0.85,3.4
-Person 0,2,6,Stakeholder Update,Program Management,2026-06-11,2026-06-13,Not Started,0.5,3.0
-Person 0,4,3,Lab Equipment Maintenance,Automation,2026-06-29,2026-07-03,Not Started,0.15,4.2
-Person 1,4,3,Lab Equipment Maintenance,Automation,2026-06-29,2026-07-03,Not Started,0.15,4.2
-Person 2,4,3,Lab Equipment Maintenance,Automation,2026-06-29,2026-07-03,Not Started,0.35,9.8
-Person 0,5,3,Automation Workflow Setup,Automation,2026-05-28,2026-06-16,Not Started,0.15,3.6
-Person 2,5,3,Automation Workflow Setup,Automation,2026-05-28,2026-06-16,Not Started,0.7,16.8
-Person 1,6,9,Fermentation Run,Process Development,2026-04-09,2026-04-19,In Progress,0.65,35.1
-Person 2,6,9,Fermentation Run,Process Development,2026-04-09,2026-04-19,In Progress,0.2,10.8
-Person 2,7,6,Quality Review,Quality,2026-04-15,2026-04-21,In Progress,0.05,0.95
-Person 0,8,5,Assay Development,Analytical,2026-04-20,2026-04-25,Not Started,0.05,0.55
-Person 1,10,6,Strain Construction,Strain Engineering,2026-03-26,2026-04-08,In Progress,0.25,16.75
-Person 3,10,6,Strain Construction,Strain Engineering,2026-03-26,2026-04-08,In Progress,0.1,6.7
-Person 2,10,6,Strain Construction,Strain Engineering,2026-03-26,2026-04-08,In Progress,0.75,50.25
-Person 1,11,9,Data Analysis,Data Science,2026-01-10,2026-01-15,Done,0.3,7.8
-Person 2,11,9,Data Analysis,Data Science,2026-01-10,2026-01-15,Done,0.3,7.8
-Person 0,12,5,Data Analysis,Data Science,2026-03-27,2026-03-30,Done,0.75,11.25
-Person 0,13,2,Downstream Processing,Process Development,2026-02-26,2026-03-04,Done,0.5,17.5
-Person 1,13,2,Downstream Processing,Process Development,2026-02-26,2026-03-04,Done,0.2,7.0
-Person 0,14,11,Stakeholder Update,Program Management,2026-01-20,2026-01-21,Done,0.75,1.5
-Person 0,16,8,Automation Workflow Setup,Automation,2026-03-08,2026-04-07,Done,0.15,27.9
-Person 1,16,8,Automation Workflow Setup,Automation,2026-03-08,2026-04-07,Done,0.15,27.9
-Person 0,18,1,Strain Construction,Strain Engineering,2026-02-04,2026-02-15,Done,0.1,1.3
-Person 3,18,1,Strain Construction,Strain Engineering,2026-02-04,2026-02-15,Done,0.1,1.3
-Person 1,18,1,Strain Construction,Strain Engineering,2026-02-04,2026-02-15,Done,0.2,2.6
-Person 2,19,2,DNA Assembly,Molecular Biology,2026-06-28,2026-07-03,Not Started,0.2,1.2
-Person 0,19,2,DNA Assembly,Molecular Biology,2026-06-28,2026-07-03,Not Started,0.15,0.9
-Person 1,19,2,DNA Assembly,Molecular Biology,2026-06-28,2026-07-03,Not Started,0.35,2.1
-Person 1,22,1,Fermentation Run,Process Development,2026-06-01,2026-06-08,Not Started,0.25,10.75
-Person 2,22,1,Fermentation Run,Process Development,2026-06-01,2026-06-08,Not Started,0.35,15.05
-Person 3,23,11,Strain Construction,Strain Engineering,2026-02-07,2026-03-01,Done,0.35,18.2
-Person 2,23,11,Strain Construction,Strain Engineering,2026-02-07,2026-03-01,Done,0.3,15.6
-Person 0,23,11,Strain Construction,Strain Engineering,2026-02-07,2026-03-01,Done,0.45,23.4
-Person 2,24,11,Downstream Processing,Process Development,2026-05-07,2026-05-15,Not Started,0.25,7.75
-Person 0,24,11,Downstream Processing,Process Development,2026-05-07,2026-05-15,Not Started,0.45,13.95
-Person 1,24,11,Downstream Processing,Process Development,2026-05-07,2026-05-15,Not Started,0.4,12.4
-Person 2,25,1,Data Analysis,Data Science,2026-01-26,2026-01-31,Done,0.45,6.75
-Person 0,26,11,Quality Review,Quality,2026-05-18,2026-05-20,Not Started,0.1,1.1
-Person 1,26,11,Quality Review,Quality,2026-05-18,2026-05-20,Not Started,0.15,1.65
-Person 2,27,7,Lab Equipment Maintenance,Automation,2026-04-05,2026-04-07,In Progress,0.3,3.3
-Person 1,27,7,Lab Equipment Maintenance,Automation,2026-04-05,2026-04-07,In Progress,0.55,6.05
-Person 2,28,2,Deviation Investigation,Quality,2026-02-06,2026-02-15,Done,0.4,10.0
-Person 0,28,2,Deviation Investigation,Quality,2026-02-06,2026-02-15,Done,0.1,2.5
-Person 0,30,5,Assay Development,Analytical,2026-02-05,2026-02-10,Done,0.3,3.6
-Person 0,31,7,Lab Equipment Maintenance,Automation,2026-06-10,2026-06-14,Not Started,0.25,6.25
-Person 1,32,10,Downstream Processing,Process Development,2026-01-14,2026-01-19,Done,0.1,3.0
-Person 0,32,10,Downstream Processing,Process Development,2026-01-14,2026-01-19,Done,0.2,6.0
-Person 2,32,10,Downstream Processing,Process Development,2026-01-14,2026-01-19,Done,0.2,6.0
-Person 1,35,6,Model Development,Data Science,2026-06-05,2026-06-14,Not Started,0.35,3.85
-Person 3,36,10,DNA Assembly,Molecular Biology,2026-06-03,2026-06-05,Not Started,0.55,7.7
-Person 0,36,10,DNA Assembly,Molecular Biology,2026-06-03,2026-06-05,Not Started,0.1,1.4
-Person 2,36,10,DNA Assembly,Molecular Biology,2026-06-03,2026-06-05,Not Started,0.75,10.5
-Person 1,37,1,Model Development,Data Science,2026-05-02,2026-05-21,Not Started,0.65,57.2
-Person 0,37,1,Model Development,Data Science,2026-05-02,2026-05-21,Not Started,0.2,17.6
-Person 1,38,3,Stakeholder Update,Program Management,2026-01-19,2026-01-21,Done,0.2,0.8
-Person 2,39,3,Deviation Investigation,Quality,2026-02-07,2026-02-20,Done,0.25,17.0
-Person 2,41,4,Fermentation Run,Process Development,2026-05-03,2026-05-14,In Progress,0.1,1.1
-Person 1,41,4,Fermentation Run,Process Development,2026-05-03,2026-05-14,In Progress,0.15,1.65
-Person 0,41,4,Fermentation Run,Process Development,2026-05-03,2026-05-14,In Progress,0.4,4.4
-Person 1,42,1,Stakeholder Update,Program Management,2026-02-13,2026-02-15,Done,0.45,1.8
-Person 0,44,8,Project Planning,Program Management,2026-05-06,2026-05-08,Done,0.5,2.0
-Person 1,45,10,Deviation Investigation,Quality,2026-03-13,2026-03-23,Done,0.25,16.75
-Person 2,45,10,Deviation Investigation,Quality,2026-03-13,2026-03-23,Done,0.2,13.4
-Person 0,45,10,Deviation Investigation,Quality,2026-03-13,2026-03-23,Done,0.6,40.2
-Person 1,46,5,Sample Testing,Analytical,2026-01-03,2026-01-10,Done,0.55,7.7
-Person 0,48,0,Fermentation Run,Process Development,2026-01-15,2026-01-23,Done,0.35,13.3
-Person 1,48,0,Fermentation Run,Process Development,2026-01-15,2026-01-23,Done,0.3,11.4
-Person 2,48,0,Fermentation Run,Process Development,2026-01-15,2026-01-23,Done,0.5,19.0
-Person 1,49,9,Downstream Processing,Process Development,2026-03-15,2026-03-30,Done,0.15,13.95
-Person 2,49,9,Downstream Processing,Process Development,2026-03-15,2026-03-30,Done,0.15,13.95
-Person 0,49,9,Downstream Processing,Process Development,2026-03-15,2026-03-30,Done,0.7,65.1
-Person 1,50,10,Downstream Processing,Process Development,2026-04-15,2026-04-23,Done,0.6,24.6
-Person 2,50,10,Downstream Processing,Process Development,2026-04-15,2026-04-23,Done,0.15,6.15
-Person 0,50,10,Downstream Processing,Process Development,2026-04-15,2026-04-23,Done,0.7,28.7
-Person 1,51,3,Assay Development,Analytical,2026-04-18,2026-04-23,In Progress,0.75,9.75
-Person 2,52,0,Data Analysis,Data Science,2026-03-28,2026-04-05,Done,0.2,6.0
-Person 1,52,0,Data Analysis,Data Science,2026-03-28,2026-04-05,Done,0.05,1.5
-Person 0,52,0,Data Analysis,Data Science,2026-03-28,2026-04-05,Done,0.75,22.5
-Person 0,53,1,Stakeholder Update,Program Management,2026-01-09,2026-01-11,Done,0.8,9.6
-Person 1,54,7,Stakeholder Update,Program Management,2026-01-06,2026-01-07,Cancelled,0.35,0.7
-Person 3,55,3,Strain Construction,Strain Engineering,2026-01-11,2026-01-26,Done,0.15,5.7
-Person 0,55,3,Strain Construction,Strain Engineering,2026-01-11,2026-01-26,Done,0.2,7.6
-Person 1,55,3,Strain Construction,Strain Engineering,2026-01-11,2026-01-26,Done,0.4,15.2
-Person 1,56,11,Stakeholder Update,Program Management,2026-06-02,2026-06-03,Not Started,0.5,2.0
-Person 0,57,6,Project Planning,Program Management,2026-06-17,2026-06-20,Not Started,0.75,4.5
-Person 2,58,10,Strain Construction,Strain Engineering,2026-03-26,2026-04-10,In Progress,0.5,39.0
-Person 1,59,7,Quality Review,Quality,2026-03-15,2026-03-20,Done,0.6,7.2
-Person 1,60,7,Project Planning,Program Management,2026-01-11,2026-01-14,Done,0.1,1.7
-Person 0,60,7,Project Planning,Program Management,2026-01-11,2026-01-14,Done,0.1,1.7
-Person 0,61,11,Assay Development,Analytical,2026-01-24,2026-02-01,Done,0.05,1.9
-Person 1,61,11,Assay Development,Analytical,2026-01-24,2026-02-01,Done,0.4,15.2
-Person 1,62,4,Stakeholder Update,Program Management,2026-06-10,2026-06-11,Not Started,0.15,0.45
-Person 0,62,4,Stakeholder Update,Program Management,2026-06-10,2026-06-11,Not Started,0.2,0.6
-Person 0,63,9,Automation Workflow Setup,Automation,2026-03-03,2026-03-18,Done,0.6,33.6
-Person 1,64,11,DNA Assembly,Molecular Biology,2026-06-05,2026-06-10,Not Started,0.1,2.8
-Person 0,65,10,Sample Testing,Analytical,2026-01-12,2026-01-16,Cancelled,0.05,0.5
-Person 3,66,4,Strain Construction,Strain Engineering,2026-05-26,2026-06-06,Not Started,0.3,6.9
-Person 0,66,4,Strain Construction,Strain Engineering,2026-05-26,2026-06-06,Not Started,0.15,3.45
-Person 3,67,11,Strain Construction,Strain Engineering,2026-04-13,2026-05-08,Done,0.2,33.0
-Person 1,68,6,Lab Equipment Maintenance,Automation,2026-02-02,2026-02-04,Done,0.3,1.5
-Person 2,68,6,Lab Equipment Maintenance,Automation,2026-02-02,2026-02-04,Done,0.1,0.5
-Person 0,68,6,Lab Equipment Maintenance,Automation,2026-02-02,2026-02-04,Done,0.65,3.25
-Person 1,70,10,Stakeholder Update,Program Management,2026-06-30,2026-07-02,Not Started,0.15,1.05
-Person 0,70,10,Stakeholder Update,Program Management,2026-06-30,2026-07-02,Not Started,0.65,4.55
-Person 1,71,6,Deviation Investigation,Quality,2026-02-01,2026-02-13,Done,0.3,22.2
-Person 0,71,6,Deviation Investigation,Quality,2026-02-01,2026-02-13,Done,0.15,11.1
-Person 2,71,6,Deviation Investigation,Quality,2026-02-01,2026-02-13,Done,0.5,37.0
-Person 2,72,6,DNA Assembly,Molecular Biology,2026-01-18,2026-01-23,Done,0.15,3.0
-Person 1,72,6,DNA Assembly,Molecular Biology,2026-01-18,2026-01-23,Done,0.6,12.0
-Person 3,72,6,DNA Assembly,Molecular Biology,2026-01-18,2026-01-23,Done,0.25,5.0
-Person 2,74,1,Downstream Processing,Process Development,2026-06-25,2026-06-30,Not Started,0.05,1.45
-Person 0,74,1,Downstream Processing,Process Development,2026-06-25,2026-06-30,Not Started,0.35,10.15
-Person 1,74,1,Downstream Processing,Process Development,2026-06-25,2026-06-30,Not Started,0.2,5.8
-Person 1,76,10,Data Analysis,Data Science,2026-03-11,2026-03-16,Done,0.15,3.75
-Person 0,76,10,Data Analysis,Data Science,2026-03-11,2026-03-16,Done,0.4,10.0
-Person 2,77,1,Strain Construction,Strain Engineering,2026-05-08,2026-05-22,In Progress,0.2,10.2
-Person 0,77,1,Strain Construction,Strain Engineering,2026-05-08,2026-05-22,In Progress,0.55,28.05
-Person 3,77,1,Strain Construction,Strain Engineering,2026-05-08,2026-05-22,In Progress,0.3,15.3
-Person 0,78,2,PCR / Cloning,Molecular Biology,2026-04-02,2026-04-04,Done,0.4,3.2
-Person 2,78,2,PCR / Cloning,Molecular Biology,2026-04-02,2026-04-04,Done,0.2,1.6
-Person 2,82,9,Downstream Processing,Process Development,2026-05-11,2026-05-21,Done,0.15,8.7
-Person 1,82,9,Downstream Processing,Process Development,2026-05-11,2026-05-21,Done,0.55,31.9
-Person 0,83,3,Stakeholder Update,Program Management,2026-05-15,2026-05-16,Not Started,0.7,0.7
-Person 3,84,0,PCR / Cloning,Molecular Biology,2026-02-14,2026-02-16,Done,0.75,8.25
-Person 2,85,8,Data Analysis,Data Science,2026-01-08,2026-01-11,Done,0.5,10.0
-Person 1,85,8,Data Analysis,Data Science,2026-01-08,2026-01-11,Done,0.15,3.0
-Person 0,85,8,Data Analysis,Data Science,2026-01-08,2026-01-11,Done,0.7,14.0
-Person 1,86,8,Deviation Investigation,Quality,2026-06-01,2026-06-13,Not Started,0.15,4.8
-Person 2,86,8,Deviation Investigation,Quality,2026-06-01,2026-06-13,Not Started,0.65,20.8
-Person 1,87,11,Automation Workflow Setup,Automation,2026-01-30,2026-02-13,Done,0.05,2.0
-Person 2,87,11,Automation Workflow Setup,Automation,2026-01-30,2026-02-13,Done,0.4,16.0
-Person 0,87,11,Automation Workflow Setup,Automation,2026-01-30,2026-02-13,Done,0.15,6.0
-Person 2,88,11,Model Development,Data Science,2026-05-28,2026-06-13,Not Started,0.35,20.3
-Person 0,89,2,Model Development,Data Science,2026-01-26,2026-02-08,Done,0.35,15.05
-Person 2,89,2,Model Development,Data Science,2026-01-26,2026-02-08,Done,0.3,12.9
-Person 1,89,2,Model Development,Data Science,2026-01-26,2026-02-08,Done,0.45,19.35
-Person 0,90,11,Fermentation Run,Process Development,2026-01-29,2026-02-12,Done,0.2,17.2
-Person 2,90,11,Fermentation Run,Process Development,2026-01-29,2026-02-12,Done,0.3,25.8
-Person 1,90,11,Fermentation Run,Process Development,2026-01-29,2026-02-12,Done,0.55,47.3
-Person 1,91,4,Assay Development,Analytical,2026-04-13,2026-04-19,Done,0.2,8.0
-Person 0,92,1,Lab Equipment Maintenance,Automation,2026-01-30,2026-02-04,Done,0.1,2.9
-Person 2,92,1,Lab Equipment Maintenance,Automation,2026-01-30,2026-02-04,Done,0.45,13.05
-Person 2,93,1,Model Development,Data Science,2026-01-07,2026-01-20,Done,0.3,8.1
-Person 1,93,1,Model Development,Data Science,2026-01-07,2026-01-20,Done,0.15,4.05
-Person 0,93,1,Model Development,Data Science,2026-01-07,2026-01-20,Done,0.7,18.9
-Person 0,95,11,DNA Assembly,Molecular Biology,2026-02-25,2026-02-27,Done,0.35,3.15
-Person 3,95,11,DNA Assembly,Molecular Biology,2026-02-25,2026-02-27,Done,0.2,1.8
-Person 2,95,11,DNA Assembly,Molecular Biology,2026-02-25,2026-02-27,Done,0.65,5.85
-Person 0,96,0,PCR / Cloning,Molecular Biology,2026-03-25,2026-03-26,Done,0.25,1.25
-Person 2,96,0,PCR / Cloning,Molecular Biology,2026-03-25,2026-03-26,Done,0.05,0.25
-Person 3,96,0,PCR / Cloning,Molecular Biology,2026-03-25,2026-03-26,Done,0.6,3.0
-Person 0,97,9,Project Planning,Program Management,2026-06-19,2026-06-24,Not Started,0.75,6.75
-Person 0,98,2,Lab Equipment Maintenance,Automation,2026-01-09,2026-01-12,Done,0.25,5.25
-Person 1,98,2,Lab Equipment Maintenance,Automation,2026-01-09,2026-01-12,Done,0.25,5.25
-Person 2,98,2,Lab Equipment Maintenance,Automation,2026-01-09,2026-01-12,Done,0.55,11.55
-Person 0,99,3,PCR / Cloning,Molecular Biology,2026-03-02,2026-03-05,Done,0.4,2.8
-Person 1,100,5,Stakeholder Update,Program Management,2026-04-13,2026-04-14,Done,0.1,0.6
-Person 0,100,5,Stakeholder Update,Program Management,2026-04-13,2026-04-14,Done,0.35,2.1
-Person 0,101,11,Automation Workflow Setup,Automation,2026-01-11,2026-01-26,Done,0.45,20.25
-Person 1,101,11,Automation Workflow Setup,Automation,2026-01-11,2026-01-26,Done,0.35,15.75
-Person 0,102,4,Assay Development,Analytical,2026-04-03,2026-04-11,Done,0.5,16.0
-Person 1,102,4,Assay Development,Analytical,2026-04-03,2026-04-11,Done,0.3,9.6
-Person 0,103,5,Stakeholder Update,Program Management,2026-03-13,2026-03-15,Done,0.75,5.25
-Person 1,103,5,Stakeholder Update,Program Management,2026-03-13,2026-03-15,Done,0.05,0.35
-Person 0,104,1,Sample Testing,Analytical,2026-01-29,2026-02-01,Done,0.8,15.2
-Person 2,105,2,PCR / Cloning,Molecular Biology,2026-01-27,2026-01-28,Done,0.7,2.1
-Person 0,106,8,PCR / Cloning,Molecular Biology,2026-05-07,2026-05-09,In Progress,0.3,0.9
-Person 2,106,8,PCR / Cloning,Molecular Biology,2026-05-07,2026-05-09,In Progress,0.05,0.15
-Person 0,108,3,PCR / Cloning,Molecular Biology,2026-04-04,2026-04-05,In Progress,0.75,3.75
-Person 1,109,2,Project Planning,Program Management,2026-01-16,2026-01-22,Done,0.65,26.0
-Person 1,110,0,DNA Assembly,Molecular Biology,2026-03-27,2026-03-31,Done,0.3,2.7
-Person 3,110,0,DNA Assembly,Molecular Biology,2026-03-27,2026-03-31,Done,0.2,1.8
-Person 0,110,0,DNA Assembly,Molecular Biology,2026-03-27,2026-03-31,Done,0.35,3.15
-Person 2,111,3,Strain Construction,Strain Engineering,2026-06-20,2026-07-10,Not Started,0.3,21.0
-Person 3,112,1,Strain Construction,Strain Engineering,2026-01-18,2026-02-04,Done,0.2,20.4
-Person 0,112,1,Strain Construction,Strain Engineering,2026-01-18,2026-02-04,Done,0.15,15.3
-Person 1,112,1,Strain Construction,Strain Engineering,2026-01-18,2026-02-04,Done,0.6,61.2
-Person 2,113,8,Quality Review,Quality,2026-05-27,2026-05-30,In Progress,0.25,4.25
-Person 0,113,8,Quality Review,Quality,2026-05-27,2026-05-30,In Progress,0.6,10.2
-Person 1,114,11,Model Development,Data Science,2026-03-24,2026-04-07,Done,0.1,7.3
-Person 0,115,4,Strain Construction,Strain Engineering,2026-04-17,2026-05-07,Done,0.2,14.2
-Person 0,117,3,Sample Testing,Analytical,2026-04-20,2026-04-24,Not Started,0.1,1.6
-Person 1,117,3,Sample Testing,Analytical,2026-04-20,2026-04-24,Not Started,0.65,10.4
-Person 0,118,8,DNA Assembly,Molecular Biology,2026-04-03,2026-04-07,In Progress,0.65,8.45
-Person 0,119,2,Data Analysis,Data Science,2026-04-13,2026-04-21,Not Started,0.45,24.3
-Person 1,121,8,Downstream Processing,Process Development,2026-03-25,2026-04-03,Done,0.45,6.3
-Person 0,121,8,Downstream Processing,Process Development,2026-03-25,2026-04-03,Done,0.35,4.9
-Person 0,122,3,Quality Review,Quality,2026-03-17,2026-03-23,Done,0.7,28.7
-Person 1,123,2,Fermentation Run,Process Development,2026-03-31,2026-04-13,Done,0.5,14.5
-Person 0,123,2,Fermentation Run,Process Development,2026-03-31,2026-04-13,Done,0.05,1.45
-Person 2,123,2,Fermentation Run,Process Development,2026-03-31,2026-04-13,Done,0.75,21.75
-Person 0,124,4,Downstream Processing,Process Development,2026-05-09,2026-05-23,Not Started,0.15,5.25
-Person 1,124,4,Downstream Processing,Process Development,2026-05-09,2026-05-23,Not Started,0.1,3.5
-Person 2,124,4,Downstream Processing,Process Development,2026-05-09,2026-05-23,Not Started,0.55,19.25
-Person 2,125,2,Quality Review,Quality,2026-06-12,2026-06-20,Not Started,0.7,6.3
-Person 1,126,5,Assay Development,Analytical,2026-01-14,2026-01-22,Done,0.05,1.3
-Person 2,127,0,PCR / Cloning,Molecular Biology,2026-01-04,2026-01-05,Done,0.35,2.45
-Person 1,127,0,PCR / Cloning,Molecular Biology,2026-01-04,2026-01-05,Done,0.25,1.75
-Person 0,127,0,PCR / Cloning,Molecular Biology,2026-01-04,2026-01-05,Done,0.45,3.15
-Person 2,128,2,Quality Review,Quality,2026-02-07,2026-02-14,Done,0.15,7.2
-Person 1,128,2,Quality Review,Quality,2026-02-07,2026-02-14,Done,0.2,9.6
-Person 0,128,2,Quality Review,Quality,2026-02-07,2026-02-14,Done,0.55,26.4
-Person 0,129,7,Stakeholder Update,Program Management,2026-02-03,2026-02-05,Done,0.15,0.75
-Person 1,130,2,Assay Development,Analytical,2026-03-11,2026-03-20,Done,0.2,5.8
-Person 1,131,10,Stakeholder Update,Program Management,2026-05-31,2026-06-01,Not Started,0.8,3.2
-Person 1,132,8,Stakeholder Update,Program Management,2026-01-14,2026-01-15,Done,0.7,2.1
-Person 0,132,8,Stakeholder Update,Program Management,2026-01-14,2026-01-15,Done,0.1,0.3
-Person 0,133,11,Lab Equipment Maintenance,Automation,2026-03-18,2026-03-22,Done,0.1,2.6
-Person 1,133,11,Lab Equipment Maintenance,Automation,2026-03-18,2026-03-22,Done,0.05,1.3
-Person 2,133,11,Lab Equipment Maintenance,Automation,2026-03-18,2026-03-22,Done,0.45,11.7
-Person 2,134,9,PCR / Cloning,Molecular Biology,2026-06-30,2026-07-01,Not Started,0.4,1.2
-Person 3,134,9,PCR / Cloning,Molecular Biology,2026-06-30,2026-07-01,Not Started,0.15,0.45
-Person 1,134,9,PCR / Cloning,Molecular Biology,2026-06-30,2026-07-01,Not Started,0.45,1.35
-Person 1,136,8,Stakeholder Update,Program Management,2026-03-08,2026-03-09,Done,0.7,3.5
-Person 0,137,11,PCR / Cloning,Molecular Biology,2026-04-17,2026-04-20,In Progress,0.65,7.8
-Person 3,137,11,PCR / Cloning,Molecular Biology,2026-04-17,2026-04-20,In Progress,0.05,0.6
-Person 2,137,11,PCR / Cloning,Molecular Biology,2026-04-17,2026-04-20,In Progress,0.75,9.0
-Person 0,138,6,Fermentation Run,Process Development,2026-06-25,2026-07-02,Not Started,0.35,5.95
-Person 1,138,6,Fermentation Run,Process Development,2026-06-25,2026-07-02,Not Started,0.1,1.7
-Person 2,138,6,Fermentation Run,Process Development,2026-06-25,2026-07-02,Not Started,0.5,8.5
-Person 0,139,11,Strain Construction,Strain Engineering,2026-05-18,2026-06-11,Not Started,0.1,3.8
-Person 3,139,11,Strain Construction,Strain Engineering,2026-05-18,2026-06-11,Not Started,0.15,5.7
-Person 1,139,11,Strain Construction,Strain Engineering,2026-05-18,2026-06-11,Not Started,0.65,24.7
-Person 1,140,2,Fermentation Run,Process Development,2026-04-01,2026-04-14,Done,0.2,6.8
-Person 1,142,9,Data Analysis,Data Science,2026-06-14,2026-06-19,Not Started,0.15,0.9
-Person 2,143,2,Fermentation Run,Process Development,2026-05-20,2026-06-01,Not Started,0.35,17.5
-Person 0,143,2,Fermentation Run,Process Development,2026-05-20,2026-06-01,Not Started,0.3,15.0
-Person 1,143,2,Fermentation Run,Process Development,2026-05-20,2026-06-01,Not Started,0.5,25.0
-Person 2,144,3,Model Development,Data Science,2026-01-14,2026-01-30,Done,0.05,3.15
-Person 0,144,3,Model Development,Data Science,2026-01-14,2026-01-30,Done,0.7,44.1
-Person 0,145,9,Strain Construction,Strain Engineering,2026-04-12,2026-05-01,Done,0.3,31.2
-Person 1,145,9,Strain Construction,Strain Engineering,2026-04-12,2026-05-01,Done,0.1,10.4
-Person 3,145,9,Strain Construction,Strain Engineering,2026-04-12,2026-05-01,Done,0.65,67.6
-Person 0,146,7,Assay Development,Analytical,2026-01-30,2026-02-09,Done,0.35,10.5
-Person 1,146,7,Assay Development,Analytical,2026-01-30,2026-02-09,Done,0.35,10.5
-Person 2,147,1,Automation Workflow Setup,Automation,2026-06-01,2026-06-15,Not Started,0.5,32.0
-Person 1,147,1,Automation Workflow Setup,Automation,2026-06-01,2026-06-15,Not Started,0.05,3.2
-Person 2,149,1,Strain Construction,Strain Engineering,2026-06-26,2026-07-21,Not Started,0.6,27.6
-Person 0,149,1,Strain Construction,Strain Engineering,2026-06-26,2026-07-21,Not Started,0.25,11.5
-Person 2,150,3,Deviation Investigation,Quality,2026-03-20,2026-03-31,Done,0.1,6.6
-Person 1,150,3,Deviation Investigation,Quality,2026-03-20,2026-03-31,Done,0.2,13.2
-Person 0,150,3,Deviation Investigation,Quality,2026-03-20,2026-03-31,Done,0.6,39.6
-Person 2,153,10,PCR / Cloning,Molecular Biology,2026-05-21,2026-05-23,Not Started,0.1,0.9
-Person 0,153,10,PCR / Cloning,Molecular Biology,2026-05-21,2026-05-23,Not Started,0.2,1.8
-Person 3,153,10,PCR / Cloning,Molecular Biology,2026-05-21,2026-05-23,Not Started,0.3,2.7
-Person 2,154,4,PCR / Cloning,Molecular Biology,2026-02-03,2026-02-06,Done,0.5,4.5
-Person 3,154,4,PCR / Cloning,Molecular Biology,2026-02-03,2026-02-06,Done,0.2,1.8
-Person 2,155,6,DNA Assembly,Molecular Biology,2026-02-25,2026-02-27,Done,0.65,8.45
-Person 0,156,2,Deviation Investigation,Quality,2026-06-12,2026-06-24,Not Started,0.25,18.5
-Person 1,156,2,Deviation Investigation,Quality,2026-06-12,2026-06-24,Not Started,0.2,14.8
-Person 2,156,2,Deviation Investigation,Quality,2026-06-12,2026-06-24,Not Started,0.55,40.7
-Person 0,157,6,DNA Assembly,Molecular Biology,2026-04-01,2026-04-05,In Progress,0.55,11.55
-Person 2,158,10,Automation Workflow Setup,Automation,2026-06-21,2026-07-04,Not Started,0.25,12.0
-Person 1,158,10,Automation Workflow Setup,Automation,2026-06-21,2026-07-04,Not Started,0.25,12.0
-Person 0,159,6,Fermentation Run,Process Development,2026-06-22,2026-07-09,Not Started,0.7,68.6
-Person 1,159,6,Fermentation Run,Process Development,2026-06-22,2026-07-09,Not Started,0.1,9.8
-Person 0,160,0,Deviation Investigation,Quality,2026-02-02,2026-02-13,Done,0.1,6.1
-Person 1,160,0,Deviation Investigation,Quality,2026-02-02,2026-02-13,Done,0.4,24.4
-Person 1,161,8,Strain Construction,Strain Engineering,2026-05-27,2026-06-07,Not Started,0.15,7.2
-Person 3,162,0,PCR / Cloning,Molecular Biology,2026-01-31,2026-02-02,Done,0.45,2.7
-Person 1,162,0,PCR / Cloning,Molecular Biology,2026-01-31,2026-02-02,Done,0.15,0.9
-Person 0,162,0,PCR / Cloning,Molecular Biology,2026-01-31,2026-02-02,Done,0.5,3.0
-Person 2,163,2,Automation Workflow Setup,Automation,2026-02-07,2026-03-01,Done,0.75,87.75
-Person 1,164,4,Sample Testing,Analytical,2026-02-18,2026-02-21,Done,0.45,2.25
-Person 1,166,1,Downstream Processing,Process Development,2026-04-03,2026-04-12,Done,0.2,9.2
-Person 3,167,10,DNA Assembly,Molecular Biology,2026-01-30,2026-02-03,Done,0.25,5.0
-Person 0,168,3,Downstream Processing,Process Development,2026-05-01,2026-05-06,Done,0.05,1.4
-Person 1,168,3,Downstream Processing,Process Development,2026-05-01,2026-05-06,Done,0.15,4.2
-Person 2,168,3,Downstream Processing,Process Development,2026-05-01,2026-05-06,Done,0.3,8.4
-Person 0,169,11,Fermentation Run,Process Development,2026-01-08,2026-01-19,Done,0.75,35.25
-Person 1,169,11,Fermentation Run,Process Development,2026-01-08,2026-01-19,Done,0.05,2.35
-Person 1,170,1,Project Planning,Program Management,2026-06-24,2026-06-26,Not Started,0.1,0.4
-Person 1,171,1,Fermentation Run,Process Development,2026-04-09,2026-04-27,Not Started,0.8,36.0
-Person 2,172,2,Lab Equipment Maintenance,Automation,2026-06-13,2026-06-18,Not Started,0.4,4.8
-Person 2,173,5,PCR / Cloning,Molecular Biology,2026-06-16,2026-06-18,Not Started,0.25,0.75
-Person 1,173,5,PCR / Cloning,Molecular Biology,2026-06-16,2026-06-18,Not Started,0.05,0.15
-Person 3,173,5,PCR / Cloning,Molecular Biology,2026-06-16,2026-06-18,Not Started,0.45,1.35
-Person 0,175,9,Lab Equipment Maintenance,Automation,2026-01-30,2026-02-02,Done,0.25,1.75
-Person 2,175,9,Lab Equipment Maintenance,Automation,2026-01-30,2026-02-02,Done,0.55,3.85
-Person 1,176,8,Project Planning,Program Management,2026-04-19,2026-04-22,Done,0.3,3.9
-Person 0,176,8,Project Planning,Program Management,2026-04-19,2026-04-22,Done,0.35,4.55
-Person 0,178,0,Assay Development,Analytical,2026-06-24,2026-07-04,Not Started,0.55,20.35
-Person 1,178,0,Assay Development,Analytical,2026-06-24,2026-07-04,Not Started,0.3,11.1
-Person 0,179,6,Deviation Investigation,Quality,2026-03-19,2026-04-01,Done,0.7,21.7
-Person 0,181,4,Data Analysis,Data Science,2026-03-08,2026-03-11,Done,0.25,4.0
-Person 2,181,4,Data Analysis,Data Science,2026-03-08,2026-03-11,Done,0.55,8.8
-Person 0,182,7,Deviation Investigation,Quality,2026-02-21,2026-03-05,Done,0.25,8.5
-Person 1,182,7,Deviation Investigation,Quality,2026-02-21,2026-03-05,Done,0.2,6.8
-Person 3,184,3,Strain Construction,Strain Engineering,2026-04-29,2026-05-16,In Progress,0.45,9.9
-Person 0,184,3,Strain Construction,Strain Engineering,2026-04-29,2026-05-16,In Progress,0.05,1.1
-Person 0,185,2,Stakeholder Update,Program Management,2026-02-18,2026-02-20,Done,0.4,4.0
-Person 1,186,3,Automation Workflow Setup,Automation,2026-03-21,2026-04-09,In Progress,0.4,47.6
-Person 0,186,3,Automation Workflow Setup,Automation,2026-03-21,2026-04-09,In Progress,0.1,11.9
-Person 2,186,3,Automation Workflow Setup,Automation,2026-03-21,2026-04-09,In Progress,0.7,83.3
-Person 2,187,4,Quality Review,Quality,2026-02-23,2026-02-25,Done,0.05,0.5
-Person 0,187,4,Quality Review,Quality,2026-02-23,2026-02-25,Done,0.75,7.5
-Person 0,189,8,Data Analysis,Data Science,2026-01-30,2026-02-03,Done,0.25,5.5
-Person 0,190,2,Fermentation Run,Process Development,2026-05-29,2026-06-12,Not Started,0.05,1.85
-Person 1,190,2,Fermentation Run,Process Development,2026-05-29,2026-06-12,Not Started,0.15,5.55
-Person 0,191,3,Lab Equipment Maintenance,Automation,2026-04-02,2026-04-05,Done,0.2,2.4
-Person 2,191,3,Lab Equipment Maintenance,Automation,2026-04-02,2026-04-05,Done,0.35,4.2
-Person 1,192,8,Assay Development,Analytical,2026-01-12,2026-01-24,Done,0.25,10.75
-Person 0,192,8,Assay Development,Analytical,2026-01-12,2026-01-24,Done,0.25,10.75
-Person 2,193,3,Downstream Processing,Process Development,2026-06-13,2026-06-27,Not Started,0.2,11.0
-Person 0,193,3,Downstream Processing,Process Development,2026-06-13,2026-06-27,Not Started,0.25,13.75
-Person 2,194,9,DNA Assembly,Molecular Biology,2026-06-15,2026-06-19,Not Started,0.2,5.6
-Person 1,194,9,DNA Assembly,Molecular Biology,2026-06-15,2026-06-19,Not Started,0.1,2.8
-Person 3,194,9,DNA Assembly,Molecular Biology,2026-06-15,2026-06-19,Not Started,0.75,21.0
-Person 0,195,10,Project Planning,Program Management,2026-02-03,2026-02-06,Done,0.4,3.6
-Person 1,195,10,Project Planning,Program Management,2026-02-03,2026-02-06,Done,0.1,0.9
-Person 0,196,9,DNA Assembly,Molecular Biology,2026-03-25,2026-03-27,Done,0.45,4.5
-Person 2,197,11,Downstream Processing,Process Development,2026-01-17,2026-01-24,Done,0.25,3.5
-Person 0,197,11,Downstream Processing,Process Development,2026-01-17,2026-01-24,Done,0.05,0.7
-Person 1,197,11,Downstream Processing,Process Development,2026-01-17,2026-01-24,Done,0.75,10.5
-Person 2,198,1,Deviation Investigation,Quality,2026-03-13,2026-03-27,Done,0.1,7.4
-Person 1,198,1,Deviation Investigation,Quality,2026-03-13,2026-03-27,Done,0.5,37.0
-Person 1,199,3,Automation Workflow Setup,Automation,2026-05-21,2026-06-17,Not Started,0.1,9.5
+Person 21,1,0,Project Planning,Program Management,2026-06-07,2026-06-12,Not Started,0.8,22.4
+Person 22,2,7,Stakeholder Update,Program Management,2026-03-10,2026-03-12,Done,0.3,3.9
+Person 20,2,7,Stakeholder Update,Program Management,2026-03-10,2026-03-12,Done,0.1,1.3
+Person 21,2,7,Stakeholder Update,Program Management,2026-03-10,2026-03-12,Done,0.75,9.75
+Person 13,3,5,Data Analysis,Data Science,2026-04-08,2026-04-18,In Progress,0.45,15.75
+Person 12,3,5,Data Analysis,Data Science,2026-04-08,2026-04-18,In Progress,0.15,5.25
+Person 11,3,5,Data Analysis,Data Science,2026-04-08,2026-04-18,In Progress,0.65,22.75
+Person 13,4,9,Model Development,Data Science,2026-06-15,2026-07-04,Not Started,0.25,9.75
+Person 11,5,1,Data Analysis,Data Science,2026-04-13,2026-04-16,Done,0.2,0.8
+Person 12,5,1,Data Analysis,Data Science,2026-04-13,2026-04-16,Done,0.2,0.8
+Person 14,5,1,Data Analysis,Data Science,2026-04-13,2026-04-16,Done,0.6,2.4
+Person 8,7,7,Fermentation Run,Process Development,2026-06-02,2026-06-14,Not Started,0.5,9.5
+Person 20,9,11,Project Planning,Program Management,2026-06-02,2026-06-07,Not Started,0.05,0.5
+Person 22,9,11,Project Planning,Program Management,2026-06-02,2026-06-07,Not Started,0.3,3.0
+Person 22,10,7,Stakeholder Update,Program Management,2026-03-01,2026-03-03,Done,0.45,3.15
+Person 20,10,7,Stakeholder Update,Program Management,2026-03-01,2026-03-03,Done,0.3,2.1
+Person 7,11,7,Assay Development,Analytical,2026-01-10,2026-01-18,Done,0.25,11.25
+Person 7,12,11,Assay Development,Analytical,2026-04-16,2026-04-23,Not Started,0.45,14.85
+Person 5,12,11,Assay Development,Analytical,2026-04-16,2026-04-23,Not Started,0.3,9.9
+Person 6,12,11,Assay Development,Analytical,2026-04-16,2026-04-23,Not Started,0.5,16.5
+Person 22,15,10,Project Planning,Program Management,2026-05-22,2026-05-27,Not Started,0.2,1.6
+Person 18,16,8,Deviation Investigation,Quality,2026-05-23,2026-05-28,Not Started,0.15,2.7
+Person 19,16,8,Deviation Investigation,Quality,2026-05-23,2026-05-28,Not Started,0.05,0.9
+Person 17,16,8,Deviation Investigation,Quality,2026-05-23,2026-05-28,Not Started,0.4,7.2
+Person 11,17,2,Data Analysis,Data Science,2026-05-19,2026-05-22,Not Started,0.6,6.0
+Person 13,17,2,Data Analysis,Data Science,2026-05-19,2026-05-22,Not Started,0.05,0.5
+Person 20,18,8,Project Planning,Program Management,2026-04-11,2026-04-15,In Progress,0.1,2.2
+Person 21,18,8,Project Planning,Program Management,2026-04-11,2026-04-15,In Progress,0.5,11.0
+Person 22,18,8,Project Planning,Program Management,2026-04-11,2026-04-15,In Progress,0.35,7.7
+Person 21,19,10,Project Planning,Program Management,2026-06-17,2026-06-21,Not Started,0.1,0.7
+Person 11,20,11,Model Development,Data Science,2026-05-16,2026-05-28,Not Started,0.05,2.6
+Person 13,20,11,Model Development,Data Science,2026-05-16,2026-05-28,Not Started,0.55,28.6
+Person 18,21,1,Quality Review,Quality,2026-02-05,2026-02-13,Done,0.15,7.05
+Person 19,21,1,Quality Review,Quality,2026-02-05,2026-02-13,Done,0.65,30.55
+Person 12,22,8,Model Development,Data Science,2026-01-14,2026-02-01,Done,0.2,13.6
+Person 11,22,8,Model Development,Data Science,2026-01-14,2026-02-01,Done,0.1,6.8
+Person 14,22,8,Model Development,Data Science,2026-01-14,2026-02-01,Done,0.45,30.6
+Person 20,23,0,Project Planning,Program Management,2026-03-05,2026-03-07,Done,0.15,0.75
+Person 21,23,0,Project Planning,Program Management,2026-03-05,2026-03-07,Done,0.15,0.75
+Person 1,24,3,Strain Construction,Strain Engineering,2026-05-27,2026-06-17,Not Started,0.65,84.5
+Person 5,25,5,Sample Testing,Analytical,2026-02-14,2026-02-17,Done,0.05,0.85
+Person 7,25,5,Sample Testing,Analytical,2026-02-14,2026-02-17,Done,0.05,0.85
+Person 6,25,5,Sample Testing,Analytical,2026-02-14,2026-02-17,Done,0.6,10.2
+Person 11,26,1,Data Analysis,Data Science,2026-06-04,2026-06-14,Not Started,0.45,25.2
+Person 12,26,1,Data Analysis,Data Science,2026-06-04,2026-06-14,Not Started,0.3,16.8
+Person 14,26,1,Data Analysis,Data Science,2026-06-04,2026-06-14,Not Started,0.55,30.8
+Person 15,27,9,Lab Equipment Maintenance,Automation,2026-03-04,2026-03-08,Done,0.55,12.1
+Person 18,28,7,Deviation Investigation,Quality,2026-04-29,2026-05-14,Not Started,0.75,22.5
+Person 21,29,11,Project Planning,Program Management,2026-03-10,2026-03-13,Done,0.05,1.0
+Person 20,29,11,Project Planning,Program Management,2026-03-10,2026-03-13,Done,0.7,14.0
+Person 8,30,11,Downstream Processing,Process Development,2026-06-28,2026-07-12,Not Started,0.5,10.5
+Person 21,31,2,Stakeholder Update,Program Management,2026-04-08,2026-04-09,Done,0.45,1.35
+Person 20,31,2,Stakeholder Update,Program Management,2026-04-08,2026-04-09,Done,0.2,0.6
+Person 22,31,2,Stakeholder Update,Program Management,2026-04-08,2026-04-09,Done,0.5,1.5
+Person 16,33,7,Automation Workflow Setup,Automation,2026-03-01,2026-03-22,Done,0.15,4.2
+Person 15,33,7,Automation Workflow Setup,Automation,2026-03-01,2026-03-22,Done,0.3,8.4
+Person 6,34,11,Sample Testing,Analytical,2026-02-14,2026-02-16,Done,0.2,1.6
+Person 7,34,11,Sample Testing,Analytical,2026-02-14,2026-02-16,Done,0.1,0.8
+Person 5,34,11,Sample Testing,Analytical,2026-02-14,2026-02-16,Done,0.45,3.6
+Person 20,36,4,Stakeholder Update,Program Management,2026-05-19,2026-05-20,Done,0.4,2.0
+Person 21,36,4,Stakeholder Update,Program Management,2026-05-19,2026-05-20,Done,0.35,1.75
+Person 6,37,7,Assay Development,Analytical,2026-05-16,2026-05-21,Not Started,0.3,5.1
+Person 7,37,7,Assay Development,Analytical,2026-05-16,2026-05-21,Not Started,0.45,7.65
+Person 5,37,7,Assay Development,Analytical,2026-05-16,2026-05-21,Not Started,0.35,5.95
+Person 15,38,3,Lab Equipment Maintenance,Automation,2026-01-01,2026-01-02,Done,0.8,1.6
+Person 7,39,0,Assay Development,Analytical,2026-03-25,2026-04-05,Done,0.05,1.25
+Person 6,39,0,Assay Development,Analytical,2026-03-25,2026-04-05,Done,0.4,10.0
+Person 16,40,0,Automation Workflow Setup,Automation,2026-04-10,2026-04-23,Done,0.35,29.4
+Person 15,40,0,Automation Workflow Setup,Automation,2026-04-10,2026-04-23,Done,0.1,8.4
+Person 2,41,9,DNA Assembly,Molecular Biology,2026-02-10,2026-02-14,Done,0.2,2.2
+Person 3,41,9,DNA Assembly,Molecular Biology,2026-02-10,2026-02-14,Done,0.3,3.3
+Person 15,42,10,Lab Equipment Maintenance,Automation,2026-06-08,2026-06-11,Not Started,0.3,2.7
+Person 14,43,11,Data Analysis,Data Science,2026-04-16,2026-04-26,Done,0.2,13.8
+Person 11,43,11,Data Analysis,Data Science,2026-04-16,2026-04-26,Done,0.1,6.9
+Person 12,43,11,Data Analysis,Data Science,2026-04-16,2026-04-26,Done,0.45,31.05
+Person 10,44,9,Fermentation Run,Process Development,2026-06-29,2026-07-17,Not Started,0.35,36.05
+Person 8,44,9,Fermentation Run,Process Development,2026-06-29,2026-07-17,Not Started,0.05,5.15
+Person 9,44,9,Fermentation Run,Process Development,2026-06-29,2026-07-17,Not Started,0.8,82.4
+Person 17,45,0,Quality Review,Quality,2026-02-26,2026-03-05,Done,0.65,16.9
+Person 6,46,4,Assay Development,Analytical,2026-02-20,2026-02-25,Done,0.35,11.2
+Person 9,47,11,Downstream Processing,Process Development,2026-03-12,2026-03-24,Done,0.05,0.85
+Person 10,47,11,Downstream Processing,Process Development,2026-03-12,2026-03-24,Done,0.15,2.55
+Person 19,48,0,Quality Review,Quality,2026-01-03,2026-01-09,Done,0.1,3.7
+Person 18,48,0,Quality Review,Quality,2026-01-03,2026-01-09,Done,0.05,1.85
+Person 17,48,0,Quality Review,Quality,2026-01-03,2026-01-09,Done,0.15,5.55
+Person 9,49,4,Fermentation Run,Process Development,2026-05-10,2026-05-17,Not Started,0.1,1.6
+Person 8,49,4,Fermentation Run,Process Development,2026-05-10,2026-05-17,Not Started,0.1,1.6
+Person 10,49,4,Fermentation Run,Process Development,2026-05-10,2026-05-17,Not Started,0.6,9.6
+Person 19,50,8,Quality Review,Quality,2026-03-18,2026-03-22,Done,0.3,6.3
+Person 3,52,10,PCR / Cloning,Molecular Biology,2026-06-24,2026-06-26,Not Started,0.2,1.8
+Person 4,52,10,PCR / Cloning,Molecular Biology,2026-06-24,2026-06-26,Not Started,0.25,2.25
+Person 2,52,10,PCR / Cloning,Molecular Biology,2026-06-24,2026-06-26,Not Started,0.35,3.15
+Person 10,53,4,Downstream Processing,Process Development,2026-01-25,2026-02-03,Done,0.55,19.25
+Person 9,53,4,Downstream Processing,Process Development,2026-01-25,2026-02-03,Done,0.1,3.5
+Person 18,54,8,Deviation Investigation,Quality,2026-02-08,2026-02-21,Done,0.1,1.7
+Person 17,54,8,Deviation Investigation,Quality,2026-02-08,2026-02-21,Done,0.1,1.7
+Person 19,54,8,Deviation Investigation,Quality,2026-02-08,2026-02-21,Done,0.45,7.65
+Person 21,55,9,Project Planning,Program Management,2026-06-04,2026-06-06,Not Started,0.05,0.2
+Person 20,55,9,Project Planning,Program Management,2026-06-04,2026-06-06,Not Started,0.15,0.6
+Person 12,57,11,Model Development,Data Science,2026-05-03,2026-05-11,In Progress,0.25,2.75
+Person 14,57,11,Model Development,Data Science,2026-05-03,2026-05-11,In Progress,0.15,1.65
+Person 11,57,11,Model Development,Data Science,2026-05-03,2026-05-11,In Progress,0.5,5.5
+Person 17,59,5,Deviation Investigation,Quality,2026-01-13,2026-01-21,Done,0.15,4.2
+Person 19,59,5,Deviation Investigation,Quality,2026-01-13,2026-01-21,Done,0.1,2.8
+Person 18,59,5,Deviation Investigation,Quality,2026-01-13,2026-01-21,Done,0.3,8.4
+Person 7,60,8,Assay Development,Analytical,2026-04-08,2026-04-14,Done,0.3,7.5
+Person 20,62,7,Stakeholder Update,Program Management,2026-05-29,2026-05-30,Not Started,0.15,1.05
+Person 22,62,7,Stakeholder Update,Program Management,2026-05-29,2026-05-30,Not Started,0.05,0.35
+Person 21,62,7,Stakeholder Update,Program Management,2026-05-29,2026-05-30,Not Started,0.25,1.75
+Person 17,63,5,Quality Review,Quality,2026-06-29,2026-07-04,Not Started,0.15,4.05
+Person 11,64,9,Model Development,Data Science,2026-01-10,2026-01-19,Done,0.15,8.4
+Person 9,65,9,Fermentation Run,Process Development,2026-01-16,2026-01-26,Done,0.1,3.1
+Person 10,65,9,Fermentation Run,Process Development,2026-01-16,2026-01-26,Done,0.1,3.1
+Person 22,66,7,Stakeholder Update,Program Management,2026-04-07,2026-04-08,In Progress,0.25,1.5
+Person 20,66,7,Stakeholder Update,Program Management,2026-04-07,2026-04-08,In Progress,0.15,0.9
+Person 18,67,9,Quality Review,Quality,2026-04-20,2026-04-26,Done,0.1,2.5
+Person 19,67,9,Quality Review,Quality,2026-04-20,2026-04-26,Done,0.15,3.75
+Person 3,68,7,DNA Assembly,Molecular Biology,2026-05-04,2026-05-08,In Progress,0.05,1.3
+Person 4,68,7,DNA Assembly,Molecular Biology,2026-05-04,2026-05-08,In Progress,0.6,15.6
+Person 5,69,8,Sample Testing,Analytical,2026-05-15,2026-05-20,Not Started,0.15,4.65
+Person 7,69,8,Sample Testing,Analytical,2026-05-15,2026-05-20,Not Started,0.2,6.2
+Person 6,69,8,Sample Testing,Analytical,2026-05-15,2026-05-20,Not Started,0.6,18.6
+Person 8,70,8,Downstream Processing,Process Development,2026-06-10,2026-06-19,Not Started,0.05,2.3
+Person 10,70,8,Downstream Processing,Process Development,2026-06-10,2026-06-19,Not Started,0.3,13.8
+Person 9,70,8,Downstream Processing,Process Development,2026-06-10,2026-06-19,Not Started,0.15,6.9
+Person 12,71,9,Data Analysis,Data Science,2026-04-03,2026-04-11,Done,0.45,7.2
+Person 11,71,9,Data Analysis,Data Science,2026-04-03,2026-04-11,Done,0.4,6.4
+Person 16,72,5,Lab Equipment Maintenance,Automation,2026-01-22,2026-01-27,Done,0.2,3.4
+Person 15,72,5,Lab Equipment Maintenance,Automation,2026-01-22,2026-01-27,Done,0.3,5.1
+Person 20,73,6,Stakeholder Update,Program Management,2026-06-01,2026-06-03,Not Started,0.25,0.5
+Person 21,73,6,Stakeholder Update,Program Management,2026-06-01,2026-06-03,Not Started,0.55,1.1
+Person 20,74,0,Project Planning,Program Management,2026-01-16,2026-01-20,Done,0.7,13.3
+Person 21,74,0,Project Planning,Program Management,2026-01-16,2026-01-20,Done,0.1,1.9
+Person 4,75,1,DNA Assembly,Molecular Biology,2026-06-25,2026-06-28,Not Started,0.4,5.6
+Person 2,75,1,DNA Assembly,Molecular Biology,2026-06-25,2026-06-28,Not Started,0.45,6.3
+Person 6,76,5,Assay Development,Analytical,2026-04-04,2026-04-11,In Progress,0.1,1.1
+Person 7,76,5,Assay Development,Analytical,2026-04-04,2026-04-11,In Progress,0.05,0.55
+Person 5,76,5,Assay Development,Analytical,2026-04-04,2026-04-11,In Progress,0.15,1.65
+Person 19,78,3,Quality Review,Quality,2026-05-09,2026-05-11,Not Started,0.8,9.6
+Person 18,78,3,Quality Review,Quality,2026-05-09,2026-05-11,Not Started,0.05,0.6
+Person 15,79,10,Automation Workflow Setup,Automation,2026-02-08,2026-02-23,Done,0.4,12.8
+Person 16,79,10,Automation Workflow Setup,Automation,2026-02-08,2026-02-23,Done,0.4,12.8
+Person 9,80,0,Downstream Processing,Process Development,2026-01-19,2026-01-29,Done,0.55,22.55
+Person 10,80,0,Downstream Processing,Process Development,2026-01-19,2026-01-29,Done,0.3,12.3
+Person 0,81,0,Strain Construction,Strain Engineering,2026-04-20,2026-05-13,Not Started,0.15,13.35
+Person 1,81,0,Strain Construction,Strain Engineering,2026-04-20,2026-05-13,Not Started,0.1,8.9
+Person 3,82,6,DNA Assembly,Molecular Biology,2026-03-26,2026-03-30,Done,0.25,5.5
+Person 13,83,3,Model Development,Data Science,2026-04-29,2026-05-11,In Progress,0.45,29.7
+Person 12,83,3,Model Development,Data Science,2026-04-29,2026-05-11,In Progress,0.25,16.5
+Person 20,84,8,Stakeholder Update,Program Management,2026-05-26,2026-05-28,Not Started,0.65,8.45
+Person 13,85,11,Model Development,Data Science,2026-03-29,2026-04-12,Not Started,0.25,18.75
+Person 11,85,11,Model Development,Data Science,2026-03-29,2026-04-12,Not Started,0.15,11.25
+Person 12,85,11,Model Development,Data Science,2026-03-29,2026-04-12,Not Started,0.5,37.5
+Person 8,86,9,Fermentation Run,Process Development,2026-02-13,2026-02-21,Done,0.3,15.6
+Person 10,86,9,Fermentation Run,Process Development,2026-02-13,2026-02-21,Done,0.4,20.8
+Person 8,87,6,Downstream Processing,Process Development,2026-05-09,2026-05-15,In Progress,0.55,6.6
+Person 11,88,7,Model Development,Data Science,2026-03-07,2026-03-19,Done,0.55,42.35
+Person 12,88,7,Model Development,Data Science,2026-03-07,2026-03-19,Done,0.15,11.55
+Person 8,89,9,Fermentation Run,Process Development,2026-06-30,2026-07-19,Not Started,0.35,9.45
+Person 10,89,9,Fermentation Run,Process Development,2026-06-30,2026-07-19,Not Started,0.2,5.4
+Person 9,90,3,Fermentation Run,Process Development,2026-03-11,2026-03-22,Done,0.85,35.7
+Person 12,91,0,Data Analysis,Data Science,2026-06-13,2026-06-20,Not Started,0.25,5.0
+Person 14,91,0,Data Analysis,Data Science,2026-06-13,2026-06-20,Not Started,0.1,2.0
+Person 9,92,8,Downstream Processing,Process Development,2026-06-03,2026-06-11,Not Started,0.05,1.7
+Person 8,92,8,Downstream Processing,Process Development,2026-06-03,2026-06-11,Not Started,0.65,22.1
+Person 10,92,8,Downstream Processing,Process Development,2026-06-03,2026-06-11,Not Started,0.2,6.8
+Person 4,93,3,PCR / Cloning,Molecular Biology,2026-05-18,2026-05-20,Not Started,0.1,0.7
+Person 10,94,2,Fermentation Run,Process Development,2026-04-02,2026-04-16,Cancelled,0.45,31.05
+Person 8,94,2,Fermentation Run,Process Development,2026-04-02,2026-04-16,Cancelled,0.2,13.8
+Person 3,95,10,PCR / Cloning,Molecular Biology,2026-06-03,2026-06-05,Not Started,0.3,3.6
+Person 4,95,10,PCR / Cloning,Molecular Biology,2026-06-03,2026-06-05,Not Started,0.3,3.6
+Person 2,95,10,PCR / Cloning,Molecular Biology,2026-06-03,2026-06-05,Not Started,0.5,6.0
+Person 16,96,10,Lab Equipment Maintenance,Automation,2026-05-20,2026-05-25,Not Started,0.7,14.7
+Person 21,97,8,Stakeholder Update,Program Management,2026-03-28,2026-03-30,Done,0.6,1.2
+Person 17,98,11,Quality Review,Quality,2026-06-18,2026-06-25,Not Started,0.55,11.55
+Person 16,99,0,Automation Workflow Setup,Automation,2026-06-15,2026-07-04,Not Started,0.3,6.6
+Person 0,100,4,Strain Construction,Strain Engineering,2026-04-16,2026-05-08,Not Started,0.35,27.65
+Person 8,101,9,Fermentation Run,Process Development,2026-02-26,2026-03-18,Done,0.4,30.8
+Person 10,101,9,Fermentation Run,Process Development,2026-02-26,2026-03-18,Done,0.15,11.55
+Person 9,101,9,Fermentation Run,Process Development,2026-02-26,2026-03-18,Done,0.55,42.35
+Person 22,102,0,Project Planning,Program Management,2026-03-01,2026-03-07,Done,0.5,15.0
+Person 8,103,10,Fermentation Run,Process Development,2026-06-10,2026-06-17,Not Started,0.45,10.8
+Person 9,103,10,Fermentation Run,Process Development,2026-06-10,2026-06-17,Not Started,0.25,6.0
+Person 10,103,10,Fermentation Run,Process Development,2026-06-10,2026-06-17,Not Started,0.55,13.2
+Person 18,104,8,Quality Review,Quality,2026-03-30,2026-04-06,Done,0.25,5.5
+Person 19,104,8,Quality Review,Quality,2026-03-30,2026-04-06,Done,0.25,5.5
+Person 3,106,2,PCR / Cloning,Molecular Biology,2026-03-07,2026-03-08,Done,0.1,0.4
+Person 4,106,2,PCR / Cloning,Molecular Biology,2026-03-07,2026-03-08,Done,0.65,2.6
+Person 4,107,8,DNA Assembly,Molecular Biology,2026-03-10,2026-03-15,Done,0.4,13.2
+Person 2,107,8,DNA Assembly,Molecular Biology,2026-03-10,2026-03-15,Done,0.15,4.95
+Person 3,107,8,DNA Assembly,Molecular Biology,2026-03-10,2026-03-15,Done,0.65,21.45
+Person 7,108,9,Sample Testing,Analytical,2026-03-23,2026-03-29,Done,0.1,3.7
+Person 5,108,9,Sample Testing,Analytical,2026-03-23,2026-03-29,Done,0.25,9.25
+Person 17,109,2,Deviation Investigation,Quality,2026-05-25,2026-06-01,Not Started,0.35,8.05
+Person 18,109,2,Deviation Investigation,Quality,2026-05-25,2026-06-01,Not Started,0.1,2.3
+Person 19,109,2,Deviation Investigation,Quality,2026-05-25,2026-06-01,Not Started,0.5,11.5
+Person 2,110,2,PCR / Cloning,Molecular Biology,2026-02-10,2026-02-11,Done,0.6,3.0
+Person 17,111,9,Deviation Investigation,Quality,2026-03-22,2026-03-28,Done,0.5,10.0
+Person 19,111,9,Deviation Investigation,Quality,2026-03-22,2026-03-28,Done,0.25,5.0
+Person 22,113,7,Project Planning,Program Management,2026-03-26,2026-03-29,Done,0.15,3.0
+Person 20,113,7,Project Planning,Program Management,2026-03-26,2026-03-29,Done,0.1,2.0
+Person 21,113,7,Project Planning,Program Management,2026-03-26,2026-03-29,Done,0.7,14.0
+Person 6,115,1,Sample Testing,Analytical,2026-05-09,2026-05-14,Not Started,0.15,3.6
+Person 5,115,1,Sample Testing,Analytical,2026-05-09,2026-05-14,Not Started,0.1,2.4
+Person 7,115,1,Sample Testing,Analytical,2026-05-09,2026-05-14,Not Started,0.4,9.6
+Person 5,116,0,Assay Development,Analytical,2026-02-20,2026-02-28,Done,0.35,7.7
+Person 3,117,2,DNA Assembly,Molecular Biology,2026-01-24,2026-01-29,Done,0.4,9.2
+Person 4,117,2,DNA Assembly,Molecular Biology,2026-01-24,2026-01-29,Done,0.05,1.15
+Person 2,117,2,DNA Assembly,Molecular Biology,2026-01-24,2026-01-29,Done,0.5,11.5
+Person 15,118,3,Automation Workflow Setup,Automation,2026-01-23,2026-02-16,Done,0.35,31.5
+Person 16,118,3,Automation Workflow Setup,Automation,2026-01-23,2026-02-16,Done,0.2,18.0
+Person 6,119,0,Assay Development,Analytical,2026-05-17,2026-05-28,In Progress,0.7,23.8
+Person 5,119,0,Assay Development,Analytical,2026-05-17,2026-05-28,In Progress,0.05,1.7
+Person 17,120,2,Deviation Investigation,Quality,2026-05-01,2026-05-09,Not Started,0.7,23.8
+Person 5,121,3,Assay Development,Analytical,2026-02-08,2026-02-19,Done,0.05,3.1
+Person 6,121,3,Assay Development,Analytical,2026-02-08,2026-02-19,Done,0.35,21.7
+Person 9,122,3,Downstream Processing,Process Development,2026-01-06,2026-01-20,Cancelled,0.3,27.9
+Person 10,122,3,Downstream Processing,Process Development,2026-01-06,2026-01-20,Cancelled,0.4,37.2
+Person 14,123,3,Data Analysis,Data Science,2026-01-22,2026-02-01,Done,0.7,47.6
+Person 2,124,8,PCR / Cloning,Molecular Biology,2026-01-12,2026-01-15,Done,0.2,3.4
+Person 11,125,9,Model Development,Data Science,2026-03-13,2026-03-31,Done,0.15,15.9
+Person 13,125,9,Model Development,Data Science,2026-03-13,2026-03-31,Done,0.35,37.1
+Person 15,126,7,Automation Workflow Setup,Automation,2026-03-17,2026-04-04,Done,0.2,11.6
+Person 16,126,7,Automation Workflow Setup,Automation,2026-03-17,2026-04-04,Done,0.45,26.1
+Person 16,127,7,Lab Equipment Maintenance,Automation,2026-03-28,2026-04-01,Done,0.3,4.5
+Person 9,128,11,Fermentation Run,Process Development,2026-06-16,2026-06-30,Not Started,0.65,39.0
+Person 11,129,2,Data Analysis,Data Science,2026-02-26,2026-03-04,Done,0.5,14.0
+Person 12,129,2,Data Analysis,Data Science,2026-02-26,2026-03-04,Done,0.25,7.0
+Person 7,130,5,Sample Testing,Analytical,2026-02-10,2026-02-14,Done,0.35,3.85
+Person 5,130,5,Sample Testing,Analytical,2026-02-10,2026-02-14,Done,0.2,2.2
+Person 6,130,5,Sample Testing,Analytical,2026-02-10,2026-02-14,Done,0.65,7.15
+Person 11,131,2,Model Development,Data Science,2026-01-19,2026-01-26,Done,0.05,0.8
+Person 12,131,2,Model Development,Data Science,2026-01-19,2026-01-26,Done,0.05,0.8
+Person 14,131,2,Model Development,Data Science,2026-01-19,2026-01-26,Done,0.55,8.8
+Person 11,132,0,Data Analysis,Data Science,2026-04-01,2026-04-05,Done,0.75,14.25
+Person 16,133,2,Automation Workflow Setup,Automation,2026-04-24,2026-05-17,Not Started,0.4,17.6
+Person 5,134,0,Assay Development,Analytical,2026-01-11,2026-01-16,Done,0.15,3.15
+Person 6,134,0,Assay Development,Analytical,2026-01-11,2026-01-16,Done,0.25,5.25
+Person 7,134,0,Assay Development,Analytical,2026-01-11,2026-01-16,Done,0.3,6.3
+Person 16,135,3,Lab Equipment Maintenance,Automation,2026-01-29,2026-02-01,Done,0.15,2.1
+Person 2,136,2,PCR / Cloning,Molecular Biology,2026-03-30,2026-04-01,Not Started,0.15,1.35
+Person 4,136,2,PCR / Cloning,Molecular Biology,2026-03-30,2026-04-01,Not Started,0.35,3.15
+Person 4,137,5,PCR / Cloning,Molecular Biology,2026-02-20,2026-02-23,Done,0.4,2.0
+Person 2,137,5,PCR / Cloning,Molecular Biology,2026-02-20,2026-02-23,Done,0.25,1.25
+Person 3,137,5,PCR / Cloning,Molecular Biology,2026-02-20,2026-02-23,Done,0.6,3.0
+Person 18,138,5,Quality Review,Quality,2026-05-07,2026-05-11,Not Started,0.7,17.5
+Person 19,138,5,Quality Review,Quality,2026-05-07,2026-05-11,Not Started,0.15,3.75
+Person 11,139,0,Data Analysis,Data Science,2026-06-29,2026-07-03,Not Started,0.15,2.25
+Person 14,139,0,Data Analysis,Data Science,2026-06-29,2026-07-03,Not Started,0.05,0.75
+Person 12,139,0,Data Analysis,Data Science,2026-06-29,2026-07-03,Not Started,0.2,3.0
+Person 15,140,7,Lab Equipment Maintenance,Automation,2026-01-18,2026-01-23,Done,0.65,21.45
+Person 19,141,7,Deviation Investigation,Quality,2026-04-29,2026-05-06,Done,0.65,16.25
+Person 17,141,7,Deviation Investigation,Quality,2026-04-29,2026-05-06,Done,0.05,1.25
+Person 10,144,5,Downstream Processing,Process Development,2026-03-24,2026-04-03,In Progress,0.25,11.25
+Person 9,144,5,Downstream Processing,Process Development,2026-03-24,2026-04-03,In Progress,0.1,4.5
+Person 19,145,7,Deviation Investigation,Quality,2026-05-21,2026-05-31,Not Started,0.25,3.0
+Person 11,146,5,Data Analysis,Data Science,2026-01-12,2026-01-22,Done,0.5,24.0
+Person 14,146,5,Data Analysis,Data Science,2026-01-12,2026-01-22,Done,0.05,2.4
+Person 12,146,5,Data Analysis,Data Science,2026-01-12,2026-01-22,Done,0.6,28.8
+Person 21,147,2,Project Planning,Program Management,2026-06-08,2026-06-10,Not Started,0.45,4.95
+Person 22,147,2,Project Planning,Program Management,2026-06-08,2026-06-10,Not Started,0.3,3.3
+Person 20,147,2,Project Planning,Program Management,2026-06-08,2026-06-10,Not Started,0.55,6.05
+Person 20,149,8,Stakeholder Update,Program Management,2026-05-11,2026-05-12,Not Started,0.1,0.6
+Person 22,149,8,Stakeholder Update,Program Management,2026-05-11,2026-05-12,Not Started,0.2,1.2
+Person 13,150,10,Model Development,Data Science,2026-02-10,2026-02-23,Cancelled,0.1,1.3
+Person 19,151,7,Quality Review,Quality,2026-03-26,2026-04-01,In Progress,0.7,11.2
+Person 6,152,4,Assay Development,Analytical,2026-06-26,2026-07-06,Not Started,0.15,8.1
+Person 7,152,4,Assay Development,Analytical,2026-06-26,2026-07-06,Not Started,0.1,5.4
+Person 5,152,4,Assay Development,Analytical,2026-06-26,2026-07-06,Not Started,0.5,27.0
+Person 21,153,6,Stakeholder Update,Program Management,2026-04-19,2026-04-21,Not Started,0.3,3.6
+Person 0,155,11,Strain Construction,Strain Engineering,2026-03-27,2026-04-19,In Progress,0.05,5.85
+Person 1,155,11,Strain Construction,Strain Engineering,2026-03-27,2026-04-19,In Progress,0.05,5.85
+Person 17,156,0,Deviation Investigation,Quality,2026-04-30,2026-05-13,Not Started,0.05,1.4
+Person 8,157,3,Fermentation Run,Process Development,2026-03-21,2026-04-03,In Progress,0.85,69.7
+Person 22,158,0,Project Planning,Program Management,2026-01-02,2026-01-05,Done,0.2,4.2
+Person 21,158,0,Project Planning,Program Management,2026-01-02,2026-01-05,Done,0.5,10.5
+Person 20,158,0,Project Planning,Program Management,2026-01-02,2026-01-05,Done,0.25,5.25
+Person 21,159,9,Project Planning,Program Management,2026-05-12,2026-05-14,Not Started,0.2,2.8
+Person 22,159,9,Project Planning,Program Management,2026-05-12,2026-05-14,Not Started,0.45,6.3
+Person 14,160,6,Model Development,Data Science,2026-05-07,2026-05-22,Not Started,0.75,77.25
+Person 2,162,9,DNA Assembly,Molecular Biology,2026-03-26,2026-03-28,Done,0.35,4.9
+Person 10,163,3,Fermentation Run,Process Development,2026-01-20,2026-02-08,Done,0.55,17.05
+Person 8,163,3,Fermentation Run,Process Development,2026-01-20,2026-02-08,Done,0.3,9.3
+Person 8,164,1,Fermentation Run,Process Development,2026-05-25,2026-06-05,Not Started,0.3,22.8
+Person 13,165,3,Model Development,Data Science,2026-01-27,2026-02-07,Cancelled,0.4,8.8
+Person 11,165,3,Model Development,Data Science,2026-01-27,2026-02-07,Cancelled,0.1,2.2
+Person 12,165,3,Model Development,Data Science,2026-01-27,2026-02-07,Cancelled,0.55,12.1
+Person 20,166,9,Stakeholder Update,Program Management,2026-06-23,2026-06-25,Not Started,0.5,4.5
+Person 14,167,8,Data Analysis,Data Science,2026-01-03,2026-01-09,Done,0.1,3.0
+Person 5,168,5,Assay Development,Analytical,2026-05-21,2026-05-31,Not Started,0.3,17.4
+Person 11,169,11,Model Development,Data Science,2026-02-04,2026-02-18,Done,0.4,37.2
+Person 13,169,11,Model Development,Data Science,2026-02-04,2026-02-18,Done,0.1,9.3
+Person 15,170,0,Lab Equipment Maintenance,Automation,2026-05-30,2026-06-04,Not Started,0.15,3.6
+Person 16,170,0,Lab Equipment Maintenance,Automation,2026-05-30,2026-06-04,Not Started,0.2,4.8
+Person 12,171,8,Data Analysis,Data Science,2026-02-12,2026-02-20,Done,0.75,16.5
+Person 11,171,8,Data Analysis,Data Science,2026-02-12,2026-02-20,Done,0.05,1.1
+Person 6,172,6,Sample Testing,Analytical,2026-05-18,2026-05-21,Done,0.75,6.0
+Person 5,172,6,Sample Testing,Analytical,2026-05-18,2026-05-21,Done,0.05,0.4
+Person 5,173,5,Sample Testing,Analytical,2026-01-10,2026-01-13,Done,0.25,3.5
+Person 7,173,5,Sample Testing,Analytical,2026-01-10,2026-01-13,Done,0.2,2.8
+Person 6,173,5,Sample Testing,Analytical,2026-01-10,2026-01-13,Done,0.6,8.4
+Person 20,174,4,Project Planning,Program Management,2026-01-08,2026-01-12,Done,0.8,6.4
+Person 22,174,4,Project Planning,Program Management,2026-01-08,2026-01-12,Done,0.05,0.4
+Person 20,175,6,Project Planning,Program Management,2026-01-02,2026-01-04,Done,0.4,2.8
+Person 21,176,9,Stakeholder Update,Program Management,2026-05-01,2026-05-02,Done,0.15,0.45
+Person 20,176,9,Stakeholder Update,Program Management,2026-05-01,2026-05-02,Done,0.05,0.15
+Person 4,177,3,DNA Assembly,Molecular Biology,2026-03-02,2026-03-04,Done,0.2,2.6
+Person 3,177,3,DNA Assembly,Molecular Biology,2026-03-02,2026-03-04,Done,0.05,0.65
+Person 2,177,3,DNA Assembly,Molecular Biology,2026-03-02,2026-03-04,Done,0.25,3.25
+Person 18,178,9,Deviation Investigation,Quality,2026-05-20,2026-05-26,Done,0.45,11.25
+Person 19,178,9,Deviation Investigation,Quality,2026-05-20,2026-05-26,Done,0.1,2.5
+Person 15,179,2,Lab Equipment Maintenance,Automation,2026-04-24,2026-04-29,In Progress,0.85,5.1
+Person 11,181,7,Data Analysis,Data Science,2026-03-12,2026-03-22,Done,0.05,1.35
+Person 12,181,7,Data Analysis,Data Science,2026-03-12,2026-03-22,Done,0.05,1.35
+Person 13,181,7,Data Analysis,Data Science,2026-03-12,2026-03-22,Done,0.3,8.1
+Person 17,182,2,Deviation Investigation,Quality,2026-02-10,2026-02-22,Done,0.8,42.4
+Person 19,183,11,Deviation Investigation,Quality,2026-03-09,2026-03-15,Done,0.1,0.7
+Person 17,183,11,Deviation Investigation,Quality,2026-03-09,2026-03-15,Done,0.05,0.35
+Person 13,184,9,Model Development,Data Science,2026-01-11,2026-01-25,Done,0.05,1.95
+Person 14,184,9,Model Development,Data Science,2026-01-11,2026-01-25,Done,0.2,7.8
+Person 13,185,8,Data Analysis,Data Science,2026-03-10,2026-03-17,Done,0.15,1.05
+Person 14,185,8,Data Analysis,Data Science,2026-03-10,2026-03-17,Done,0.15,1.05
+Person 12,185,8,Data Analysis,Data Science,2026-03-10,2026-03-17,Done,0.55,3.85
+Person 9,186,8,Fermentation Run,Process Development,2026-02-20,2026-03-01,Cancelled,0.7,43.4
+Person 8,186,8,Fermentation Run,Process Development,2026-02-20,2026-03-01,Cancelled,0.05,3.1
+Person 15,187,9,Automation Workflow Setup,Automation,2026-02-09,2026-03-02,Done,0.85,117.3
+Person 15,188,10,Lab Equipment Maintenance,Automation,2026-05-24,2026-05-28,Not Started,0.3,8.4
+Person 15,189,2,Automation Workflow Setup,Automation,2026-03-09,2026-04-02,Done,0.45,38.7
+Person 15,190,2,Lab Equipment Maintenance,Automation,2026-06-18,2026-06-20,Not Started,0.45,4.95
+Person 16,190,2,Lab Equipment Maintenance,Automation,2026-06-18,2026-06-20,Not Started,0.25,2.75
+Person 22,192,8,Stakeholder Update,Program Management,2026-01-30,2026-01-31,Done,0.25,1.25
+Person 20,192,8,Stakeholder Update,Program Management,2026-01-30,2026-01-31,Done,0.2,1.0
+Person 21,192,8,Stakeholder Update,Program Management,2026-01-30,2026-01-31,Done,0.5,2.5
+Person 22,193,5,Project Planning,Program Management,2026-06-13,2026-06-17,Not Started,0.7,16.8
+Person 18,194,9,Deviation Investigation,Quality,2026-01-24,2026-01-30,Done,0.2,4.4
+Person 19,194,9,Deviation Investigation,Quality,2026-01-24,2026-01-30,Done,0.05,1.1
+Person 17,194,9,Deviation Investigation,Quality,2026-01-24,2026-01-30,Done,0.5,11.0
+Person 16,195,5,Automation Workflow Setup,Automation,2026-04-13,2026-04-26,Not Started,0.25,5.0
+Person 15,195,5,Automation Workflow Setup,Automation,2026-04-13,2026-04-26,Not Started,0.55,11.0
+Person 10,196,5,Fermentation Run,Process Development,2026-03-07,2026-03-16,Done,0.65,11.7
+Person 22,197,1,Project Planning,Program Management,2026-03-13,2026-03-18,Done,0.15,2.4
+Person 22,198,11,Project Planning,Program Management,2026-02-27,2026-03-05,Done,0.6,9.6
+Person 7,199,4,Assay Development,Analytical,2026-04-17,2026-04-26,Not Started,0.15,7.35

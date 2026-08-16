@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: raw
+    description: Raw tables loaded from data/raw CSVs into DuckDB.
+    schema: main
+    tables:
+      - name: projects
+      - name: resources
+      - name: task_types
+      - name: tasks
+      - name: allocations
+      - name: time_logs
+      - name: budgets
+      - name: spend
+      - name: milestones
+      - name: kpis

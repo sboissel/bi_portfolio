@@ -1,0 +1,7 @@
+bi_portfolio:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../data/biotech_ops.duckdb
+      threads: 4

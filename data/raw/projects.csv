@@ -1,13 +1,13 @@
 project_id,project_name,project_type,priority,status,start_date,end_date,budget_total
-0,Project 0,Process Optimization,High,At Risk,2026-01-09,2026-04-19,346953
-1,Project 1,Strain Development,Low,Delayed,2026-01-14,2026-04-15,254182
-2,Project 2,Platform Build,Low,On Track,2026-01-12,2026-05-24,324867
-3,Project 3,Process Optimization,Medium,Delayed,2026-01-27,2026-06-10,429279
-4,Project 4,Customer Program,Low,Delayed,2026-02-05,2026-07-11,162333
-5,Project 5,Platform Build,Medium,On Track,2026-02-08,2026-07-10,151481
-6,Project 6,Assay Development,Low,On Track,2026-01-01,2026-05-25,405604
-7,Project 7,Strain Development,High,Delayed,2026-02-03,2026-07-10,159340
-8,Project 8,Customer Program,High,At Risk,2026-01-05,2026-05-22,162165
-9,Project 9,Customer Program,Low,Delayed,2026-01-13,2026-05-01,236532
-10,Project 10,Process Optimization,Low,On Track,2026-01-14,2026-06-07,279703
-11,Project 11,Customer Program,Medium,On Track,2026-02-28,2026-06-19,343373
+0,Project 0,Process Optimization,High,At Risk,2026-01-05,2026-06-22,232448
+1,Project 1,Assay Development,High,Delayed,2026-02-04,2026-05-08,221068
+2,Project 2,Platform Build,Medium,At Risk,2026-02-04,2026-07-03,334861
+3,Project 3,Platform Build,High,Delayed,2026-03-01,2026-06-08,377833
+4,Project 4,Assay Development,Low,At Risk,2026-01-14,2026-06-01,380038
+5,Project 5,Strain Development,High,At Risk,2026-01-12,2026-05-10,345891
+6,Project 6,Customer Program,High,At Risk,2026-01-06,2026-05-20,403771
+7,Project 7,Strain Development,Low,Delayed,2026-02-03,2026-06-05,449058
+8,Project 8,Assay Development,Low,On Track,2026-01-29,2026-05-06,342871
+9,Project 9,Customer Program,Medium,On Track,2026-01-25,2026-06-05,421752
+10,Project 10,Process Optimization,High,Delayed,2026-02-10,2026-06-15,340944
+11,Project 11,Assay Development,Low,Delayed,2026-01-11,2026-04-14,123550

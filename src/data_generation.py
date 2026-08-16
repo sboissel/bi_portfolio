@@ -120,13 +120,15 @@ projects_df = pd.DataFrame(projects, columns=[
 # RESOURCES
 # -----------------------
 resources = []
+resource_id = 0
 for team in teams:
-    for i in range(random.randint(2, 4)):  # 1-5 resources per team
+    for _ in range(random.randint(2, 4)):  # 2-4 resources per team
         role = random.choice(roles_by_team[team])
         availability = role_allocation_baseline[role] * 40  # hours per week
         resources.append([
-            i, f"Person {i}", team, role, availability
+            resource_id, f"Person {resource_id}", team, role, availability
         ])
+        resource_id += 1
 
 resources_df = pd.DataFrame(resources, columns=[
     "resource_id", "name", "team", "role", "capacity_hours_per_week"

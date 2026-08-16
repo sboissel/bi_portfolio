@@ -1,0 +1,93 @@
+version: 2
+
+models:
+  - name: stg_projects
+    description: Staged R&D projects.
+    columns:
+      - name: project_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_resources
+    description: Staged people. resource_id and resource_name are unique across the company.
+    columns:
+      - name: resource_sk
+        data_tests:
+          - unique
+          - not_null
+      - name: resource_id
+        data_tests:
+          - unique
+          - not_null
+      - name: resource_name
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_task_types
+    description: Staged catalog of work types and default teams.
+    columns:
+      - name: task_type_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_tasks
+    description: Staged project tasks.
+    columns:
+      - name: task_id
+        data_tests:
+          - unique
+          - not_null
+      - name: project_id
+        data_tests:
+          - not_null
+
+  - name: stg_allocations
+    description: Staged planned resource assignments to tasks. Source completion_date is the task due date.
+    columns:
+      - name: allocation_sk
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_time_logs
+    description: Staged weekday actual hours. Source grain can repeat a person/project/day when someone is on multiple tasks, so the key includes a row number.
+    columns:
+      - name: time_log_sk
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_budgets
+    description: Staged planned spend by project and cost category.
+    columns:
+      - name: budget_sk
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_spend
+    description: Staged monthly actual spend by project and cost category.
+    columns:
+      - name: spend_sk
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_milestones
+    description: Staged project milestones with planned vs actual dates.
+    columns:
+      - name: milestone_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_kpis
+    description: Staged monthly portfolio KPIs. Baseline rows have a null period_date.
+    columns:
+      - name: kpi_sk
+        data_tests:
+          - unique
+          - not_null
