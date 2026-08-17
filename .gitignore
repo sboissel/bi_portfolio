@@ -1,7 +1,10 @@
-.python-version
+.venv.python-version
 .venv/
 .env
 logs/
+.vscode/
+
+# dbt
 
 dbt/target/
 dbt/dbt_packages/
