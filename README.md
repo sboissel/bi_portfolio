@@ -9,7 +9,7 @@ All data is fictional. It is meant for BI prototypes, dashboard mockups, and ana
 ```
 src/data_generation.py   # CSV generator
 src/create_database.py   # load CSVs into DuckDB
-dbt/                     # staging models
+dbt/                     # staging views and mart tables (dims + facts)
 data/raw/                # exported CSVs
 data/biotech_ops.duckdb  # DuckDB database
 requirements.txt         # pandas, numpy, duckdb, dbt
@@ -59,13 +59,15 @@ python src/create_database.py
 
 This replaces `data/biotech_ops.duckdb`.
 
-Build staging views (one `stg_*` model per raw table) in that same database:
+Build staging views and mart tables in that same database, then run tests:
 
 ```bash
 cd dbt
 dbt run --profiles-dir .
 dbt test --profiles-dir .
 ```
+
+See `dbt/README.md` for model layout and test types. Always pass `--profiles-dir .` so dbt uses the local DuckDB profile.
 
 ## Development environment (pyenv)
 
@@ -83,7 +85,7 @@ python -m pip install -r requirements.txt
 # run generators and DB loader using the pyenv python
 python src/data_generation.py
 python src/create_database.py
-cd dbt && dbt run --profiles-dir .
+cd dbt && dbt run --profiles-dir . && dbt test --profiles-dir .
 ```
 
 Do not create or activate a `venv` for this project; using `pyenv local` ensures the correct interpreter is used when you run `python` commands.

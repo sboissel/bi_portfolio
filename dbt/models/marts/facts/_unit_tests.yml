@@ -1,0 +1,142 @@
+unit_tests:
+  - name: test_fct_task_performance_done_in_progress_and_not_started
+    description: >
+      Done tasks get actual_days and cycle_time from completion_date.
+      In-progress tasks use as_of_date for actual_days and have no cycle_time.
+      Not-started tasks have null duration metrics and zero actual hours.
+    model: fct_task_performance
+    overrides:
+      vars:
+        as_of_date: "2026-05-01"
+    given:
+      - input: ref('dim_tasks')
+        rows:
+          - {
+              task_sk: done,
+              task_id: 1,
+              project_id: 10,
+              task_name: Task Done,
+              task_type_id: 7,
+              task_type_name: Data Analysis,
+              status: Done,
+              start_date: "2026-01-05",
+              due_date: "2026-01-09",
+              completion_date: "2026-01-08",
+              estimated_hours: 10
+            }
+          - {
+              task_sk: wip,
+              task_id: 2,
+              project_id: 10,
+              task_name: Task WIP,
+              task_type_id: 7,
+              task_type_name: Data Analysis,
+              status: "In Progress",
+              start_date: "2026-04-01",
+              due_date: "2026-04-10",
+              completion_date: null,
+              estimated_hours: 20
+            }
+          - {
+              task_sk: ns,
+              task_id: 3,
+              project_id: 10,
+              task_name: Task NS,
+              task_type_id: 7,
+              task_type_name: Data Analysis,
+              status: "Not Started",
+              start_date: "2026-06-01",
+              due_date: "2026-06-05",
+              completion_date: null,
+              estimated_hours: 8
+            }
+      - input: ref('dim_projects')
+        rows:
+          - {project_id: 10, project_name: Project 10}
+      - input: ref('dim_task_types')
+        rows:
+          - {task_type_id: 7, default_team: Data Science}
+      - input: ref('dim_time_logs')
+        rows:
+          - {task_id: 1, actual_hours: 6}
+          - {task_id: 1, actual_hours: 6}
+    expect:
+      rows:
+        - {
+            task_id: 1,
+            actual_hours: 12.0,
+            hour_variance: 2.0,
+            planned_days: 4,
+            actual_days: 3,
+            cycle_time: 4
+          }
+        - {
+            task_id: 2,
+            actual_hours: 0.0,
+            hour_variance: -20.0,
+            planned_days: 9,
+            actual_days: 30,
+            cycle_time: null
+          }
+        - {
+            task_id: 3,
+            actual_hours: 0.0,
+            hour_variance: -8.0,
+            planned_days: 4,
+            actual_days: null,
+            cycle_time: null
+          }
+
+  - name: test_fct_project_financials_spreads_planned_across_installments
+    description: >
+      Planned budget is split evenly across spend installments, then summed
+      to calendar month. Two January installments each get half the budget.
+    model: fct_project_financials
+    given:
+      - input: ref('dim_budgets')
+        rows:
+          - {project_id: 1, cost_category: Labor, planned_amount: 120}
+      - input: ref('dim_spend')
+        rows:
+          - {
+              project_id: 1,
+              cost_category: Labor,
+              spend_date: "2026-01-01",
+              spend_month: "2026-01-01",
+              actual_amount: 50
+            }
+          - {
+              project_id: 1,
+              cost_category: Labor,
+              spend_date: "2026-01-31",
+              spend_month: "2026-01-01",
+              actual_amount: 70
+            }
+          - {
+              project_id: 1,
+              cost_category: Labor,
+              spend_date: "2026-03-02",
+              spend_month: "2026-03-01",
+              actual_amount: 40
+            }
+      - input: ref('dim_projects')
+        rows:
+          - {project_id: 1, project_name: Project 1}
+    expect:
+      rows:
+        - {
+            project: Project 1,
+            cost_category: Labor,
+            month: "2026-01-01",
+            planned: 80.0,
+            actual: 120.0,
+            variance: 40.0
+          }
+        - {
+            project: Project 1,
+            cost_category: Labor,
+            month: "2026-03-01",
+            planned: 40.0,
+            actual: 40.0,
+            variance: 0.0
+          }

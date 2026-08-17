@@ -8,6 +8,18 @@ models:
         data_tests:
           - unique
           - not_null
+      - name: status
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['On Track', 'At Risk', 'Delayed']
+      - name: priority
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['High', 'Medium', 'Low']
 
   - name: stg_resources
     description: Staged people. resource_id and resource_name are unique across the company.
@@ -43,6 +55,23 @@ models:
       - name: project_id
         data_tests:
           - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_projects')
+                field: project_id
+      - name: task_type_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_task_types')
+                field: task_type_id
+      - name: status
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Not Started', 'In Progress', 'Done', 'Cancelled']
 
   - name: stg_allocations
     description: Staged planned resource assignments to tasks. Source completion_date is the task due date.
@@ -51,6 +80,33 @@ models:
         data_tests:
           - unique
           - not_null
+      - name: resource_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_resources')
+                field: resource_id
+      - name: task_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_tasks')
+                field: task_id
+      - name: project_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_projects')
+                field: project_id
+      - name: status
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Not Started', 'In Progress', 'Done', 'Cancelled']
 
   - name: stg_time_logs
     description: Staged weekday actual hours by resource, project, and task.
@@ -59,6 +115,27 @@ models:
         data_tests:
           - unique
           - not_null
+      - name: resource_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_resources')
+                field: resource_id
+      - name: task_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_tasks')
+                field: task_id
+      - name: project_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_projects')
+                field: project_id
 
   - name: stg_budgets
     description: Staged planned spend by project and cost category.
@@ -67,6 +144,19 @@ models:
         data_tests:
           - unique
           - not_null
+      - name: project_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_projects')
+                field: project_id
+      - name: cost_category
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Labor', 'External']
 
   - name: stg_spend
     description: Staged monthly actual spend by project and cost category.
@@ -75,6 +165,19 @@ models:
         data_tests:
           - unique
           - not_null
+      - name: project_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_projects')
+                field: project_id
+      - name: cost_category
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Labor', 'External']
 
   - name: stg_milestones
     description: Staged project milestones with planned vs actual dates.
@@ -83,6 +186,19 @@ models:
         data_tests:
           - unique
           - not_null
+      - name: project_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_projects')
+                field: project_id
+      - name: status
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['On Time', 'Delayed']
 
   - name: stg_kpis
     description: Staged monthly portfolio KPIs. Baseline rows have a null period_date.

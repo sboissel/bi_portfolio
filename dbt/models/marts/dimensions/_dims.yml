@@ -76,6 +76,18 @@ models:
         data_tests:
           - unique
           - not_null
+      - name: resource_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_resources')
+                field: resource_id
+      - name: task_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_tasks')
+                field: task_id
 
   - name: dim_time_logs
     description: Daily actual-hours dimension.
@@ -84,6 +96,18 @@ models:
         data_tests:
           - unique
           - not_null
+      - name: resource_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_resources')
+                field: resource_id
+      - name: task_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_tasks')
+                field: task_id
 
   - name: dim_budgets
     description: Planned spend by project and cost category.

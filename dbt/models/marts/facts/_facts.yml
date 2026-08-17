@@ -31,6 +31,12 @@ models:
         description: Logged hours falling in this week.
       - name: utilization
         description: Actual hours divided by weekly capacity.
+      - name: planned
+        data_tests:
+          - not_null
+      - name: actual
+        data_tests:
+          - not_null
 
   - name: fct_project_performance
     description: >
@@ -108,6 +114,9 @@ models:
       - name: cost_category
         data_tests:
           - not_null
+          - accepted_values:
+              arguments:
+                values: ['Labor', 'External']
       - name: planned
         description: Share of total planned budget allocated to this month.
       - name: actual
@@ -140,6 +149,13 @@ models:
         description: actual minus planned, in calendar days.
       - name: on_time
         description: True when the milestone was not delayed.
+        data_tests:
+          - not_null
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['On Time', 'Delayed']
 
   - name: fct_resource_allocation
     description: >
@@ -186,6 +202,14 @@ models:
       - name: kpi
         data_tests:
           - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - 'On-Time Milestone Delivery (%)'
+                  - 'Resource Utilization (%)'
+                  - 'Budget Variance (%)'
+                  - 'Cycle Time (days)'
+                  - 'Quality Success Rate (%)'
       - name: month
         data_tests:
           - not_null
