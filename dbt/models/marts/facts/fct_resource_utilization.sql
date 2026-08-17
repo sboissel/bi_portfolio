@@ -86,6 +86,7 @@ spine as (
 
 select
     md5(concat_ws('|', spine.week_start, spine.resource_id)) as resource_utilization_sk,
+    spine.resource_id,
     spine.week_start as week,
     spine.resource_name as resource,
     spine.team,
