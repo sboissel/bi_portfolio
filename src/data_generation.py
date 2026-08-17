@@ -4,12 +4,10 @@ import numpy as np
 from datetime import date, timedelta
 import random
 from pathlib import Path
-from dataclasses import dataclass   
+from dataclasses import dataclass
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = REPO_ROOT / "data" / "raw"
-
-np.random.seed(42)
 
 # -----------------------
 # CONFIG
@@ -95,56 +93,20 @@ task_duration_ranges = {
     "Stakeholder Update": (1, 2)
 }
 
-# -----------------------
-# PROJECTS
-# -----------------------
-projects = []
-for i in range(n_projects):
-    s = START_DATE + timedelta(days=random.randint(0, 60))
-    e = s + timedelta(days=random.randint(90, 180))
-    budget = random.randint(100000, 500000)
+EXPECTED_CSV_NAMES = (
+    "projects",
+    "tasks",
+    "resources",
+    "task_types",
+    "allocations",
+    "time_logs",
+    "budgets",
+    "spend",
+    "milestones",
+    "kpis",
+)
 
-    projects.append([
-        i, f"Project {i}", random.choice(project_types),
-        random.choice(["High", "Medium", "Low"]),
-        random.choice(["On Track", "At Risk", "Delayed"]),
-        s, e, budget
-    ])
 
-projects_df = pd.DataFrame(projects, columns=[
-    "project_id", "project_name", "project_type", "priority", "status",
-    "start_date", "end_date", "budget_total"
-])
-
-# -----------------------
-# RESOURCES
-# -----------------------
-resources = []
-resource_id = 0
-for team in teams:
-    for _ in range(random.randint(2, 4)):  # 2-4 resources per team
-        role = random.choice(roles_by_team[team])
-        availability = role_allocation_baseline[role] * 40  # hours per week
-        resources.append([
-            resource_id, f"Person {resource_id}", team, role, availability
-        ])
-        resource_id += 1
-
-resources_df = pd.DataFrame(resources, columns=[
-    "resource_id", "name", "team", "role", "capacity_hours_per_week"
-])
-n_resources = len(resources_df)
-
-# -----------------------
-# TASK TYPES
-# -----------------------
-task_types_df = pd.DataFrame([
-    [i, name, team] for i, (name, team) in enumerate(task_types.items())
-], columns=["task_type_id", "task_type_name", "default_team"])
-
-# -----------------------
-# TASKS
-# -----------------------
 def status_simulator(due_date):
     if due_date < AS_OF_DATE + timedelta(days=-30):
         # past tasks should be closed
@@ -180,7 +142,8 @@ def status_simulator(due_date):
 
     return status
 
-def generate_task():
+
+def generate_task(task_id):
     project_id = random.randint(0, n_projects - 1)
     task_type_id = random.randint(0, len(task_types) - 1)
 
@@ -195,29 +158,16 @@ def generate_task():
     completion_date = min(AS_OF_DATE, due + timedelta(days=random.randint(-5, 15))) if status == "Done" else None
     estimated_hours = random.randint(duration, duration*7)  # 1-7 hours per day of work
 
-    return  [
-        i, project_id, f"Task {i}", task_type_id, task_type_name,
-        status, s, days_since_start, due, days_to_due, 
+    return [
+        task_id, project_id, f"Task {task_id}", task_type_id, task_type_name,
+        status, s, days_since_start, due, days_to_due,
         completion_date, estimated_hours
     ]
 
-tasks = []
-for i in range(n_tasks):
-    task = generate_task()
-    tasks.append(task)
-    
-tasks_df = pd.DataFrame(tasks, columns=[
-    "task_id", "project_id", "task_name", "task_type_id", 
-    "task_type_name", "status", "start_date", "days_since_start", 
-    "due_date", "days_to_due", "completion_date", "estimated_hours"
-])
 
-# -----------------------
-# ALLOCATIONS
-# -----------------------
-def generate_resource_allocation(task_dict):
+def generate_resource_allocation(task_dict, task_types_df, resources_df):
     assigned = random.choices([True, False], weights=[0.85, 0.15])[0]
-    if not assigned: 
+    if not assigned:
         return []  # no allocations for unassigned tasks
 
     # allocate 1-3 resources per task
@@ -235,25 +185,12 @@ def generate_resource_allocation(task_dict):
         planned_hours = alloc * estimated_hours  # scale by estimated hours and typical
         task_allocations.append([
             r, task_dict["task_id"], task_dict["project_id"], task_dict["task_type_name"],
-            team, task_dict["start_date"], task_dict["due_date"], task_dict["status"], 
+            team, task_dict["start_date"], task_dict["due_date"], task_dict["status"],
             round(alloc, 2), round(planned_hours, 2)
         ])
-    
+
     return task_allocations
-    
-allocations = []
-for _, row in tasks_df.iterrows():
-    allocations.extend(generate_resource_allocation(row.to_dict()))
 
-alloc_df = pd.DataFrame(allocations, columns=[
-    "resource_id", "task_id", "project_id", "task_type_name", 
-    "team", "start_date", "completion_date", "status", "allocation", 
-    "planned_hours"
-])
-
-# -----------------------
-# TIME LOGS (actuals)
-# -----------------------
 
 def generate_time_logs(allocation_dict):
     # only generate time logs for tasks that are in progress or done
@@ -267,14 +204,14 @@ def generate_time_logs(allocation_dict):
         planned_hours = allocation_dict["planned_hours"]
         fraction_complete = random.randint(1, 9) / 10  # simulate 10-90% completion
         actual_hours = round(planned_hours * fraction_complete * np.random.normal(1.1, 0.3), 2)  # some overrun
-    
+
     elif allocation_dict["status"] == "Done":
         # for done tasks, log time up to completion date
         start_date = allocation_dict["start_date"]
         end_date = allocation_dict["completion_date"]
         planned_hours = allocation_dict["planned_hours"]
         actual_hours = round(planned_hours * np.random.normal(1.1, 0.3), 2)  # some overrun
-    
+
     task_logs = []
     # use pandas business day range length to avoid divide-by-zero
     bdays = len(pd.bdate_range(start=start_date, end=end_date))
@@ -290,85 +227,15 @@ def generate_time_logs(allocation_dict):
 
     return task_logs
 
-time_logs = []
-for _, row in alloc_df.iterrows():
-    time_logs.extend(generate_time_logs(row.to_dict()))
 
-time_logs_df = pd.DataFrame(time_logs, columns=[
-    "resource_id", "project_id", "task_id",
-    "date", "actual_hours"
-])
-
-# -----------------------
-# BUDGET & SPEND
-# -----------------------
-budgets = []
-spend = []
-
-for pid in range(n_projects):
-    total = projects_df.loc[pid, "budget_total"]
-
-    labor = int(total * 0.6)
-    external = int(total * 0.4)
-
-    budgets.append([pid, "Labor", labor])
-    budgets.append([pid, "External", external])
-
-    # spend slightly off
-    for m in range(6):
-        spend.append([
-            pid,
-            START_DATE + timedelta(days=30 * m),
-            "Labor",
-            int(labor / 6 * np.random.normal(1.1, 0.2))
-        ])
-        spend.append([
-            pid,
-            START_DATE + timedelta(days=30 * m),
-            "External",
-            int(external / 6 * np.random.normal(0.9, 0.2))
-        ])
-
-budgets_df = pd.DataFrame(budgets, columns=[
-    "project_id", "cost_category", "planned_amount"
-])
-
-spend_df = pd.DataFrame(spend, columns=[
-    "project_id", "date", "cost_category", "actual_amount"
-])
-
-# -----------------------
-# MILESTONES
-# -----------------------
-milestones = []
-for i in range(50):
-    planned = START_DATE + timedelta(days=random.randint(30, 180))
-    actual = planned + timedelta(days=random.randint(-10, 20))
-
-    milestones.append([
-        i,
-        random.randint(0, n_projects - 1),
-        f"Milestone {i}",
-        planned,
-        actual,
-        "Delayed" if actual > planned else "On Time"
-    ])
-
-milestones_df = pd.DataFrame(milestones, columns=[
-    "milestone_id", "project_id", "milestone_name",
-    "planned_date", "actual_date", "status"
-])
-
-# -----------------------
-# KPI (monthly)
-# -----------------------
 @dataclass
 class ProjectEntry:
     name: str
     baseline: float
     target: float
 
-milestone_kpis = ProjectEntry(  
+
+milestone_kpis = ProjectEntry(
     name="On-Time Milestone Delivery (%)",
     baseline=0.72,
     target=0.9
@@ -383,7 +250,7 @@ budget_var_kpis = ProjectEntry(
     baseline=-0.08,  # 8% over budget
     target=0.0     # on budget
 )
-cycle_time_kpis = ProjectEntry(     
+cycle_time_kpis = ProjectEntry(
     name="Cycle Time (days)",
     baseline=26,
     target=20
@@ -392,61 +259,224 @@ quality_kpis = ProjectEntry(
     name="Quality Success Rate (%)",
     baseline=0.72,
     target=0.8
-)  
+)
 kpi_list = [milestone_kpis, resource_util_kpis, budget_var_kpis, cycle_time_kpis, quality_kpis]
+
 
 def generate_targets(kpi):
     increment = (kpi.target - kpi.baseline)/12  # linear improvement towards target over 12 months
     return [kpi.baseline + increment * month for month in range(1, 13)]
+
 
 def generate_actuals(kpi):
     actual = random.uniform(kpi.baseline, kpi.target * 1.1)
     increment = (actual - kpi.baseline)/12
     return [round(kpi.baseline + increment * month + random.uniform(-0.02, 0.02), 2) for month in range(1, 13)]
 
-kpis = []
-months = [date(2026, month, 1) for month in range(1, 13)]
-for kpi in kpi_list:
-    kpis.append([
-        kpi.name,
-        "Baseline",
-        kpi.baseline,
-        kpi.baseline,
-        kpi.target
-    ])
-    targets = generate_targets(kpi)
-    actuals = generate_actuals(kpi)
 
-    for i, month in enumerate(months):
-        target = targets[i]
-        actual = actuals[i] if month < date(2026, 4, 1) else None # only generate actuals for current and past periods    
-        kpis.append([
-            kpi.name,
-            month,
-            actual,
-            target,
-            kpi.target
+def generate_data(output_dir=None):
+    """Build the synthetic portfolio tables and write them as CSVs."""
+    np.random.seed(42)
+    output_dir = Path(output_dir) if output_dir is not None else DATA_DIR
+
+    # -----------------------
+    # PROJECTS
+    # -----------------------
+    projects = []
+    for i in range(n_projects):
+        s = START_DATE + timedelta(days=random.randint(0, 60))
+        e = s + timedelta(days=random.randint(90, 180))
+        budget = random.randint(100000, 500000)
+
+        projects.append([
+            i, f"Project {i}", random.choice(project_types),
+            random.choice(["High", "Medium", "Low"]),
+            random.choice(["On Track", "At Risk", "Delayed"]),
+            s, e, budget
         ])
 
-kpis_df = pd.DataFrame(kpis, columns=[
-    "kpi_name", "month", "actual_value", 
-    "monthly_target", "yearly_target"
-])
+    projects_df = pd.DataFrame(projects, columns=[
+        "project_id", "project_name", "project_type", "priority", "status",
+        "start_date", "end_date", "budget_total"
+    ])
 
-# -----------------------
-# EXPORT
-# -----------------------
-DATA_DIR.mkdir(parents=True, exist_ok=True)
+    # -----------------------
+    # RESOURCES
+    # -----------------------
+    resources = []
+    resource_id = 0
+    for team in teams:
+        for _ in range(random.randint(2, 4)):  # 2-4 resources per team
+            role = random.choice(roles_by_team[team])
+            availability = role_allocation_baseline[role] * 40  # hours per week
+            resources.append([
+                resource_id, f"Person {resource_id}", team, role, availability
+            ])
+            resource_id += 1
 
-projects_df.to_csv(DATA_DIR / "projects.csv", index=False)
-tasks_df.to_csv(DATA_DIR / "tasks.csv", index=False)
-resources_df.to_csv(DATA_DIR / "resources.csv", index=False)
-task_types_df.to_csv(DATA_DIR / "task_types.csv", index=False)
-alloc_df.to_csv(DATA_DIR / "allocations.csv", index=False)
-time_logs_df.to_csv(DATA_DIR / "time_logs.csv", index=False)
-budgets_df.to_csv(DATA_DIR / "budgets.csv", index=False)
-spend_df.to_csv(DATA_DIR / "spend.csv", index=False)
-milestones_df.to_csv(DATA_DIR / "milestones.csv", index=False)
-kpis_df.to_csv(DATA_DIR / "kpis.csv", index=False)
+    resources_df = pd.DataFrame(resources, columns=[
+        "resource_id", "name", "team", "role", "capacity_hours_per_week"
+    ])
 
-print(f"Data generated in {DATA_DIR}")
+    # -----------------------
+    # TASK TYPES
+    # -----------------------
+    task_types_df = pd.DataFrame([
+        [i, name, team] for i, (name, team) in enumerate(task_types.items())
+    ], columns=["task_type_id", "task_type_name", "default_team"])
+
+    # -----------------------
+    # TASKS
+    # -----------------------
+    tasks = []
+    for i in range(n_tasks):
+        tasks.append(generate_task(i))
+
+    tasks_df = pd.DataFrame(tasks, columns=[
+        "task_id", "project_id", "task_name", "task_type_id",
+        "task_type_name", "status", "start_date", "days_since_start",
+        "due_date", "days_to_due", "completion_date", "estimated_hours"
+    ])
+
+    # -----------------------
+    # ALLOCATIONS
+    # -----------------------
+    allocations = []
+    for _, row in tasks_df.iterrows():
+        allocations.extend(
+            generate_resource_allocation(row.to_dict(), task_types_df, resources_df)
+        )
+
+    alloc_df = pd.DataFrame(allocations, columns=[
+        "resource_id", "task_id", "project_id", "task_type_name",
+        "team", "start_date", "completion_date", "status", "allocation",
+        "planned_hours"
+    ])
+
+    # -----------------------
+    # TIME LOGS (actuals)
+    # -----------------------
+    time_logs = []
+    for _, row in alloc_df.iterrows():
+        time_logs.extend(generate_time_logs(row.to_dict()))
+
+    time_logs_df = pd.DataFrame(time_logs, columns=[
+        "resource_id", "project_id", "task_id",
+        "date", "actual_hours"
+    ])
+
+    # -----------------------
+    # BUDGET & SPEND
+    # -----------------------
+    budgets = []
+    spend = []
+
+    for pid in range(n_projects):
+        total = projects_df.loc[pid, "budget_total"]
+
+        labor = int(total * 0.6)
+        external = int(total * 0.4)
+
+        budgets.append([pid, "Labor", labor])
+        budgets.append([pid, "External", external])
+
+        # spend slightly off
+        for m in range(6):
+            spend.append([
+                pid,
+                START_DATE + timedelta(days=30 * m),
+                "Labor",
+                int(labor / 6 * np.random.normal(1.1, 0.2))
+            ])
+            spend.append([
+                pid,
+                START_DATE + timedelta(days=30 * m),
+                "External",
+                int(external / 6 * np.random.normal(0.9, 0.2))
+            ])
+
+    budgets_df = pd.DataFrame(budgets, columns=[
+        "project_id", "cost_category", "planned_amount"
+    ])
+
+    spend_df = pd.DataFrame(spend, columns=[
+        "project_id", "date", "cost_category", "actual_amount"
+    ])
+
+    # -----------------------
+    # MILESTONES
+    # -----------------------
+    milestones = []
+    for i in range(50):
+        planned = START_DATE + timedelta(days=random.randint(30, 180))
+        actual = planned + timedelta(days=random.randint(-10, 20))
+
+        milestones.append([
+            i,
+            random.randint(0, n_projects - 1),
+            f"Milestone {i}",
+            planned,
+            actual,
+            "Delayed" if actual > planned else "On Time"
+        ])
+
+    milestones_df = pd.DataFrame(milestones, columns=[
+        "milestone_id", "project_id", "milestone_name",
+        "planned_date", "actual_date", "status"
+    ])
+
+    # -----------------------
+    # KPI (monthly)
+    # -----------------------
+    kpis = []
+    months = [date(2026, month, 1) for month in range(1, 13)]
+    for kpi in kpi_list:
+        kpis.append([
+            kpi.name,
+            "Baseline",
+            kpi.baseline,
+            kpi.baseline,
+            kpi.target
+        ])
+        targets = generate_targets(kpi)
+        actuals = generate_actuals(kpi)
+
+        for i, month in enumerate(months):
+            target = targets[i]
+            actual = actuals[i] if month < date(2026, 4, 1) else None  # only generate actuals for current and past periods
+            kpis.append([
+                kpi.name,
+                month,
+                actual,
+                target,
+                kpi.target
+            ])
+
+    kpis_df = pd.DataFrame(kpis, columns=[
+        "kpi_name", "month", "actual_value",
+        "monthly_target", "yearly_target"
+    ])
+
+    frames = {
+        "projects": projects_df,
+        "tasks": tasks_df,
+        "resources": resources_df,
+        "task_types": task_types_df,
+        "allocations": alloc_df,
+        "time_logs": time_logs_df,
+        "budgets": budgets_df,
+        "spend": spend_df,
+        "milestones": milestones_df,
+        "kpis": kpis_df,
+    }
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    for name, df in frames.items():
+        df.to_csv(output_dir / f"{name}.csv", index=False)
+
+    print(f"Data generated in {output_dir}")
+    return frames
+
+
+if __name__ == "__main__":
+    generate_data()

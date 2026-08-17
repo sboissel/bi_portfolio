@@ -9,10 +9,11 @@ All data is fictional. It is meant for BI prototypes, dashboard mockups, and ana
 ```
 src/data_generation.py   # CSV generator
 src/create_database.py   # load CSVs into DuckDB
+tests/                   # pytest for the Python scripts
 dbt/                     # staging views and mart tables (dims + facts)
 data/raw/                # exported CSVs
 data/biotech_ops.duckdb  # DuckDB database
-requirements.txt         # pandas, numpy, duckdb, dbt
+requirements.txt         # pandas, numpy, duckdb, dbt, pytest
 ```
 
 The snapshot is frozen as of **2026-05-01** (about four months after the portfolio start date of 2026-01-01). Task status, time logs, and KPI actuals are simulated relative to that date.
@@ -59,15 +60,26 @@ python src/create_database.py
 
 This replaces `data/biotech_ops.duckdb`.
 
-Build staging views and mart tables in that same database, then run tests:
+Build staging views and mart tables in that same database, then run tests. The dbt project lives in `dbt/`, so a bare `dbt build` from the repo root will fail looking for `dbt_project.yml` here.
 
 ```bash
 cd dbt
-dbt run --profiles-dir .
-dbt test --profiles-dir .
+dbt build --profiles-dir .
 ```
 
-See `dbt/README.md` for model layout and test types. Always pass `--profiles-dir .` so dbt uses the local DuckDB profile.
+From the repo root instead:
+
+```bash
+dbt build --project-dir dbt --profiles-dir dbt
+```
+
+See `dbt/README.md` for model layout and test types. Always pass `--profiles-dir` so dbt uses the local DuckDB profile (`dbt/profiles.yml`), not `~/.dbt`.
+
+Python tests (from the repo root) cover the generator helpers, CSV output invariants, and the DuckDB loader. They write to a temporary directory and do not replace `data/raw/` or `data/biotech_ops.duckdb`.
+
+```bash
+pytest
+```
 
 ## Development environment (pyenv)
 
@@ -85,7 +97,8 @@ python -m pip install -r requirements.txt
 # run generators and DB loader using the pyenv python
 python src/data_generation.py
 python src/create_database.py
-cd dbt && dbt run --profiles-dir . && dbt test --profiles-dir .
+pytest
+cd dbt && dbt build --profiles-dir .
 ```
 
 Do not create or activate a `venv` for this project; using `pyenv local` ensures the correct interpreter is used when you run `python` commands.

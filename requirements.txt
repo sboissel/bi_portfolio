@@ -3,3 +3,4 @@ pandas==3.0.2
 duckdb==1.5.5
 dbt-core==1.12.2
 dbt-duckdb==1.11.0
+pytest==9.0.3

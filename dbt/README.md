@@ -1,13 +1,20 @@
 # dbt project (`bi_portfolio`)
 
-Transforms the DuckDB database at `../data/biotech_ops.duckdb` (profile `bi_portfolio` in `profiles.yml`). Always run from this directory with `--profiles-dir .`.
+Transforms the DuckDB database at `../data/biotech_ops.duckdb` (profile `bi_portfolio` in `profiles.yml`).
+
+Run from this directory (`dbt/`), not the repo root:
 
 ```bash
-dbt run --profiles-dir .
-dbt test --profiles-dir .
+dbt build --profiles-dir .
 ```
 
-`as_of_date` is `2026-05-01` (see `dbt_project.yml`). Recreating the DuckDB file drops these models; run `dbt run` again after `python src/create_database.py`.
+From the repo root:
+
+```bash
+dbt build --project-dir dbt --profiles-dir dbt
+```
+
+`as_of_date` is `2026-05-01` (see `dbt_project.yml`). Recreating the DuckDB file drops these models; run `dbt build` again after `python src/create_database.py`.
 
 ## Models
 
