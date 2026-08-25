@@ -4,6 +4,13 @@ with source as (
 
 ),
 
+date_offset as (
+
+    select offset_days
+    from {{ ref('int_date_offset') }}
+
+),
+
 renamed as (
 
     select
@@ -13,13 +20,32 @@ renamed as (
         task_type_id::integer as task_type_id,
         trim(task_type_name) as task_type_name,
         trim(status) as status,
-        start_date::date as start_date,
+
+        date_add(
+            'day',
+            date_offset.offset_days,
+            start_date::date
+        ) as start_date,
+
         days_since_start::integer as days_since_start,
-        due_date::date as due_date,
+        
+        date_add(
+            'day',
+            date_offset.offset_days,
+            due_date::date
+        ) as due_date,
+        
         days_to_due::integer as days_to_due,
-        completion_date::date as completion_date,
+        
+        date_add(
+            'day',
+            date_offset.offset_days,
+            completion_date::date
+        ) as completion_date,
+
         estimated_hours::decimal(18, 2) as estimated_hours
     from source
+    cross join date_offset
 
 )
 

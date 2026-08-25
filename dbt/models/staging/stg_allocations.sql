@@ -4,6 +4,13 @@ with source as (
 
 ),
 
+date_offset as (
+
+    select offset_days
+    from {{ ref('int_date_offset') }}
+
+),
+
 renamed as (
 
     select
@@ -14,12 +21,24 @@ renamed as (
         project_id::integer as project_id,
         trim(task_type_name) as task_type_name,
         trim(team) as team,
-        start_date::date as start_date,
-        completion_date::date as due_date,
+        
+        date_add(
+            'day',
+            date_offset.offset_days,
+            start_date::date
+        ) as start_date,
+        
+        date_add(
+            'day',
+            date_offset.offset_days,
+            completion_date::date
+        ) as due_date,
+        
         trim(status) as status,
         allocation::decimal(8, 4) as allocation,
         planned_hours::decimal(18, 2) as planned_hours
     from source
+    cross join date_offset
 
 )
 
