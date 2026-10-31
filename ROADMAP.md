@@ -14,7 +14,7 @@ Tableau stays the portfolio / plan-vs-actual tool. Streamlit is for operations l
 
 ## 1. Streamlit: Delivery & Resource Operations
 
-Read from DuckDB **read-only** (or a copied extract). Prefer the dbt marts below over raw CSVs so dates and statuses match Tableau.
+Prefer the dbt marts below over raw CSVs so dates and statuses match Tableau.
 
 | Dashboard | What it answers | Source tables | Use these models |
 | --- | --- | --- | --- |
@@ -28,14 +28,14 @@ Read from DuckDB **read-only** (or a copied extract). Prefer the dbt marts below
 
 **App rules:**
 
-- Open DuckDB read-only so Tableau and dbt do not lock the file.
 - Filters: team, person, project, next N weeks. Default to the coming weeks, not the whole history.
 - Formulas stay consistent with `src/metrics.md` (utilization = actual hours / capacity).
 - Suggested layout: `app/Home.py` (what-if) plus pages for the four read-only views.
 
 ## 2. Right after the first app
 
-- **One refresh command.** A short script that runs `create_database` then `dbt build --project-dir dbt --profiles-dir dbt`. Document “close Tableau / Streamlit first.”
+- **DuckDB is single-writer.** Streamlit and Tableau should open `data/biotech_ops.duckdb` read-only, or use a copied extract. Close them before `create_database` or `dbt build`, or those jobs will fail to lock the file.
+- **One refresh command.** A short script that runs `create_database` then `dbt build --project-dir dbt --profiles-dir dbt`.
 - **Real CI.** `.gitlab-ci.yml` is still a Pages stub. Run `pytest` and `dbt build` (or parse + tests against a CI DuckDB) on every push.
 - **Ignore junk.** Add `.DS_Store` and `__pycache__/` to `.gitignore`.
 - **Demo notes.** How to refresh, how to start Streamlit, how to open Tableau, and two or three screenshots.
