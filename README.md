@@ -102,3 +102,7 @@ cd dbt && dbt build --profiles-dir .
 ```
 
 Do not create or activate a `venv` for this project; using `pyenv local` ensures the correct interpreter is used when you run `python` commands.
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE).
