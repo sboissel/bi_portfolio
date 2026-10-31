@@ -17,17 +17,11 @@ renamed as (
         milestone_id::integer as milestone_id,
         project_id::integer as project_id,
         trim(milestone_name) as milestone_name,
-        date_add(
-            'day',
-            date_offset.offset_days,
-            planned_date::date
-        ) as planned_date,
-        
-        date_add(
-            'day',
-            date_offset.offset_days,
-            actual_date::date
-        ) as actual_date,
+        planned_date::date + (date_offset.offset_days * interval '1 day') as planned_date,
+        case
+            when actual_date is null then null
+            else actual_date::date + (date_offset.offset_days * interval '1 day')
+        end as actual_date,
         
         trim(status) as status
     from source
@@ -35,4 +29,7 @@ renamed as (
 
 )
 
-select * from renamed
+select
+    *,
+    date_diff('day', planned_date, actual_date) as variance_days
+from renamed

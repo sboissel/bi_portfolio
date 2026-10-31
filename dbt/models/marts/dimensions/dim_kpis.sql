@@ -1,6 +1,7 @@
 select
     kpi_sk,
     kpi_name,
+    kpi_short_name,
     is_baseline,
     period_label,
     period_date,

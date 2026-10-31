@@ -18,11 +18,7 @@ shifted as (
         project_id::integer as project_id,
         task_id::integer as task_id,
 
-        date_add(
-            'day',
-            date_offset.offset_days,
-            date::date
-        ) as log_date,
+        date::date + (date_offset.offset_days * interval '1 day') as log_date,
 
         actual_hours::decimal(18, 2) as actual_hours
 

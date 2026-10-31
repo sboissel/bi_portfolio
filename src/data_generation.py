@@ -274,6 +274,58 @@ def generate_actuals(kpi):
     return [round(kpi.baseline + increment * month + random.uniform(-0.02, 0.02), 2) for month in range(1, 13)]
 
 
+SPEND_CATEGORIES = (
+    # (cost category, share of budget, month-to-month noise)
+    ("Labor", 0.6, 0.10),
+    ("External", 0.4, 0.30),
+)
+
+
+def generate_spend(projects_df, as_of=AS_OF_DATE, seed=42):
+    """Monthly actual spend per project and cost category.
+
+    Spend runs from each project's start date to its end date or the as-of
+    date, whichever comes first, booked at each month end (the last period
+    is booked on the cutoff date). Each project gets its own burn rate
+    (0.8x to 1.35x of a straight-line plan), so some projects underspend
+    and others overspend relative to the time elapsed.
+    """
+    rng = np.random.default_rng(seed)
+    cutoff_limit = pd.Timestamp(as_of)
+    rows = []
+
+    for project in projects_df.itertuples(index=False):
+        start = pd.Timestamp(project.start_date)
+        end = pd.Timestamp(project.end_date)
+        duration_days = (end - start).days
+        burn_rate = rng.uniform(0.8, 1.35)
+
+        cutoff = min(end, cutoff_limit)
+        if cutoff <= start:
+            continue  # project has not started by the as-of date
+
+        period_ends = list(pd.date_range(start, cutoff, freq="ME"))
+        if not period_ends or period_ends[-1] < cutoff:
+            period_ends.append(cutoff)
+
+        period_start = start
+        for period_end in period_ends:
+            days = (period_end - period_start).days
+            if days <= 0:
+                continue
+            for category, share, noise in SPEND_CATEGORIES:
+                planned = project.budget_total * share * days / duration_days
+                amount = planned * burn_rate * max(rng.normal(1, noise), 0)
+                rows.append([
+                    project.project_id, period_end.date(), category, int(amount)
+                ])
+            period_start = period_end
+
+    return pd.DataFrame(rows, columns=[
+        "project_id", "date", "cost_category", "actual_amount"
+    ])
+
+
 def generate_data(output_dir=None):
     """Build the synthetic portfolio tables and write them as CSVs."""
     np.random.seed(42)
@@ -369,7 +421,6 @@ def generate_data(output_dir=None):
     # BUDGET & SPEND
     # -----------------------
     budgets = []
-    spend = []
 
     for pid in range(n_projects):
         total = projects_df.loc[pid, "budget_total"]
@@ -380,36 +431,25 @@ def generate_data(output_dir=None):
         budgets.append([pid, "Labor", labor])
         budgets.append([pid, "External", external])
 
-        # spend slightly off
-        for m in range(6):
-            spend.append([
-                pid,
-                START_DATE + timedelta(days=30 * m),
-                "Labor",
-                int(labor / 6 * np.random.normal(1.1, 0.2))
-            ])
-            spend.append([
-                pid,
-                START_DATE + timedelta(days=30 * m),
-                "External",
-                int(external / 6 * np.random.normal(0.9, 0.2))
-            ])
-
     budgets_df = pd.DataFrame(budgets, columns=[
         "project_id", "cost_category", "planned_amount"
     ])
 
-    spend_df = pd.DataFrame(spend, columns=[
-        "project_id", "date", "cost_category", "actual_amount"
-    ])
+    spend_df = generate_spend(projects_df)
 
     # -----------------------
     # MILESTONES
     # -----------------------
     milestones = []
+    milestone_as_of = date(2026, 4, 6)
     for i in range(50):
         planned = START_DATE + timedelta(days=random.randint(30, 180))
         actual = planned + timedelta(days=random.randint(-10, 20))
+        if actual >= milestone_as_of:
+            actual = None
+            status = "Upcoming"
+        else:
+            status = "Delayed" if actual > planned else "On Time"
 
         milestones.append([
             i,
@@ -417,7 +457,7 @@ def generate_data(output_dir=None):
             f"Milestone {i}",
             planned,
             actual,
-            "Delayed" if actual > planned else "On Time"
+            status
         ])
 
     milestones_df = pd.DataFrame(milestones, columns=[

@@ -21,7 +21,7 @@ select
     milestones.planned_date as planned,
     milestones.actual_date as actual,
     milestones.days_variance as variance_days,
-    not milestones.is_delayed as on_time,
+    milestones.status = 'On Time' as on_time,
     milestones.status
 from milestones
 inner join projects

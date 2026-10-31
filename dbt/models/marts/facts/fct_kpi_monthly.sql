@@ -1,6 +1,7 @@
 select
     kpi_sk,
     kpi_name as kpi,
+    kpi_short_name,
     period_date as month,
     round(actual_value, 4) as actual,
     round(monthly_target, 4) as monthly_target,

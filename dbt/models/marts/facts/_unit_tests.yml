@@ -58,12 +58,16 @@ unit_tests:
           - {task_type_id: 7, default_team: Data Science}
       - input: ref('dim_time_logs')
         rows:
-          - {task_id: 1, actual_hours: 6}
-          - {task_id: 1, actual_hours: 6}
+          - {task_id: 1, log_date: "2026-01-05", actual_hours: 6}
+          - {task_id: 1, log_date: "2026-01-08", actual_hours: 6}
     expect:
       rows:
         - {
             task_id: 1,
+            planned_start_date: "2026-01-05",
+            planned_due_date: "2026-01-09",
+            actual_start_date: "2026-01-05",
+            actual_end_date: "2026-01-08",
             actual_hours: 12.0,
             hour_variance: 2.0,
             planned_days: 4,
@@ -72,6 +76,10 @@ unit_tests:
           }
         - {
             task_id: 2,
+            planned_start_date: "2026-04-01",
+            planned_due_date: "2026-04-10",
+            actual_start_date: null,
+            actual_end_date: null,
             actual_hours: 0.0,
             hour_variance: -20.0,
             planned_days: 9,
@@ -80,12 +88,62 @@ unit_tests:
           }
         - {
             task_id: 3,
+            planned_start_date: "2026-06-01",
+            planned_due_date: "2026-06-05",
+            actual_start_date: null,
+            actual_end_date: null,
             actual_hours: 0.0,
             hour_variance: -8.0,
             planned_days: 4,
             actual_days: null,
             cycle_time: null
           }
+
+  - name: test_fct_task_hours_daily_spreads_across_days_and_months
+    description: >
+      Forty planned hours over June 1-4 become 10 per day. Twenty actual
+      hours over June 3-4 become 10 per day. A task spanning May 31-June 1
+      splits 30 planned hours 15/15 so each month gets its share.
+    model: fct_task_hours_daily
+    given:
+      - input: ref('fct_task_performance')
+        rows:
+          - {
+              task_id: 1,
+              task: June Task,
+              project: Project 1,
+              type: Data Analysis,
+              team: Data Science,
+              status: Done,
+              planned_start_date: "2026-06-01",
+              planned_due_date: "2026-06-04",
+              actual_start_date: "2026-06-03",
+              actual_end_date: "2026-06-04",
+              estimated_hours: 40,
+              actual_hours: 20
+            }
+          - {
+              task_id: 2,
+              task: Month Span,
+              project: Project 1,
+              type: Data Analysis,
+              team: Data Science,
+              status: Not Started,
+              planned_start_date: "2026-05-31",
+              planned_due_date: "2026-06-01",
+              actual_start_date: null,
+              actual_end_date: null,
+              estimated_hours: 30,
+              actual_hours: 0
+            }
+    expect:
+      rows:
+        - {task_id: 1, work_date: "2026-06-01", month: "2026-06-01", planned_hours: 10.0, actual_hours: 0.0}
+        - {task_id: 1, work_date: "2026-06-02", month: "2026-06-01", planned_hours: 10.0, actual_hours: 0.0}
+        - {task_id: 1, work_date: "2026-06-03", month: "2026-06-01", planned_hours: 10.0, actual_hours: 10.0}
+        - {task_id: 1, work_date: "2026-06-04", month: "2026-06-01", planned_hours: 10.0, actual_hours: 10.0}
+        - {task_id: 2, work_date: "2026-05-31", month: "2026-05-01", planned_hours: 15.0, actual_hours: 0.0}
+        - {task_id: 2, work_date: "2026-06-01", month: "2026-06-01", planned_hours: 15.0, actual_hours: 0.0}
 
   - name: test_fct_project_financials_spreads_planned_across_installments
     description: >

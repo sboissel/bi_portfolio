@@ -26,7 +26,9 @@ actuals as (
 
     select
         task_id,
-        sum(actual_hours) as actual_hours
+        sum(actual_hours) as actual_hours,
+        min(log_date) as first_logged_date,
+        max(log_date) as last_logged_date
     from {{ ref('dim_time_logs') }}
     group by 1
 
@@ -40,6 +42,10 @@ select
     tasks.task_type_name as type,
     task_types.default_team as team,
     tasks.status,
+    tasks.start_date as planned_start_date,
+    tasks.due_date as planned_due_date,
+    actuals.first_logged_date as actual_start_date,
+    coalesce(tasks.completion_date, actuals.last_logged_date) as actual_end_date,
     round(tasks.estimated_hours, 2) as estimated_hours,
     round(coalesce(actuals.actual_hours, 0), 2) as actual_hours,
     round(

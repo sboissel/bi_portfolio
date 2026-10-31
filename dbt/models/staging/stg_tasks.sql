@@ -21,27 +21,11 @@ renamed as (
         trim(task_type_name) as task_type_name,
         trim(status) as status,
 
-        date_add(
-            'day',
-            date_offset.offset_days,
-            start_date::date
-        ) as start_date,
-
+        start_date::date + (date_offset.offset_days * interval '1 day') as start_date,
         days_since_start::integer as days_since_start,
-        
-        date_add(
-            'day',
-            date_offset.offset_days,
-            due_date::date
-        ) as due_date,
-        
+        due_date::date + (date_offset.offset_days * interval '1 day') as due_date,
         days_to_due::integer as days_to_due,
-        
-        date_add(
-            'day',
-            date_offset.offset_days,
-            completion_date::date
-        ) as completion_date,
+        completion_date::date + (date_offset.offset_days * interval '1 day') as completion_date,
 
         estimated_hours::decimal(18, 2) as estimated_hours
     from source

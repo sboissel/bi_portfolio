@@ -45,8 +45,8 @@ milestone_metrics as (
     select
         project_id,
         count(*) as milestone_count,
-        count(*) filter (where not is_delayed) as milestones_on_time,
-        count(*) filter (where is_delayed) as milestones_delayed
+        count(*) filter (where status = 'On Time') as milestones_on_time,
+        count(*) filter (where status in ('Delayed', 'Overdue')) as milestones_delayed
     from {{ ref('dim_milestones') }}
     group by 1
 
@@ -111,7 +111,11 @@ select
     coalesce(milestone_metrics.milestones_delayed, 0) as milestones_delayed,
     round(
         milestone_metrics.milestones_on_time
-        / nullif(milestone_metrics.milestone_count, 0),
+        / nullif(
+            milestone_metrics.milestones_on_time
+            + milestone_metrics.milestones_delayed,
+            0
+        ),
         4
     ) as on_time_milestone_pct,
 

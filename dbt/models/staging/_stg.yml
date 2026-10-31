@@ -193,12 +193,14 @@ models:
               arguments:
                 to: ref('stg_projects')
                 field: project_id
+      - name: variance_days
+        description: actual_date minus planned_date, in calendar days; null when there is no actual.
       - name: status
         data_tests:
           - not_null
           - accepted_values:
               arguments:
-                values: ['On Time', 'Delayed']
+                values: ['On Time', 'Delayed', 'Upcoming', 'Overdue']
 
   - name: stg_kpis
     description: Staged monthly portfolio KPIs. Baseline rows have a null period_date.
@@ -207,3 +209,69 @@ models:
         data_tests:
           - unique
           - not_null
+      - name: kpi_short_name
+        description: Compact label for charts; full name stays on kpi_name.
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - 'On-Time %'
+                  - 'Utilization %'
+                  - 'Budget Var %'
+                  - 'Cycle Time'
+                  - 'Quality %'
+
+  - name: int_project_health
+    description: >
+      One row per project comparing budget burn with schedule progress, as of
+      current_date. Built on staged models so it keeps the live date shift.
+      Spend to date counts only spend dated on or before the as-of date.
+      burn_gap is pct_budget_spent minus pct_schedule_elapsed; positive means
+      spending faster than time is passing.
+    columns:
+      - name: project_id
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_projects')
+                field: project_id
+      - name: reported_status
+        description: Status as recorded in the source data, kept for comparison with budget_health.
+      - name: spend_to_date
+        description: Actual spend dated on or before as_of_date.
+        data_tests:
+          - not_null
+      - name: pct_budget_spent
+        description: spend_to_date divided by budget_total.
+      - name: pct_schedule_elapsed
+        description: Share of the start-to-end window elapsed at as_of_date, capped between 0 and 1.
+        data_tests:
+          - not_null
+      - name: burn_gap
+        description: pct_budget_spent minus pct_schedule_elapsed.
+      - name: budget_health
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['OK', 'Watch', 'Overspending']
+      - name: schedule_phase
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Not started', 'In flight', 'Past end date']
+      - name: milestones_due
+        description: Milestones delivered by today or planned before today (still open = overdue).
+        data_tests:
+          - not_null
+      - name: milestones_on_time
+        description: Delivered by today, on or before the planned date.
+      - name: milestones_delivered_late
+        description: Delivered by today, after the planned date.
+      - name: milestones_overdue
+        description: Not delivered by today, with a planned date before today.
+      - name: late_days_total
+        description: Sum of days late across milestones_delivered_late; divide by that count for average slip.

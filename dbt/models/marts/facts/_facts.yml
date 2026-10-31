@@ -69,9 +69,9 @@ models:
   - name: fct_task_performance
     description: >
       One row per task. Compares estimated vs actual hours and planned vs
-      actual duration. cycle_time is weekday count from start to completion
-      for done tasks; actual_days is calendar days to completion or to the
-      as-of date for in-progress work.
+      actual duration, including the plan and actual date windows. cycle_time
+      is weekday count from start to completion for done tasks; actual_days
+      is calendar days to completion or to the as-of date for in-progress work.
     columns:
       - name: task_sk
         data_tests:
@@ -85,14 +85,62 @@ models:
         data_tests:
           - unique
           - not_null
+      - name: planned_start_date
+        description: Task start date from the plan.
+        data_tests:
+          - not_null
+      - name: planned_due_date
+        description: Task due date from the plan.
+        data_tests:
+          - not_null
+      - name: actual_start_date
+        description: First time-log date; null when no hours have been logged.
+      - name: actual_end_date
+        description: Completion date when the task is done, otherwise the last time-log date.
       - name: hour_variance
         description: actual_hours minus estimated_hours.
       - name: planned_days
-        description: Calendar days from start_date to due_date.
+        description: Calendar days from planned_start_date to planned_due_date.
       - name: actual_days
         description: Calendar days from start to completion, or to as-of for in-progress tasks.
       - name: cycle_time
         description: Weekdays from start_date to completion_date for completed tasks.
+
+  - name: fct_task_hours_daily
+    description: >
+      Task hours spread evenly across calendar days, inclusive of the end
+      date, so monthly dashboards receive the share of hours that fall in
+      each month. A plan of 6/1-6/4 is four days. Planned hours use
+      planned_start_date through planned_due_date; actual hours use
+      actual_start_date through actual_end_date. Grain is task and day.
+    columns:
+      - name: task_hours_daily_sk
+        data_tests:
+          - unique
+          - not_null
+      - name: work_date
+        description: Calendar day that receives a share of the task hours.
+        data_tests:
+          - not_null
+      - name: month
+        description: First of the month for work_date, for monthly rollups.
+        data_tests:
+          - not_null
+      - name: task_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('fct_task_performance')
+                field: task_id
+      - name: planned_hours
+        description: Estimated hours divided by (planned due minus start, plus one).
+        data_tests:
+          - not_null
+      - name: actual_hours
+        description: Actual hours divided by (actual end minus start, plus one).
+        data_tests:
+          - not_null
 
   - name: fct_project_financials
     description: >
@@ -155,7 +203,7 @@ models:
         data_tests:
           - accepted_values:
               arguments:
-                values: ['On Time', 'Delayed']
+                values: ['On Time', 'Delayed', 'Upcoming', 'Overdue']
 
   - name: fct_resource_allocation
     description: >
@@ -210,6 +258,18 @@ models:
                   - 'Budget Variance (%)'
                   - 'Cycle Time (days)'
                   - 'Quality Success Rate (%)'
+      - name: kpi_short_name
+        description: Compact label for charts; full name stays on kpi.
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - 'On-Time %'
+                  - 'Utilization %'
+                  - 'Budget Var %'
+                  - 'Cycle Time'
+                  - 'Quality %'
       - name: month
         data_tests:
           - not_null

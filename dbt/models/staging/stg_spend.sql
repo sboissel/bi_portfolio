@@ -17,11 +17,7 @@ renamed as (
         md5(concat_ws('|', project_id, date, cost_category)) as spend_sk,
         project_id::integer as project_id,
         
-        date_add(
-            'day',
-            date_offset.offset_days,
-            date::date
-        ) as spend_date,
+        date::date + (date_offset.offset_days * interval '1 day') as spend_date,
 
         trim(cost_category) as cost_category,
         actual_amount::decimal(18, 2) as actual_amount

@@ -22,17 +22,8 @@ renamed as (
         trim(task_type_name) as task_type_name,
         trim(team) as team,
         
-        date_add(
-            'day',
-            date_offset.offset_days,
-            start_date::date
-        ) as start_date,
-        
-        date_add(
-            'day',
-            date_offset.offset_days,
-            completion_date::date
-        ) as due_date,
+        start_date::date + (date_offset.offset_days * interval '1 day') as start_date,
+        completion_date::date + (date_offset.offset_days * interval '1 day') as due_date,
         
         trim(status) as status,
         allocation::decimal(8, 4) as allocation,

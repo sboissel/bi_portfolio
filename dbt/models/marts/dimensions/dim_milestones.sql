@@ -6,6 +6,6 @@ select
     planned_date,
     actual_date,
     status,
-    date_diff('day', planned_date, actual_date) as days_variance,
-    status = 'Delayed' as is_delayed
+    variance_days as days_variance,
+    status in ('Delayed', 'Overdue') as is_delayed
 from {{ ref('stg_milestones') }}

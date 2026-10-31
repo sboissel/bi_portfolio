@@ -19,17 +19,8 @@ renamed as (
         trim(project_type) as project_type,
         trim(priority) as priority,
         trim(status) as status,
-        date_add(
-            'day',
-            date_offset.offset_days,
-            start_date::date
-        ) as start_date,
-
-        date_add(
-            'day',
-            date_offset.offset_days,
-            end_date::date
-        ) as end_date,
+        start_date::date + (date_offset.offset_days * interval '1 day') as start_date,
+        end_date::date + (date_offset.offset_days * interval '1 day') as end_date,
 
         budget_total::decimal(18, 2) as budget_total
     from source

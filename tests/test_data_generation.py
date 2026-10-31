@@ -232,11 +232,28 @@ class TestGenerateData:
             assert (log_dates.dt.weekday < 5).all()
         assert len(budgets) == n_projects * 2
         assert set(budgets["cost_category"]) == {"Labor", "External"}
-        assert len(spend) == n_projects * 6 * 2
+        assert set(spend["cost_category"]) == {"Labor", "External"}
+        spend_dates = pd.to_datetime(spend["date"])
+        spend_window = spend.assign(date=spend_dates).merge(
+            projects[["project_id", "start_date", "end_date"]], on="project_id"
+        )
+        assert (spend_window["date"] > pd.to_datetime(spend_window["start_date"])).all()
+        assert (spend_window["date"] <= pd.to_datetime(spend_window["end_date"])).all()
+        assert (spend_dates <= pd.Timestamp(AS_OF_DATE)).all()
+        assert (spend["actual_amount"] >= 0).all()
         assert len(milestones) == 50
-        delayed = milestones["actual_date"] > milestones["planned_date"]
+        as_of = pd.Timestamp("2026-04-06")
+        completed = milestones["actual_date"].notna()
+        assert (pd.to_datetime(milestones.loc[completed, "actual_date"]) < as_of).all()
+        delayed = completed & (
+            pd.to_datetime(milestones["actual_date"])
+            > pd.to_datetime(milestones["planned_date"])
+        )
+        on_time = completed & ~delayed
+        upcoming = milestones["actual_date"].isna()
         assert (milestones.loc[delayed, "status"] == "Delayed").all()
-        assert (milestones.loc[~delayed, "status"] == "On Time").all()
+        assert (milestones.loc[on_time, "status"] == "On Time").all()
+        assert (milestones.loc[upcoming, "status"] == "Upcoming").all()
         assert len(kpis) == len(kpi_list) * 13
         period_rows = kpis[kpis["month"].ne("Baseline")].copy()
         months = pd.to_datetime(period_rows["month"])
