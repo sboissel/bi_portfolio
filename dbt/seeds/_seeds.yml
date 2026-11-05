@@ -1,0 +1,31 @@
+version: 2
+
+seeds:
+  - name: kpi_targets
+    description: >
+      Leadership targets for the KPI scorecard. Each KPI improves in a straight
+      line from baseline to year_goal over a 12-month target year. better says
+      which direction is good (higher or lower).
+    columns:
+      - name: kpi_short_name
+        data_tests:
+          - unique
+          - not_null
+      - name: unit
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['pct', 'days']
+      - name: better
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['higher', 'lower']
+      - name: baseline
+        data_tests:
+          - not_null
+      - name: year_goal
+        data_tests:
+          - not_null
+      - name: upper_limit
+        description: Optional ceiling; an actual above it shows as Over limit (e.g. utilization above 100%).

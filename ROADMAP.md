@@ -24,7 +24,7 @@ Prefer the dbt marts below over raw CSVs so dates and statuses match Tableau.
 | Estimate accuracy | How far are estimated hours from actual hours, by task type and team? | `tasks`, `time_logs` | `fct_task_performance` |
 | What-if planner | If we add project X or lose a person, which teams break? | `resources`, `allocations` | Load the same tables, then recompute in Streamlit |
 
-**What-if planner is the centerpiece.** Sliders and inputs change capacity or demand and the app recalculates live. The other four pages are read-only views that set up that question.
+**What-if planner is the centerpiece.** Sliders and inputs change capacity or demand and the app recalculates live. The first version answers both halves of its question: remove a person or reduce their capacity, and add project X as hours of demand per team per week. The other four pages are read-only views that set up that question.
 
 **App rules:**
 
@@ -42,19 +42,28 @@ Prefer the dbt marts below over raw CSVs so dates and statuses match Tableau.
 
 ## 3. After that
 
-- **What-if v2.** Add or remove a whole project (reuse an existing project’s allocation pattern), not only one person or a capacity slider.
+- **What-if v2.** Model a new project by copying an existing project’s allocation pattern instead of entering its demand by hand, and remove a whole existing project.
 - **At-risk teams.** From the planner, list teams that go over capacity in the next N weeks so the PMO page has a short action list.
 
-## Not recommended
+## 4. Ask the data: natural-language questions + evaluation
 
-- Rebuilding the Tableau portfolio dashboard in Streamlit
-- Airflow, Snowflake, or a warehouse migration
-- Auth or write-back into DuckDB
-- Recreating every fact table in the app — stay on the five views above
+An "Ask the data" page in the Streamlit app. A user types a question, an LLM writes SQL against the same dbt marts the other pages use, and the page shows the answer with the generated SQL.
+
+- **Model: free only.** A free, rate-limited API tier (e.g. Gemini) for the hosted app, or a local open model via Ollama for development and live demos. Data is synthetic, so free-tier data terms are not a concern.
+- **Evaluation set.** 30–50 questions with known correct answers, covering:
+  - simple lookups and aggregations
+  - time windows ("next 4 weeks"), with "today" pinned so answers are stable
+  - project metrics (utilization, estimate accuracy) defined in `src/metrics.md`
+  - ambiguous questions, where the right answer is a clarifying question
+  - unanswerable questions, where the right answer is to say the data isn't there
+- **Grading.** Compare query results, not SQL text. Log a failure reason for each miss (wrong join, wrong metric definition, misread time window).
+- **Before/after.** Run the evaluation with schema only, then with metric definitions added, and report accuracy by category in the README.
+- **Demo safety.** Keep the hosted page within free-tier rate limits; offer example questions alongside free-text input.
 
 ## Suggested order
 
 1. Streamlit read-only pages: utilization, backlog & aging, estimate accuracy
-2. Capacity vs demand, then the what-if planner
+2. Capacity vs demand, then the what-if planner (lose a person, add project X)
 3. Refresh command, GitLab CI, gitignore, demo notes
-4. What-if v2 (add/remove a project) and at-risk teams
+4. What-if v2 (project templates, remove a project) and at-risk teams
+5. Ask the data: evaluation question set first, then the page, then the before/after run

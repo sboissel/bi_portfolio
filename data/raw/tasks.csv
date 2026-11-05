@@ -1,201 +1,1201 @@
 task_id,project_id,task_name,task_type_id,task_type_name,status,start_date,days_since_start,due_date,days_to_due,completion_date,estimated_hours
-0,4,Task 0,11,Quality Review,Done,2026-02-13,77,2026-02-15,-75,2026-03-02,13
-1,10,Task 1,11,Quality Review,Done,2026-01-28,93,2026-02-02,-88,2026-02-06,8
-2,1,Task 2,1,Strain Construction,Done,2026-01-12,109,2026-02-03,-87,2026-02-18,50
-3,9,Task 3,2,PCR / Cloning,Not Started,2026-06-04,-34,2026-06-05,35,,4
-4,3,Task 4,11,Quality Review,Done,2026-01-11,110,2026-01-17,-104,2026-01-28,14
-5,8,Task 5,0,DNA Assembly,Cancelled,2026-03-31,31,2026-04-04,-27,,21
-6,3,Task 6,3,Fermentation Run,Done,2026-03-28,34,2026-04-16,-15,2026-04-22,63
-7,7,Task 7,4,Downstream Processing,Done,2026-03-04,58,2026-03-18,-44,2026-03-24,36
-8,8,Task 8,14,Stakeholder Update,Not Started,2026-06-08,-38,2026-06-09,39,,6
-9,6,Task 9,2,PCR / Cloning,Done,2026-04-04,27,2026-04-06,-25,2026-04-09,3
-10,4,Task 10,0,DNA Assembly,Done,2026-02-06,84,2026-02-10,-80,2026-02-13,7
-11,1,Task 11,11,Quality Review,Not Started,2026-06-20,-50,2026-06-27,57,,32
-12,8,Task 12,10,Lab Equipment Maintenance,Done,2026-03-17,45,2026-03-19,-43,2026-03-28,4
-13,4,Task 13,12,Deviation Investigation,Done,2026-04-06,25,2026-04-18,-13,2026-04-30,51
-14,1,Task 14,1,Strain Construction,Done,2026-04-03,28,2026-04-19,-12,2026-04-20,31
-15,3,Task 15,1,Strain Construction,Not Started,2026-05-23,-22,2026-06-14,44,,68
-16,10,Task 16,1,Strain Construction,Done,2026-03-26,36,2026-04-19,-12,2026-04-14,141
-17,5,Task 17,9,Automation Workflow Setup,In Progress,2026-04-06,25,2026-04-21,-10,,87
-18,9,Task 18,11,Quality Review,Done,2026-03-08,54,2026-03-12,-50,2026-03-16,18
-19,6,Task 19,13,Project Planning,Not Started,2026-05-26,-25,2026-05-30,29,,22
-20,1,Task 20,6,Sample Testing,Done,2026-01-25,96,2026-01-31,-90,2026-02-10,27
-21,11,Task 21,13,Project Planning,Done,2026-04-22,9,2026-04-28,-3,2026-05-01,10
-22,9,Task 22,1,Strain Construction,Not Started,2026-06-02,-32,2026-06-13,43,,30
-23,3,Task 23,6,Sample Testing,Done,2026-03-20,42,2026-03-24,-38,2026-04-01,4
-24,4,Task 24,5,Assay Development,Done,2026-02-10,80,2026-02-19,-71,2026-02-22,33
-25,8,Task 25,1,Strain Construction,Done,2026-02-01,89,2026-02-18,-72,2026-03-02,70
-26,3,Task 26,8,Model Development,Not Started,2026-06-24,-54,2026-07-06,66,,60
-27,4,Task 27,8,Model Development,Not Started,2026-06-22,-52,2026-07-11,71,,28
-28,6,Task 28,9,Automation Workflow Setup,Done,2026-01-10,111,2026-01-27,-94,2026-01-26,37
-29,11,Task 29,12,Deviation Investigation,Not Started,2026-04-23,8,2026-05-05,4,,42
-30,7,Task 30,12,Deviation Investigation,Not Started,2026-05-26,-25,2026-06-02,32,,29
-31,5,Task 31,2,PCR / Cloning,Done,2026-04-02,29,2026-04-04,-27,2026-04-10,14
-32,1,Task 32,2,PCR / Cloning,Not Started,2026-05-24,-23,2026-05-27,26,,14
-33,8,Task 33,6,Sample Testing,Not Started,2026-05-18,-17,2026-05-21,20,,7
-34,9,Task 34,1,Strain Construction,Done,2026-02-05,85,2026-02-17,-73,2026-02-25,15
-35,0,Task 35,13,Project Planning,Done,2026-01-18,103,2026-01-20,-101,2026-01-15,8
-36,11,Task 36,12,Deviation Investigation,Done,2026-03-07,55,2026-03-16,-46,2026-03-14,41
-37,9,Task 37,14,Stakeholder Update,Not Started,2026-05-21,-20,2026-05-23,22,,11
-38,11,Task 38,6,Sample Testing,In Progress,2026-05-08,-7,2026-05-15,14,,32
-39,1,Task 39,4,Downstream Processing,Done,2026-03-03,59,2026-03-18,-44,2026-03-31,92
-40,4,Task 40,6,Sample Testing,Done,2026-01-11,110,2026-01-17,-104,2026-01-30,22
-41,10,Task 41,3,Fermentation Run,In Progress,2026-03-27,35,2026-04-15,-16,,45
-42,2,Task 42,1,Strain Construction,Done,2026-02-26,64,2026-03-15,-47,2026-03-23,109
-43,9,Task 43,3,Fermentation Run,Done,2026-03-09,53,2026-03-19,-43,2026-03-22,66
-44,3,Task 44,12,Deviation Investigation,Done,2026-01-09,112,2026-01-18,-103,2026-02-01,17
-45,8,Task 45,4,Downstream Processing,Cancelled,2026-03-10,52,2026-03-25,-37,,40
-46,4,Task 46,2,PCR / Cloning,Not Started,2026-06-23,-53,2026-06-24,54,,5
-47,10,Task 47,3,Fermentation Run,Not Started,2026-03-23,39,2026-04-10,-21,,35
-48,1,Task 48,5,Assay Development,Done,2026-02-22,68,2026-03-03,-59,2026-03-09,45
-49,3,Task 49,8,Model Development,Done,2026-02-15,75,2026-02-23,-67,2026-03-03,37
-50,4,Task 50,7,Data Analysis,Cancelled,2026-03-18,44,2026-03-22,-40,,7
-51,10,Task 51,9,Automation Workflow Setup,Done,2026-01-25,96,2026-02-24,-66,2026-02-22,191
-52,3,Task 52,12,Deviation Investigation,Not Started,2026-05-27,-26,2026-06-09,39,,86
-53,9,Task 53,3,Fermentation Run,Done,2026-02-27,63,2026-03-19,-43,2026-04-03,64
-54,8,Task 54,3,Fermentation Run,Done,2026-03-24,38,2026-04-03,-28,2026-04-02,48
-55,1,Task 55,9,Automation Workflow Setup,Not Started,2026-05-02,-1,2026-05-22,21,,30
-56,7,Task 56,7,Data Analysis,Not Started,2026-05-08,-7,2026-05-16,15,,19
-57,9,Task 57,4,Downstream Processing,Not Started,2026-06-10,-40,2026-06-20,50,,69
-58,5,Task 58,11,Quality Review,Done,2026-03-21,41,2026-03-25,-37,2026-04-02,7
-59,8,Task 59,3,Fermentation Run,Not Started,2026-04-12,19,2026-04-28,-3,,64
-60,4,Task 60,3,Fermentation Run,In Progress,2026-04-13,18,2026-05-03,2,,77
-61,2,Task 61,8,Model Development,Not Started,2026-05-06,-5,2026-05-17,16,,23
-62,1,Task 62,2,PCR / Cloning,Done,2026-03-04,58,2026-03-05,-57,2026-03-07,6
-63,0,Task 63,7,Data Analysis,Done,2026-03-17,45,2026-03-21,-41,2026-03-25,27
-64,3,Task 64,11,Quality Review,Not Started,2026-06-14,-44,2026-06-21,51,,48
-65,6,Task 65,11,Quality Review,Done,2026-01-10,111,2026-01-14,-107,2026-01-15,24
-66,2,Task 66,11,Quality Review,Done,2026-02-15,75,2026-02-21,-69,2026-03-02,13
-67,2,Task 67,14,Stakeholder Update,Not Started,2026-05-12,-11,2026-05-13,12,,3
-68,9,Task 68,7,Data Analysis,Done,2026-02-11,79,2026-02-21,-69,2026-02-24,52
-69,7,Task 69,13,Project Planning,Done,2026-02-19,71,2026-02-23,-67,2026-03-05,8
-70,5,Task 70,7,Data Analysis,In Progress,2026-04-23,8,2026-05-02,1,,20
-71,0,Task 71,0,DNA Assembly,Done,2026-02-27,63,2026-03-03,-59,2026-03-12,10
-72,4,Task 72,14,Stakeholder Update,In Progress,2026-03-31,31,2026-04-01,-30,,2
-73,5,Task 73,12,Deviation Investigation,Done,2026-03-07,55,2026-03-22,-40,2026-04-04,77
-74,11,Task 74,11,Quality Review,Not Started,2026-05-08,-7,2026-05-12,11,,14
-75,6,Task 75,11,Quality Review,In Progress,2026-04-29,2,2026-05-07,6,,55
-76,9,Task 76,6,Sample Testing,Done,2026-02-02,88,2026-02-09,-81,2026-02-06,23
-77,3,Task 77,9,Automation Workflow Setup,Not Started,2026-04-25,6,2026-05-21,20,,57
-78,10,Task 78,11,Quality Review,Done,2026-03-17,45,2026-03-25,-37,2026-03-25,9
-79,5,Task 79,2,PCR / Cloning,Done,2026-04-27,4,2026-04-29,-2,2026-04-30,14
-80,1,Task 80,2,PCR / Cloning,Done,2026-03-25,37,2026-03-28,-34,2026-03-23,11
-81,8,Task 81,6,Sample Testing,Done,2026-02-06,84,2026-02-11,-79,2026-02-07,7
-82,6,Task 82,10,Lab Equipment Maintenance,Done,2026-02-02,88,2026-02-07,-83,2026-02-11,20
-83,7,Task 83,12,Deviation Investigation,Done,2026-03-16,46,2026-03-29,-33,2026-03-27,55
-84,7,Task 84,11,Quality Review,Done,2026-03-03,59,2026-03-05,-57,2026-03-13,5
-85,9,Task 85,3,Fermentation Run,Not Started,2026-05-05,-4,2026-05-14,13,,40
-86,11,Task 86,12,Deviation Investigation,Cancelled,2026-04-14,17,2026-04-20,-11,,8
-87,3,Task 87,12,Deviation Investigation,Done,2026-01-22,99,2026-02-01,-89,2026-02-07,36
-88,2,Task 88,14,Stakeholder Update,Done,2026-02-26,64,2026-02-27,-63,2026-03-13,2
-89,4,Task 89,13,Project Planning,Done,2026-01-14,107,2026-01-17,-104,2026-01-20,5
-90,4,Task 90,13,Project Planning,Done,2026-04-09,22,2026-04-13,-18,2026-04-13,6
-91,0,Task 91,1,Strain Construction,Done,2026-02-04,86,2026-02-18,-72,2026-02-20,22
-92,10,Task 92,7,Data Analysis,Done,2026-02-11,79,2026-02-20,-70,2026-03-05,38
-93,9,Task 93,4,Downstream Processing,In Progress,2026-04-19,12,2026-04-25,-6,,25
-94,9,Task 94,4,Downstream Processing,Not Started,2026-05-24,-23,2026-06-05,35,,64
-95,8,Task 95,2,PCR / Cloning,In Progress,2026-05-06,-5,2026-05-09,8,,7
-96,7,Task 96,5,Assay Development,Not Started,2026-05-30,-29,2026-06-11,41,,22
-97,8,Task 97,13,Project Planning,Not Started,2026-06-20,-50,2026-06-22,52,,9
-98,10,Task 98,10,Lab Equipment Maintenance,Done,2026-04-24,7,2026-04-27,-4,2026-05-01,15
-99,3,Task 99,14,Stakeholder Update,Not Started,2026-06-28,-58,2026-06-30,60,,14
-100,7,Task 100,10,Lab Equipment Maintenance,Not Started,2026-05-22,-21,2026-05-26,25,,7
-101,0,Task 101,14,Stakeholder Update,Not Started,2026-05-11,-10,2026-05-13,12,,7
-102,9,Task 102,13,Project Planning,Done,2026-05-04,-3,2026-05-09,8,2026-05-01,19
-103,10,Task 103,2,PCR / Cloning,Done,2026-01-31,90,2026-02-01,-89,2026-02-09,2
-104,2,Task 104,9,Automation Workflow Setup,Not Started,2026-06-08,-38,2026-07-03,63,,175
-105,1,Task 105,5,Assay Development,Not Started,2026-06-06,-36,2026-06-16,46,,60
-106,7,Task 106,14,Stakeholder Update,Done,2026-01-03,118,2026-01-05,-116,2026-01-06,11
-107,5,Task 107,10,Lab Equipment Maintenance,Done,2026-01-09,112,2026-01-14,-107,2026-01-14,35
-108,9,Task 108,12,Deviation Investigation,Not Started,2026-05-30,-29,2026-06-07,37,,14
-109,5,Task 109,14,Stakeholder Update,In Progress,2026-05-26,-25,2026-05-27,26,,2
-110,1,Task 110,4,Downstream Processing,Done,2026-03-25,37,2026-04-04,-27,2026-04-05,46
-111,11,Task 111,8,Model Development,Done,2026-01-19,102,2026-02-08,-82,2026-02-17,81
-112,0,Task 112,6,Sample Testing,Done,2026-03-15,47,2026-03-20,-42,2026-04-04,24
-113,4,Task 113,9,Automation Workflow Setup,Done,2026-01-10,111,2026-01-24,-97,2026-01-29,39
-114,9,Task 114,13,Project Planning,Done,2026-03-13,49,2026-03-19,-43,2026-03-29,21
-115,7,Task 115,11,Quality Review,Done,2026-02-12,78,2026-02-14,-76,2026-02-15,6
-116,10,Task 116,6,Sample Testing,Done,2026-02-13,77,2026-02-20,-70,2026-02-19,41
-117,0,Task 117,6,Sample Testing,Done,2026-01-25,96,2026-01-31,-90,2026-01-31,39
-118,5,Task 118,8,Model Development,Done,2026-04-01,30,2026-04-11,-20,2026-04-07,22
-119,7,Task 119,14,Stakeholder Update,Done,2026-02-03,87,2026-02-04,-86,2026-02-02,2
-120,5,Task 120,5,Assay Development,Not Started,2026-05-31,-30,2026-06-11,41,,43
-121,8,Task 121,4,Downstream Processing,Done,2026-03-22,40,2026-04-05,-26,2026-04-12,92
-122,1,Task 122,5,Assay Development,Not Started,2026-05-21,-20,2026-05-30,29,,38
-123,11,Task 123,10,Lab Equipment Maintenance,In Progress,2026-04-25,6,2026-04-28,-3,,5
-124,5,Task 124,11,Quality Review,Done,2026-03-20,42,2026-03-27,-35,2026-03-29,41
-125,0,Task 125,14,Stakeholder Update,Done,2026-03-20,42,2026-03-21,-41,2026-03-27,4
-126,2,Task 126,14,Stakeholder Update,Done,2026-02-21,69,2026-02-23,-67,2026-03-02,8
-127,9,Task 127,10,Lab Equipment Maintenance,In Progress,2026-05-24,-23,2026-05-29,28,,9
-128,5,Task 128,4,Downstream Processing,Done,2026-01-28,93,2026-02-04,-86,2026-01-31,12
-129,5,Task 129,5,Assay Development,Done,2026-02-16,74,2026-02-22,-68,2026-03-05,31
-130,7,Task 130,8,Model Development,Not Started,2026-06-16,-46,2026-06-26,56,,54
-131,7,Task 131,12,Deviation Investigation,Done,2026-01-21,100,2026-01-28,-93,2026-02-08,39
-132,2,Task 132,12,Deviation Investigation,Done,2026-04-02,29,2026-04-16,-15,2026-04-14,36
-133,5,Task 133,6,Sample Testing,Done,2026-01-24,97,2026-01-29,-92,2026-02-07,19
-134,3,Task 134,3,Fermentation Run,Done,2026-01-01,120,2026-01-13,-108,2026-01-11,33
-135,5,Task 135,6,Sample Testing,Done,2026-01-29,92,2026-01-31,-90,2026-01-30,11
-136,7,Task 136,0,DNA Assembly,Not Started,2026-05-08,-7,2026-05-13,12,,30
-137,1,Task 137,11,Quality Review,Done,2026-05-23,-22,2026-05-26,25,2026-05-01,7
-138,6,Task 138,5,Assay Development,Not Started,2026-06-03,-33,2026-06-09,39,,9
-139,11,Task 139,5,Assay Development,Not Started,2026-05-14,-13,2026-05-20,19,,35
-140,5,Task 140,2,PCR / Cloning,Done,2026-01-02,119,2026-01-04,-117,2026-01-12,9
-141,10,Task 141,8,Model Development,In Progress,2026-03-19,43,2026-04-06,-25,,24
-142,6,Task 142,9,Automation Workflow Setup,Not Started,2026-05-30,-29,2026-06-09,39,,38
-143,0,Task 143,9,Automation Workflow Setup,Not Started,2026-06-30,-60,2026-07-23,83,,73
-144,8,Task 144,3,Fermentation Run,Not Started,2026-06-11,-41,2026-06-19,49,,45
-145,10,Task 145,13,Project Planning,Not Started,2026-05-28,-27,2026-05-31,30,,15
-146,3,Task 146,9,Automation Workflow Setup,Not Started,2026-06-26,-56,2026-07-07,67,,46
-147,10,Task 147,10,Lab Equipment Maintenance,Not Started,2026-05-31,-30,2026-06-03,33,,10
-148,0,Task 148,6,Sample Testing,Not Started,2026-03-30,32,2026-04-01,-30,,7
-149,10,Task 149,11,Quality Review,Done,2026-01-05,116,2026-01-12,-109,2026-01-22,10
-150,9,Task 150,8,Model Development,Not Started,2026-06-28,-58,2026-07-18,78,,99
-151,2,Task 151,7,Data Analysis,Not Started,2026-06-08,-38,2026-06-12,42,,21
-152,10,Task 152,2,PCR / Cloning,Not Started,2026-06-06,-36,2026-06-08,38,,10
-153,1,Task 153,11,Quality Review,Done,2026-03-11,51,2026-03-17,-45,2026-03-30,9
-154,0,Task 154,6,Sample Testing,Not Started,2026-05-24,-23,2026-05-31,30,,43
-155,7,Task 155,0,DNA Assembly,Not Started,2026-04-02,29,2026-04-04,-27,,3
-156,8,Task 156,3,Fermentation Run,Done,2026-02-09,81,2026-02-20,-70,2026-02-21,50
-157,6,Task 157,5,Assay Development,Done,2026-03-10,52,2026-03-19,-43,2026-04-03,29
-158,8,Task 158,9,Automation Workflow Setup,Done,2026-02-16,74,2026-03-17,-45,2026-03-27,61
-159,2,Task 159,4,Downstream Processing,Not Started,2026-06-13,-43,2026-06-24,54,,76
-160,8,Task 160,0,DNA Assembly,Done,2026-02-14,76,2026-02-18,-72,2026-02-18,9
-161,0,Task 161,6,Sample Testing,Done,2026-01-23,98,2026-01-25,-96,2026-02-06,7
-162,3,Task 162,1,Strain Construction,Done,2026-03-02,60,2026-03-26,-36,2026-03-25,91
-163,11,Task 163,14,Stakeholder Update,Done,2026-03-22,40,2026-03-23,-39,2026-04-05,7
-164,2,Task 164,14,Stakeholder Update,Done,2026-01-14,107,2026-01-15,-106,2026-01-20,2
-165,5,Task 165,0,DNA Assembly,In Progress,2026-04-30,1,2026-05-05,4,,17
-166,0,Task 166,1,Strain Construction,Done,2026-01-26,95,2026-02-07,-83,2026-02-06,76
-167,2,Task 167,8,Model Development,Not Started,2026-06-25,-55,2026-07-11,71,,88
-168,7,Task 168,8,Model Development,Not Started,2026-06-24,-54,2026-07-06,66,,78
-169,11,Task 169,11,Quality Review,Done,2026-02-04,86,2026-02-10,-80,2026-02-11,29
-170,10,Task 170,7,Data Analysis,Done,2026-04-07,24,2026-04-16,-15,2026-04-12,38
-171,9,Task 171,8,Model Development,Cancelled,2026-02-19,71,2026-03-10,-52,,132
-172,1,Task 172,8,Model Development,Done,2026-03-01,61,2026-03-20,-42,2026-04-01,26
-173,6,Task 173,14,Stakeholder Update,Done,2026-02-12,78,2026-02-14,-76,2026-02-16,12
-174,5,Task 174,6,Sample Testing,Done,2026-03-20,42,2026-03-24,-38,2026-03-21,16
-175,6,Task 175,13,Project Planning,Done,2026-01-02,119,2026-01-06,-115,2026-01-11,21
-176,0,Task 176,7,Data Analysis,Done,2026-01-23,98,2026-02-02,-88,2026-02-11,63
-177,11,Task 177,11,Quality Review,Not Started,2026-06-24,-54,2026-06-27,57,,5
-178,3,Task 178,7,Data Analysis,Done,2026-01-26,95,2026-02-02,-88,2026-02-03,49
-179,4,Task 179,0,DNA Assembly,Done,2026-02-21,69,2026-02-23,-67,2026-03-02,11
-180,1,Task 180,2,PCR / Cloning,Done,2026-03-03,59,2026-03-05,-57,2026-03-10,11
-181,8,Task 181,0,DNA Assembly,Done,2026-03-26,36,2026-03-30,-32,2026-03-25,13
-182,8,Task 182,9,Automation Workflow Setup,Not Started,2026-06-11,-41,2026-07-02,62,,72
-183,11,Task 183,5,Assay Development,Done,2026-03-05,57,2026-03-12,-50,2026-03-24,17
-184,4,Task 184,11,Quality Review,Done,2026-01-24,97,2026-02-01,-89,2026-02-01,23
-185,3,Task 185,5,Assay Development,Done,2026-03-19,43,2026-03-29,-33,2026-04-12,66
-186,5,Task 186,13,Project Planning,Done,2026-03-04,58,2026-03-10,-52,2026-03-11,30
-187,9,Task 187,9,Automation Workflow Setup,Not Started,2026-05-15,-14,2026-06-12,42,,53
-188,7,Task 188,1,Strain Construction,Done,2026-01-21,100,2026-02-02,-88,2026-02-06,26
-189,2,Task 189,14,Stakeholder Update,Not Started,2026-04-02,29,2026-04-03,-28,,7
-190,6,Task 190,8,Model Development,Not Started,2026-05-02,-1,2026-05-15,14,,84
-191,7,Task 191,10,Lab Equipment Maintenance,In Progress,2026-04-09,22,2026-04-14,-17,,10
-192,7,Task 192,7,Data Analysis,Not Started,2026-06-11,-41,2026-06-21,51,,57
-193,6,Task 193,10,Lab Equipment Maintenance,Not Started,2026-05-31,-30,2026-06-04,34,,21
-194,6,Task 194,14,Stakeholder Update,In Progress,2026-04-20,11,2026-04-21,-10,,5
-195,4,Task 195,5,Assay Development,Done,2026-01-15,106,2026-01-24,-97,2026-01-27,11
-196,6,Task 196,7,Data Analysis,Not Started,2026-06-10,-40,2026-06-18,48,,48
-197,6,Task 197,4,Downstream Processing,Not Started,2026-05-20,-19,2026-05-27,26,,19
-198,6,Task 198,4,Downstream Processing,Not Started,2026-05-27,-26,2026-06-05,35,,62
-199,3,Task 199,7,Data Analysis,Not Started,2026-06-04,-34,2026-06-14,44,,37
+0,10,Task 0,0,DNA Assembly,Done,2026-03-09,53,2026-03-13,-49,2026-03-11,25
+1,11,Task 1,14,Stakeholder Update,Not Started,2026-05-10,-9,2026-05-11,10,,1
+2,3,Task 2,2,PCR / Cloning,Done,2026-02-22,68,2026-02-25,-65,2026-03-12,20
+3,6,Task 3,2,PCR / Cloning,Done,2026-03-17,45,2026-03-20,-42,2026-03-17,8
+4,11,Task 4,5,Assay Development,Done,2026-02-10,80,2026-02-19,-71,2026-02-24,15
+5,1,Task 5,4,Downstream Processing,Not Started,2026-05-16,-15,2026-05-26,25,,61
+6,0,Task 6,11,Quality Review,Cancelled,2026-03-06,56,2026-03-12,-50,,30
+7,1,Task 7,7,Data Analysis,Done,2026-04-07,24,2026-04-15,-16,2026-04-11,50
+8,3,Task 8,11,Quality Review,Done,2026-04-16,15,2026-04-18,-13,2026-04-25,6
+9,7,Task 9,10,Lab Equipment Maintenance,Done,2026-03-03,59,2026-03-06,-56,2026-03-07,11
+10,11,Task 10,14,Stakeholder Update,Done,2026-03-06,56,2026-03-07,-55,2026-03-09,2
+11,7,Task 11,4,Downstream Processing,Not Started,2026-06-12,-42,2026-06-27,57,,43
+12,10,Task 12,2,PCR / Cloning,Done,2026-03-05,57,2026-03-06,-56,2026-03-11,4
+13,4,Task 13,0,DNA Assembly,Done,2026-02-20,70,2026-02-24,-66,2026-03-03,24
+14,7,Task 14,2,PCR / Cloning,Done,2026-03-25,37,2026-03-26,-36,2026-04-07,3
+15,11,Task 15,9,Automation Workflow Setup,In Progress,2026-03-14,48,2026-04-11,-20,,63
+16,8,Task 16,6,Sample Testing,Done,2026-02-08,82,2026-02-10,-80,2026-02-10,14
+17,10,Task 17,5,Assay Development,In Progress,2026-04-14,17,2026-04-20,-11,,35
+18,8,Task 18,2,PCR / Cloning,Done,2026-01-13,108,2026-01-16,-105,2026-01-14,20
+19,4,Task 19,11,Quality Review,Done,2026-02-07,83,2026-02-11,-79,2026-02-11,18
+20,0,Task 20,14,Stakeholder Update,Done,2026-04-24,7,2026-04-26,-5,2026-05-01,3
+21,10,Task 21,2,PCR / Cloning,Not Started,2026-05-15,-14,2026-05-18,17,,7
+22,5,Task 22,11,Quality Review,Not Started,2026-06-21,-51,2026-06-27,57,,6
+23,9,Task 23,2,PCR / Cloning,Done,2026-03-03,59,2026-03-04,-58,2026-03-08,2
+24,0,Task 24,2,PCR / Cloning,Done,2026-03-01,61,2026-03-04,-58,2026-03-14,5
+25,8,Task 25,11,Quality Review,In Progress,2026-05-12,-11,2026-05-15,14,,8
+26,4,Task 26,7,Data Analysis,Done,2026-02-20,70,2026-03-01,-61,2026-03-02,54
+27,4,Task 27,4,Downstream Processing,In Progress,2026-04-17,14,2026-05-02,1,,81
+28,7,Task 28,1,Strain Construction,Done,2026-02-06,84,2026-02-23,-67,2026-03-08,87
+29,3,Task 29,9,Automation Workflow Setup,Done,2026-03-06,56,2026-03-16,-46,2026-03-12,24
+30,1,Task 30,14,Stakeholder Update,Done,2026-03-07,55,2026-03-09,-53,2026-03-12,12
+31,7,Task 31,2,PCR / Cloning,Not Started,2026-06-16,-46,2026-06-17,47,,5
+32,7,Task 32,2,PCR / Cloning,Not Started,2026-05-05,-4,2026-05-07,6,,3
+33,10,Task 33,5,Assay Development,In Progress,2026-04-21,10,2026-05-02,1,,17
+34,10,Task 34,10,Lab Equipment Maintenance,Done,2026-01-21,100,2026-01-22,-99,2026-01-27,7
+35,1,Task 35,2,PCR / Cloning,Not Started,2026-07-04,-64,2026-07-05,65,,4
+36,2,Task 36,5,Assay Development,In Progress,2026-03-30,32,2026-04-08,-23,,13
+37,7,Task 37,12,Deviation Investigation,Done,2026-02-15,75,2026-02-28,-62,2026-03-12,14
+38,1,Task 38,14,Stakeholder Update,Done,2026-03-31,31,2026-04-01,-30,2026-04-11,2
+39,6,Task 39,14,Stakeholder Update,Done,2026-03-30,32,2026-03-31,-31,2026-04-07,3
+40,7,Task 40,2,PCR / Cloning,Not Started,2026-06-12,-42,2026-06-15,45,,18
+41,2,Task 41,2,PCR / Cloning,Done,2026-02-06,84,2026-02-07,-83,2026-02-19,1
+42,11,Task 42,2,PCR / Cloning,Not Started,2026-05-24,-23,2026-05-25,24,,7
+43,8,Task 43,2,PCR / Cloning,Done,2026-01-31,90,2026-02-03,-87,2026-01-31,5
+44,10,Task 44,13,Project Planning,Done,2026-02-05,85,2026-02-10,-80,2026-02-23,12
+45,9,Task 45,9,Automation Workflow Setup,Done,2026-02-27,63,2026-03-28,-34,2026-04-10,173
+46,8,Task 46,2,PCR / Cloning,Done,2026-03-04,58,2026-03-06,-56,2026-03-11,5
+47,4,Task 47,4,Downstream Processing,Not Started,2026-04-16,15,2026-05-01,0,,55
+48,1,Task 48,0,DNA Assembly,Done,2026-03-07,55,2026-03-09,-53,2026-03-20,6
+49,2,Task 49,14,Stakeholder Update,Done,2026-03-02,60,2026-03-03,-59,2026-03-03,4
+50,8,Task 50,10,Lab Equipment Maintenance,Not Started,2026-05-26,-25,2026-05-31,30,,5
+51,10,Task 51,12,Deviation Investigation,Done,2026-02-01,89,2026-02-10,-80,2026-02-09,25
+52,1,Task 52,14,Stakeholder Update,Not Started,2026-04-27,4,2026-04-28,-3,,2
+53,11,Task 53,3,Fermentation Run,Done,2026-04-13,18,2026-04-30,-1,2026-05-01,79
+54,4,Task 54,14,Stakeholder Update,Done,2026-02-04,86,2026-02-05,-85,2026-02-08,1
+55,0,Task 55,2,PCR / Cloning,Done,2026-05-11,-10,2026-05-12,11,2026-05-11,6
+56,7,Task 56,7,Data Analysis,Not Started,2026-06-13,-43,2026-06-22,52,,9
+57,1,Task 57,0,DNA Assembly,Not Started,2026-07-06,-66,2026-07-09,69,,4
+58,5,Task 58,9,Automation Workflow Setup,Not Started,2026-05-27,-26,2026-06-10,40,,30
+59,0,Task 59,2,PCR / Cloning,In Progress,2026-04-05,26,2026-04-06,-25,,2
+60,10,Task 60,0,DNA Assembly,Not Started,2026-06-13,-43,2026-06-18,48,,28
+61,2,Task 61,14,Stakeholder Update,Cancelled,2026-02-19,71,2026-02-20,-70,,7
+62,2,Task 62,14,Stakeholder Update,Done,2026-02-21,69,2026-02-22,-68,2026-02-27,7
+63,6,Task 63,12,Deviation Investigation,Done,2026-03-16,46,2026-03-24,-38,2026-03-22,32
+64,0,Task 64,13,Project Planning,Done,2026-03-16,46,2026-03-19,-43,2026-03-28,14
+65,4,Task 65,12,Deviation Investigation,Done,2026-02-21,69,2026-03-01,-61,2026-03-02,33
+66,5,Task 66,2,PCR / Cloning,In Progress,2026-04-18,13,2026-04-19,-12,,5
+67,6,Task 67,10,Lab Equipment Maintenance,Done,2026-03-24,38,2026-03-29,-33,2026-03-27,33
+68,4,Task 68,2,PCR / Cloning,Done,2026-01-28,93,2026-01-30,-91,2026-02-07,7
+69,11,Task 69,11,Quality Review,Done,2026-02-20,70,2026-02-25,-65,2026-03-10,11
+70,4,Task 70,0,DNA Assembly,Done,2026-01-24,97,2026-01-29,-92,2026-02-10,26
+71,11,Task 71,14,Stakeholder Update,In Progress,2026-04-25,6,2026-04-26,-5,,6
+72,5,Task 72,10,Lab Equipment Maintenance,In Progress,2026-04-23,8,2026-04-24,-7,,6
+73,6,Task 73,2,PCR / Cloning,Done,2026-03-19,43,2026-03-22,-40,2026-03-23,16
+74,10,Task 74,14,Stakeholder Update,Not Started,2026-06-12,-42,2026-06-13,43,,5
+75,4,Task 75,4,Downstream Processing,Done,2026-03-03,59,2026-03-08,-54,2026-03-16,30
+76,9,Task 76,10,Lab Equipment Maintenance,Done,2026-04-17,14,2026-04-20,-11,2026-04-21,19
+77,7,Task 77,11,Quality Review,Done,2026-03-05,57,2026-03-13,-49,2026-03-17,40
+78,10,Task 78,10,Lab Equipment Maintenance,Done,2026-01-29,92,2026-02-01,-89,2026-02-03,12
+79,3,Task 79,12,Deviation Investigation,Done,2026-02-22,68,2026-03-01,-61,2026-03-11,46
+80,1,Task 80,6,Sample Testing,Done,2026-04-07,24,2026-04-14,-17,2026-04-21,38
+81,6,Task 81,2,PCR / Cloning,Not Started,2026-05-09,-8,2026-05-12,11,,6
+82,6,Task 82,2,PCR / Cloning,Done,2026-04-17,14,2026-04-20,-11,2026-05-01,10
+83,1,Task 83,6,Sample Testing,Not Started,2026-07-02,-62,2026-07-07,67,,22
+84,9,Task 84,2,PCR / Cloning,Done,2026-05-06,-5,2026-05-08,7,2026-05-06,8
+85,8,Task 85,5,Assay Development,Not Started,2026-05-12,-11,2026-05-19,18,,22
+86,10,Task 86,2,PCR / Cloning,Not Started,2026-05-10,-9,2026-05-13,12,,11
+87,7,Task 87,0,DNA Assembly,Done,2026-03-22,40,2026-03-26,-36,2026-03-31,21
+88,1,Task 88,1,Strain Construction,Not Started,2026-05-26,-25,2026-06-12,42,,105
+89,2,Task 89,10,Lab Equipment Maintenance,Done,2026-03-24,38,2026-03-25,-37,2026-04-06,4
+90,6,Task 90,0,DNA Assembly,Done,2026-03-31,31,2026-04-05,-26,2026-04-18,35
+91,11,Task 91,0,DNA Assembly,Not Started,2026-05-24,-23,2026-05-29,28,,16
+92,4,Task 92,11,Quality Review,Done,2026-03-18,44,2026-03-26,-36,2026-04-07,46
+93,3,Task 93,6,Sample Testing,Not Started,2026-06-07,-37,2026-06-11,41,,19
+94,0,Task 94,4,Downstream Processing,Not Started,2026-05-16,-15,2026-05-31,30,,66
+95,11,Task 95,2,PCR / Cloning,Cancelled,2026-02-23,67,2026-02-25,-65,,10
+96,0,Task 96,14,Stakeholder Update,Done,2026-03-01,61,2026-03-02,-60,2026-03-01,7
+97,7,Task 97,2,PCR / Cloning,Not Started,2026-04-28,3,2026-04-30,-1,,9
+98,5,Task 98,3,Fermentation Run,Done,2026-04-18,13,2026-05-01,0,2026-05-01,45
+99,1,Task 99,6,Sample Testing,Not Started,2026-07-05,-65,2026-07-12,72,,10
+100,5,Task 100,2,PCR / Cloning,Done,2026-02-16,74,2026-02-17,-73,2026-02-19,2
+101,0,Task 101,10,Lab Equipment Maintenance,Done,2026-03-07,55,2026-03-09,-53,2026-03-07,11
+102,3,Task 102,6,Sample Testing,Not Started,2026-05-21,-20,2026-05-25,24,,23
+103,11,Task 103,10,Lab Equipment Maintenance,Not Started,2026-04-11,20,2026-04-13,-18,,2
+104,4,Task 104,9,Automation Workflow Setup,Done,2026-03-15,47,2026-04-06,-25,2026-04-07,41
+105,9,Task 105,10,Lab Equipment Maintenance,Done,2026-03-02,60,2026-03-04,-58,2026-03-08,12
+106,9,Task 106,12,Deviation Investigation,Done,2026-02-22,68,2026-03-08,-54,2026-03-16,98
+107,5,Task 107,0,DNA Assembly,Done,2026-02-09,81,2026-02-13,-77,2026-02-23,7
+108,6,Task 108,14,Stakeholder Update,Not Started,2026-05-11,-10,2026-05-13,12,,4
+109,11,Task 109,7,Data Analysis,Not Started,2026-05-25,-24,2026-06-01,31,,36
+110,6,Task 110,12,Deviation Investigation,Done,2026-03-16,46,2026-03-30,-32,2026-04-01,25
+111,4,Task 111,14,Stakeholder Update,In Progress,2026-04-30,1,2026-05-01,0,,5
+112,10,Task 112,4,Downstream Processing,In Progress,2026-05-12,-11,2026-05-17,16,,10
+113,7,Task 113,2,PCR / Cloning,In Progress,2026-04-18,13,2026-04-20,-11,,11
+114,11,Task 114,14,Stakeholder Update,Not Started,2026-06-03,-33,2026-06-04,34,,2
+115,1,Task 115,2,PCR / Cloning,Not Started,2026-06-22,-52,2026-06-24,54,,10
+116,3,Task 116,10,Lab Equipment Maintenance,Not Started,2026-06-10,-40,2026-06-14,44,,4
+117,1,Task 117,2,PCR / Cloning,Not Started,2026-04-20,11,2026-04-22,-9,,11
+118,5,Task 118,6,Sample Testing,Not Started,2026-05-05,-4,2026-05-11,10,,41
+119,5,Task 119,3,Fermentation Run,Not Started,2026-04-16,15,2026-04-30,-1,,43
+120,1,Task 120,10,Lab Equipment Maintenance,Done,2026-03-19,43,2026-03-22,-40,2026-03-22,9
+121,3,Task 121,11,Quality Review,Not Started,2026-06-30,-60,2026-07-04,64,,23
+122,4,Task 122,14,Stakeholder Update,Done,2026-03-02,60,2026-03-03,-59,2026-03-03,3
+123,0,Task 123,10,Lab Equipment Maintenance,Done,2026-03-26,36,2026-03-28,-34,2026-03-26,10
+124,4,Task 124,10,Lab Equipment Maintenance,Done,2026-04-15,16,2026-04-17,-14,2026-04-27,3
+125,0,Task 125,8,Model Development,In Progress,2026-04-21,10,2026-05-05,4,,37
+126,0,Task 126,2,PCR / Cloning,Done,2026-03-05,57,2026-03-07,-55,2026-03-14,9
+127,1,Task 127,9,Automation Workflow Setup,Not Started,2026-03-27,35,2026-04-07,-24,,49
+128,1,Task 128,14,Stakeholder Update,Not Started,2026-07-09,-69,2026-07-10,70,,7
+129,6,Task 129,10,Lab Equipment Maintenance,Done,2026-03-10,52,2026-03-15,-47,2026-03-22,19
+130,7,Task 130,2,PCR / Cloning,Not Started,2026-05-10,-9,2026-05-13,12,,4
+131,9,Task 131,14,Stakeholder Update,Done,2026-03-15,47,2026-03-16,-46,2026-03-19,6
+132,1,Task 132,2,PCR / Cloning,Not Started,2026-07-08,-68,2026-07-09,69,,1
+133,2,Task 133,0,DNA Assembly,In Progress,2026-04-28,3,2026-05-03,2,,14
+134,0,Task 134,2,PCR / Cloning,Done,2026-03-27,35,2026-03-30,-32,2026-04-08,5
+135,10,Task 135,2,PCR / Cloning,Not Started,2026-06-15,-45,2026-06-17,47,,11
+136,10,Task 136,12,Deviation Investigation,Not Started,2026-04-24,7,2026-05-02,1,,22
+137,10,Task 137,2,PCR / Cloning,Done,2026-02-11,79,2026-02-13,-77,2026-02-13,14
+138,4,Task 138,9,Automation Workflow Setup,Done,2026-03-01,61,2026-03-29,-33,2026-04-07,105
+139,11,Task 139,4,Downstream Processing,Done,2026-03-27,35,2026-04-05,-26,2026-04-14,14
+140,9,Task 140,0,DNA Assembly,Done,2026-03-30,32,2026-04-04,-27,2026-03-30,7
+141,3,Task 141,14,Stakeholder Update,In Progress,2026-04-25,6,2026-04-26,-5,,7
+142,2,Task 142,6,Sample Testing,Done,2026-03-27,35,2026-04-03,-28,2026-04-03,44
+143,6,Task 143,10,Lab Equipment Maintenance,Done,2026-02-21,69,2026-02-25,-65,2026-03-05,14
+144,5,Task 144,10,Lab Equipment Maintenance,In Progress,2026-05-01,0,2026-05-03,2,,9
+145,4,Task 145,10,Lab Equipment Maintenance,In Progress,2026-05-01,0,2026-05-05,4,,18
+146,1,Task 146,2,PCR / Cloning,Cancelled,2026-03-18,44,2026-03-20,-42,,8
+147,8,Task 147,12,Deviation Investigation,Not Started,2026-05-29,-28,2026-06-03,33,,19
+148,6,Task 148,0,DNA Assembly,Done,2026-04-30,1,2026-05-04,3,2026-05-01,18
+149,0,Task 149,2,PCR / Cloning,Done,2026-03-07,55,2026-03-10,-52,2026-03-19,18
+150,1,Task 150,0,DNA Assembly,In Progress,2026-03-29,33,2026-04-01,-30,,3
+151,8,Task 151,4,Downstream Processing,Done,2026-02-09,81,2026-02-17,-73,2026-02-15,49
+152,2,Task 152,6,Sample Testing,Done,2026-03-08,54,2026-03-15,-47,2026-03-18,33
+153,7,Task 153,14,Stakeholder Update,Not Started,2026-05-17,-16,2026-05-18,17,,4
+154,3,Task 154,14,Stakeholder Update,Done,2026-03-05,57,2026-03-06,-56,2026-03-14,3
+155,8,Task 155,2,PCR / Cloning,Done,2026-03-24,38,2026-03-25,-37,2026-04-07,5
+156,10,Task 156,6,Sample Testing,In Progress,2026-04-30,1,2026-05-03,2,,14
+157,5,Task 157,7,Data Analysis,Not Started,2026-06-02,-32,2026-06-11,41,,29
+158,3,Task 158,14,Stakeholder Update,Not Started,2026-05-25,-24,2026-05-26,25,,7
+159,6,Task 159,0,DNA Assembly,In Progress,2026-05-11,-10,2026-05-16,15,,17
+160,6,Task 160,14,Stakeholder Update,Cancelled,2026-04-14,17,2026-04-15,-16,,2
+161,8,Task 161,14,Stakeholder Update,Done,2026-02-05,85,2026-02-07,-83,2026-02-16,3
+162,8,Task 162,14,Stakeholder Update,Done,2026-02-16,74,2026-02-17,-73,2026-03-04,2
+163,1,Task 163,6,Sample Testing,Not Started,2026-05-14,-13,2026-05-18,17,,16
+164,10,Task 164,0,DNA Assembly,Not Started,2026-05-22,-21,2026-05-26,25,,14
+165,10,Task 165,10,Lab Equipment Maintenance,Not Started,2026-05-24,-23,2026-05-28,27,,6
+166,3,Task 166,10,Lab Equipment Maintenance,Done,2026-04-15,16,2026-04-18,-13,2026-04-26,6
+167,10,Task 167,10,Lab Equipment Maintenance,Not Started,2026-04-29,2,2026-04-30,-1,,3
+168,0,Task 168,0,DNA Assembly,Done,2026-03-28,34,2026-03-30,-32,2026-04-07,4
+169,3,Task 169,7,Data Analysis,In Progress,2026-03-31,31,2026-04-05,-26,,24
+170,6,Task 170,10,Lab Equipment Maintenance,Done,2026-04-14,17,2026-04-16,-15,2026-04-15,5
+171,7,Task 171,10,Lab Equipment Maintenance,Done,2026-03-27,35,2026-03-31,-31,2026-04-09,13
+172,10,Task 172,7,Data Analysis,Done,2026-04-29,2,2026-05-03,2,2026-05-01,13
+173,10,Task 173,14,Stakeholder Update,Done,2026-05-02,-1,2026-05-04,3,2026-05-02,8
+174,7,Task 174,0,DNA Assembly,Not Started,2026-06-16,-46,2026-06-21,51,,16
+175,9,Task 175,2,PCR / Cloning,Done,2026-03-26,36,2026-03-29,-33,2026-04-05,11
+176,0,Task 176,8,Model Development,Done,2026-02-25,65,2026-03-14,-48,2026-03-24,53
+177,3,Task 177,10,Lab Equipment Maintenance,Done,2026-04-13,18,2026-04-16,-15,2026-04-30,11
+178,10,Task 178,11,Quality Review,Done,2026-02-10,80,2026-02-18,-72,2026-03-05,49
+179,0,Task 179,2,PCR / Cloning,Done,2026-02-23,67,2026-02-25,-65,2026-02-24,3
+180,4,Task 180,2,PCR / Cloning,Done,2026-02-15,75,2026-02-17,-73,2026-03-01,7
+181,8,Task 181,6,Sample Testing,Done,2026-02-22,68,2026-02-26,-64,2026-03-08,13
+182,11,Task 182,13,Project Planning,Done,2026-05-21,-20,2026-05-23,22,2026-05-21,14
+183,3,Task 183,13,Project Planning,Not Started,2026-05-20,-19,2026-05-25,24,,17
+184,0,Task 184,2,PCR / Cloning,In Progress,2026-04-18,13,2026-04-19,-12,,6
+185,10,Task 185,2,PCR / Cloning,Not Started,2026-06-18,-48,2026-06-20,50,,7
+186,1,Task 186,10,Lab Equipment Maintenance,Done,2026-02-23,67,2026-02-27,-63,2026-03-11,14
+187,9,Task 187,2,PCR / Cloning,Done,2026-05-09,-8,2026-05-10,9,2026-05-09,6
+188,6,Task 188,1,Strain Construction,Done,2026-02-14,76,2026-02-25,-65,2026-03-07,25
+189,1,Task 189,2,PCR / Cloning,Done,2026-03-23,39,2026-03-26,-36,2026-04-01,20
+190,6,Task 190,9,Automation Workflow Setup,Done,2026-04-04,27,2026-04-18,-13,2026-04-28,92
+191,6,Task 191,14,Stakeholder Update,Done,2026-02-14,76,2026-02-16,-74,2026-02-17,9
+192,7,Task 192,14,Stakeholder Update,Cancelled,2026-02-15,75,2026-02-17,-73,,7
+193,8,Task 193,14,Stakeholder Update,Done,2026-01-26,95,2026-01-28,-93,2026-01-29,3
+194,7,Task 194,0,DNA Assembly,Not Started,2026-06-22,-52,2026-06-25,55,,3
+195,0,Task 195,11,Quality Review,Done,2026-03-07,55,2026-03-10,-52,2026-03-11,5
+196,8,Task 196,2,PCR / Cloning,Done,2026-03-11,51,2026-03-12,-50,2026-03-11,7
+197,9,Task 197,0,DNA Assembly,Done,2026-03-05,57,2026-03-08,-54,2026-03-08,6
+198,10,Task 198,13,Project Planning,Done,2026-01-09,112,2026-01-12,-109,2026-01-14,21
+199,5,Task 199,0,DNA Assembly,Done,2026-02-19,71,2026-02-23,-67,2026-03-03,20
+200,1,Task 200,11,Quality Review,Not Started,2026-06-11,-41,2026-06-16,46,,29
+201,5,Task 201,6,Sample Testing,Not Started,2026-06-01,-31,2026-06-03,33,,10
+202,3,Task 202,14,Stakeholder Update,Not Started,2026-06-29,-59,2026-06-30,60,,3
+203,7,Task 203,10,Lab Equipment Maintenance,Cancelled,2026-02-05,85,2026-02-06,-84,,7
+204,6,Task 204,5,Assay Development,Done,2026-04-13,18,2026-04-19,-12,2026-04-28,10
+205,1,Task 205,2,PCR / Cloning,Done,2026-03-05,57,2026-03-06,-56,2026-03-20,6
+206,9,Task 206,7,Data Analysis,Cancelled,2026-04-06,25,2026-04-14,-17,,41
+207,4,Task 207,6,Sample Testing,Done,2026-03-20,42,2026-03-26,-36,2026-03-24,41
+208,11,Task 208,13,Project Planning,In Progress,2026-05-17,-16,2026-05-22,21,,18
+209,5,Task 209,13,Project Planning,Not Started,2026-05-23,-22,2026-05-28,27,,15
+210,6,Task 210,2,PCR / Cloning,Cancelled,2026-03-29,33,2026-03-31,-31,,12
+211,7,Task 211,0,DNA Assembly,Done,2026-02-13,77,2026-02-15,-75,2026-02-21,14
+212,2,Task 212,8,Model Development,In Progress,2026-04-11,20,2026-04-27,-4,,101
+213,1,Task 213,4,Downstream Processing,Not Started,2026-06-05,-35,2026-06-20,50,,21
+214,4,Task 214,10,Lab Equipment Maintenance,Done,2026-02-06,84,2026-02-09,-81,2026-02-10,7
+215,10,Task 215,6,Sample Testing,Done,2026-04-05,26,2026-04-07,-24,2026-04-13,3
+216,4,Task 216,8,Model Development,Done,2026-03-19,43,2026-04-07,-24,2026-04-21,97
+217,10,Task 217,10,Lab Equipment Maintenance,Not Started,2026-06-10,-40,2026-06-11,41,,6
+218,11,Task 218,2,PCR / Cloning,Done,2026-04-01,30,2026-04-02,-29,2026-04-06,3
+219,5,Task 219,0,DNA Assembly,Not Started,2026-06-30,-60,2026-07-03,63,,15
+220,1,Task 220,2,PCR / Cloning,Done,2026-02-24,66,2026-02-27,-63,2026-03-10,9
+221,6,Task 221,5,Assay Development,Done,2026-03-02,60,2026-03-12,-50,2026-03-17,59
+222,9,Task 222,10,Lab Equipment Maintenance,Done,2026-03-08,54,2026-03-09,-53,2026-03-23,1
+223,10,Task 223,0,DNA Assembly,In Progress,2026-04-24,7,2026-04-29,-2,,19
+224,6,Task 224,2,PCR / Cloning,Done,2026-02-24,66,2026-02-27,-63,2026-02-25,12
+225,10,Task 225,10,Lab Equipment Maintenance,Not Started,2026-05-20,-19,2026-05-24,23,,5
+226,3,Task 226,4,Downstream Processing,Done,2026-03-02,60,2026-03-16,-46,2026-03-20,41
+227,2,Task 227,11,Quality Review,Done,2026-03-12,50,2026-03-16,-46,2026-03-26,27
+228,6,Task 228,2,PCR / Cloning,Done,2026-04-19,12,2026-04-21,-10,2026-05-01,10
+229,10,Task 229,12,Deviation Investigation,Done,2026-04-17,14,2026-04-23,-8,2026-04-19,33
+230,0,Task 230,6,Sample Testing,Done,2026-03-31,31,2026-04-02,-29,2026-04-15,8
+231,11,Task 231,10,Lab Equipment Maintenance,Done,2026-02-20,70,2026-02-23,-67,2026-02-28,8
+232,9,Task 232,6,Sample Testing,Not Started,2026-04-04,27,2026-04-11,-20,,13
+233,3,Task 233,5,Assay Development,Not Started,2026-06-30,-60,2026-07-11,71,,21
+234,6,Task 234,13,Project Planning,Done,2026-03-10,52,2026-03-14,-48,2026-03-14,6
+235,8,Task 235,10,Lab Equipment Maintenance,Not Started,2026-05-21,-20,2026-05-26,25,,29
+236,5,Task 236,3,Fermentation Run,In Progress,2026-03-15,47,2026-04-04,-27,,38
+237,4,Task 237,2,PCR / Cloning,Done,2026-02-12,78,2026-02-15,-75,2026-03-02,5
+238,2,Task 238,14,Stakeholder Update,Done,2026-03-30,32,2026-04-01,-30,2026-04-14,9
+239,10,Task 239,14,Stakeholder Update,Not Started,2026-06-15,-45,2026-06-17,47,,7
+240,2,Task 240,5,Assay Development,Done,2026-03-27,35,2026-04-08,-23,2026-04-11,19
+241,5,Task 241,6,Sample Testing,Not Started,2026-06-04,-34,2026-06-08,38,,18
+242,0,Task 242,0,DNA Assembly,Done,2026-02-28,62,2026-03-04,-58,2026-03-01,23
+243,9,Task 243,6,Sample Testing,In Progress,2026-05-02,-1,2026-05-07,6,,30
+244,11,Task 244,14,Stakeholder Update,Done,2026-03-11,51,2026-03-13,-49,2026-03-23,10
+245,2,Task 245,14,Stakeholder Update,Done,2026-02-12,78,2026-02-14,-76,2026-02-19,13
+246,1,Task 246,6,Sample Testing,Done,2026-02-27,63,2026-03-02,-60,2026-03-11,17
+247,8,Task 247,7,Data Analysis,In Progress,2026-04-14,17,2026-04-19,-12,,14
+248,6,Task 248,4,Downstream Processing,Not Started,2026-05-07,-6,2026-05-17,16,,60
+249,10,Task 249,10,Lab Equipment Maintenance,Not Started,2026-03-31,31,2026-04-01,-30,,6
+250,6,Task 250,2,PCR / Cloning,Done,2026-05-05,-4,2026-05-08,7,2026-05-05,7
+251,5,Task 251,0,DNA Assembly,Not Started,2026-05-06,-5,2026-05-09,8,,15
+252,2,Task 252,9,Automation Workflow Setup,Done,2026-03-10,52,2026-03-22,-40,2026-04-06,54
+253,2,Task 253,10,Lab Equipment Maintenance,Done,2026-02-10,80,2026-02-15,-75,2026-02-23,21
+254,5,Task 254,0,DNA Assembly,Cancelled,2026-03-24,38,2026-03-28,-34,,14
+255,7,Task 255,2,PCR / Cloning,Done,2026-03-01,61,2026-03-02,-60,2026-03-01,5
+256,8,Task 256,13,Project Planning,Done,2026-01-20,101,2026-01-26,-95,2026-02-09,14
+257,9,Task 257,4,Downstream Processing,Done,2026-03-12,50,2026-03-19,-43,2026-04-02,17
+258,11,Task 258,5,Assay Development,Done,2026-03-09,53,2026-03-20,-42,2026-03-22,67
+259,9,Task 259,2,PCR / Cloning,In Progress,2026-04-15,16,2026-04-18,-13,,10
+260,4,Task 260,14,Stakeholder Update,Done,2026-02-17,73,2026-02-19,-71,2026-03-04,9
+261,7,Task 261,11,Quality Review,In Progress,2026-04-28,3,2026-05-06,5,,34
+262,2,Task 262,12,Deviation Investigation,Done,2026-02-16,74,2026-03-02,-60,2026-02-26,96
+263,7,Task 263,13,Project Planning,Done,2026-02-16,74,2026-02-22,-68,2026-03-05,13
+264,4,Task 264,0,DNA Assembly,Done,2026-02-27,63,2026-03-02,-60,2026-03-13,7
+265,6,Task 265,0,DNA Assembly,Done,2026-04-08,23,2026-04-11,-20,2026-04-08,16
+266,0,Task 266,4,Downstream Processing,Done,2026-03-21,41,2026-03-31,-31,2026-03-28,33
+267,3,Task 267,0,DNA Assembly,Not Started,2026-05-12,-11,2026-05-14,13,,4
+268,0,Task 268,2,PCR / Cloning,In Progress,2026-05-19,-18,2026-05-21,20,,14
+269,11,Task 269,6,Sample Testing,Done,2026-01-23,98,2026-01-29,-92,2026-01-24,22
+270,3,Task 270,13,Project Planning,Not Started,2026-07-01,-61,2026-07-07,67,,33
+271,1,Task 271,11,Quality Review,Not Started,2026-05-05,-4,2026-05-08,7,,10
+272,6,Task 272,10,Lab Equipment Maintenance,Not Started,2026-04-09,22,2026-04-14,-17,,31
+273,7,Task 273,10,Lab Equipment Maintenance,Not Started,2026-06-01,-31,2026-06-02,32,,5
+274,3,Task 274,10,Lab Equipment Maintenance,Not Started,2026-06-05,-35,2026-06-08,38,,3
+275,9,Task 275,3,Fermentation Run,Not Started,2026-04-11,20,2026-04-27,-4,,101
+276,1,Task 276,7,Data Analysis,Cancelled,2026-03-06,56,2026-03-14,-48,,42
+277,8,Task 277,11,Quality Review,Not Started,2026-06-01,-31,2026-06-07,37,,7
+278,6,Task 278,13,Project Planning,In Progress,2026-05-02,-1,2026-05-04,3,,7
+279,4,Task 279,11,Quality Review,Not Started,2026-05-04,-3,2026-05-08,7,,11
+280,11,Task 280,10,Lab Equipment Maintenance,Not Started,2026-04-17,14,2026-04-18,-13,,3
+281,8,Task 281,3,Fermentation Run,Done,2026-02-24,66,2026-03-13,-49,2026-03-22,106
+282,7,Task 282,10,Lab Equipment Maintenance,Done,2026-02-06,84,2026-02-08,-82,2026-02-17,2
+283,4,Task 283,2,PCR / Cloning,Done,2026-01-29,92,2026-01-30,-91,2026-02-03,5
+284,6,Task 284,14,Stakeholder Update,Done,2026-03-14,48,2026-03-16,-46,2026-03-31,5
+285,4,Task 285,3,Fermentation Run,Done,2026-01-30,91,2026-02-18,-72,2026-02-23,53
+286,1,Task 286,12,Deviation Investigation,Not Started,2026-05-30,-29,2026-06-10,40,,67
+287,6,Task 287,3,Fermentation Run,In Progress,2026-04-14,17,2026-04-23,-8,,32
+288,8,Task 288,2,PCR / Cloning,Not Started,2026-04-29,2,2026-04-30,-1,,5
+289,2,Task 289,7,Data Analysis,Done,2026-02-12,78,2026-02-20,-70,2026-02-24,27
+290,7,Task 290,10,Lab Equipment Maintenance,Done,2026-03-04,58,2026-03-08,-54,2026-03-14,18
+291,0,Task 291,10,Lab Equipment Maintenance,Done,2026-05-08,-7,2026-05-11,10,2026-05-08,4
+292,1,Task 292,10,Lab Equipment Maintenance,Not Started,2026-05-21,-20,2026-05-25,24,,27
+293,10,Task 293,2,PCR / Cloning,Done,2026-02-11,79,2026-02-12,-78,2026-02-21,1
+294,2,Task 294,0,DNA Assembly,Done,2026-03-17,45,2026-03-21,-41,2026-04-03,5
+295,9,Task 295,2,PCR / Cloning,In Progress,2026-04-05,26,2026-04-07,-24,,14
+296,1,Task 296,8,Model Development,Not Started,2026-05-21,-20,2026-06-05,35,,65
+297,5,Task 297,10,Lab Equipment Maintenance,Done,2026-03-07,55,2026-03-09,-53,2026-03-09,9
+298,8,Task 298,4,Downstream Processing,Done,2026-02-10,80,2026-02-23,-67,2026-02-26,70
+299,3,Task 299,14,Stakeholder Update,Not Started,2026-06-21,-51,2026-06-23,53,,5
+300,1,Task 300,1,Strain Construction,Not Started,2026-06-12,-42,2026-06-24,54,,34
+301,11,Task 301,5,Assay Development,Done,2026-04-13,18,2026-04-19,-12,2026-04-16,41
+302,8,Task 302,2,PCR / Cloning,Done,2026-02-20,70,2026-02-22,-68,2026-03-09,4
+303,5,Task 303,6,Sample Testing,Done,2026-03-29,33,2026-03-31,-31,2026-04-02,14
+304,7,Task 304,0,DNA Assembly,In Progress,2026-05-20,-19,2026-05-24,23,,21
+305,2,Task 305,10,Lab Equipment Maintenance,Done,2026-02-07,83,2026-02-08,-82,2026-02-18,5
+306,6,Task 306,11,Quality Review,Not Started,2026-04-24,7,2026-05-02,1,,28
+307,10,Task 307,0,DNA Assembly,Not Started,2026-05-18,-17,2026-05-23,22,,33
+308,8,Task 308,10,Lab Equipment Maintenance,Done,2026-02-13,77,2026-02-15,-75,2026-02-13,3
+309,8,Task 309,2,PCR / Cloning,Done,2026-02-21,69,2026-02-22,-68,2026-02-24,3
+310,8,Task 310,14,Stakeholder Update,Done,2026-03-16,46,2026-03-17,-45,2026-03-29,3
+311,2,Task 311,10,Lab Equipment Maintenance,Not Started,2026-04-08,23,2026-04-13,-18,,25
+312,2,Task 312,9,Automation Workflow Setup,Done,2026-02-18,72,2026-03-18,-44,2026-04-01,182
+313,5,Task 313,13,Project Planning,Done,2026-02-16,74,2026-02-22,-68,2026-02-17,11
+314,0,Task 314,14,Stakeholder Update,Not Started,2026-05-13,-12,2026-05-15,14,,11
+315,6,Task 315,10,Lab Equipment Maintenance,Done,2026-04-14,17,2026-04-15,-16,2026-04-27,3
+316,10,Task 316,14,Stakeholder Update,Done,2026-03-09,53,2026-03-11,-51,2026-03-18,6
+317,7,Task 317,0,DNA Assembly,Done,2026-03-02,60,2026-03-04,-58,2026-03-14,9
+318,3,Task 318,3,Fermentation Run,In Progress,2026-05-07,-6,2026-05-16,15,,29
+319,11,Task 319,14,Stakeholder Update,Not Started,2026-05-04,-3,2026-05-06,5,,7
+320,8,Task 320,8,Model Development,Done,2026-03-13,49,2026-03-25,-37,2026-03-28,69
+321,3,Task 321,2,PCR / Cloning,Done,2026-05-01,0,2026-05-02,1,2026-05-01,4
+322,3,Task 322,14,Stakeholder Update,In Progress,2026-05-10,-9,2026-05-11,10,,6
+323,5,Task 323,2,PCR / Cloning,Not Started,2026-06-13,-43,2026-06-14,44,,5
+324,7,Task 324,6,Sample Testing,Not Started,2026-05-28,-27,2026-06-01,31,,4
+325,1,Task 325,14,Stakeholder Update,Not Started,2026-04-19,12,2026-04-21,-10,,7
+326,0,Task 326,0,DNA Assembly,In Progress,2026-05-06,-5,2026-05-11,10,,25
+327,10,Task 327,6,Sample Testing,Done,2026-01-08,113,2026-01-14,-107,2026-01-22,14
+328,4,Task 328,10,Lab Equipment Maintenance,Done,2026-03-11,51,2026-03-15,-47,2026-03-11,22
+329,8,Task 329,2,PCR / Cloning,Done,2026-03-25,37,2026-03-28,-34,2026-04-08,17
+330,8,Task 330,2,PCR / Cloning,Not Started,2026-06-16,-46,2026-06-19,49,,6
+331,2,Task 331,14,Stakeholder Update,Done,2026-03-18,44,2026-03-20,-42,2026-03-25,10
+332,5,Task 332,11,Quality Review,Not Started,2026-07-10,-70,2026-07-13,73,,19
+333,6,Task 333,6,Sample Testing,Done,2026-02-14,76,2026-02-16,-74,2026-02-21,14
+334,7,Task 334,7,Data Analysis,Not Started,2026-06-25,-55,2026-06-30,60,,33
+335,8,Task 335,2,PCR / Cloning,In Progress,2026-04-02,29,2026-04-05,-26,,12
+336,9,Task 336,2,PCR / Cloning,In Progress,2026-04-26,5,2026-04-29,-2,,21
+337,4,Task 337,6,Sample Testing,Done,2026-03-12,50,2026-03-14,-48,2026-03-12,8
+338,9,Task 338,2,PCR / Cloning,Not Started,2026-05-16,-15,2026-05-19,18,,18
+339,4,Task 339,14,Stakeholder Update,Not Started,2026-04-26,5,2026-04-27,-4,,4
+340,2,Task 340,7,Data Analysis,Done,2026-02-17,73,2026-02-26,-64,2026-02-28,11
+341,9,Task 341,14,Stakeholder Update,Done,2026-03-13,49,2026-03-14,-48,2026-03-19,4
+342,2,Task 342,5,Assay Development,Done,2026-03-23,39,2026-03-31,-31,2026-04-14,38
+343,11,Task 343,10,Lab Equipment Maintenance,Not Started,2026-06-03,-33,2026-06-05,35,,5
+344,8,Task 344,2,PCR / Cloning,Not Started,2026-05-13,-12,2026-05-16,15,,13
+345,2,Task 345,6,Sample Testing,Done,2026-03-14,48,2026-03-20,-42,2026-04-04,22
+346,9,Task 346,6,Sample Testing,Done,2026-03-24,38,2026-03-27,-35,2026-03-29,12
+347,4,Task 347,10,Lab Equipment Maintenance,Done,2026-03-05,57,2026-03-09,-53,2026-03-21,27
+348,4,Task 348,2,PCR / Cloning,In Progress,2026-04-20,11,2026-04-23,-8,,15
+349,5,Task 349,14,Stakeholder Update,Not Started,2026-04-21,10,2026-04-22,-9,,6
+350,1,Task 350,3,Fermentation Run,Done,2026-04-23,8,2026-05-07,6,2026-05-01,39
+351,8,Task 351,2,PCR / Cloning,Done,2026-03-21,41,2026-03-24,-38,2026-04-07,21
+352,3,Task 352,2,PCR / Cloning,Not Started,2026-07-01,-61,2026-07-04,64,,10
+353,10,Task 353,2,PCR / Cloning,Not Started,2026-04-21,10,2026-04-22,-9,,4
+354,1,Task 354,10,Lab Equipment Maintenance,Cancelled,2026-02-18,72,2026-02-20,-70,,4
+355,6,Task 355,10,Lab Equipment Maintenance,Done,2026-04-12,19,2026-04-16,-15,2026-04-20,14
+356,4,Task 356,10,Lab Equipment Maintenance,Done,2026-04-17,14,2026-04-18,-13,2026-04-30,6
+357,11,Task 357,13,Project Planning,Done,2026-03-07,55,2026-03-09,-53,2026-03-09,2
+358,6,Task 358,11,Quality Review,Done,2026-05-16,-15,2026-05-19,18,2026-05-16,4
+359,0,Task 359,2,PCR / Cloning,Done,2026-03-04,58,2026-03-07,-55,2026-03-12,12
+360,7,Task 360,14,Stakeholder Update,Done,2026-02-24,66,2026-02-26,-64,2026-03-07,6
+361,3,Task 361,12,Deviation Investigation,Done,2026-03-29,33,2026-04-08,-23,2026-04-23,26
+362,11,Task 362,2,PCR / Cloning,Done,2026-04-18,13,2026-04-21,-10,2026-05-01,9
+363,2,Task 363,10,Lab Equipment Maintenance,Done,2026-03-25,37,2026-03-29,-33,2026-03-26,16
+364,10,Task 364,0,DNA Assembly,Not Started,2026-05-08,-7,2026-05-11,10,,10
+365,0,Task 365,2,PCR / Cloning,Done,2026-04-17,14,2026-04-18,-13,2026-04-23,3
+366,9,Task 366,10,Lab Equipment Maintenance,Done,2026-03-22,40,2026-03-23,-39,2026-03-25,1
+367,10,Task 367,1,Strain Construction,Done,2026-02-15,75,2026-03-06,-56,2026-03-17,133
+368,11,Task 368,11,Quality Review,Done,2026-02-21,69,2026-02-28,-62,2026-03-04,30
+369,9,Task 369,2,PCR / Cloning,In Progress,2026-04-19,12,2026-04-20,-11,,6
+370,9,Task 370,4,Downstream Processing,Done,2026-04-18,13,2026-05-01,0,2026-05-01,44
+371,10,Task 371,11,Quality Review,Done,2026-01-26,95,2026-02-03,-87,2026-02-14,53
+372,5,Task 372,0,DNA Assembly,Done,2026-02-21,69,2026-02-23,-67,2026-03-06,5
+373,9,Task 373,7,Data Analysis,Done,2026-03-30,32,2026-04-04,-27,2026-04-13,8
+374,10,Task 374,2,PCR / Cloning,Not Started,2026-05-11,-10,2026-05-14,13,,19
+375,7,Task 375,12,Deviation Investigation,Done,2026-02-23,67,2026-03-07,-55,2026-03-16,84
+376,0,Task 376,8,Model Development,Done,2026-03-30,32,2026-04-16,-15,2026-04-23,49
+377,0,Task 377,11,Quality Review,Done,2026-02-28,62,2026-03-06,-56,2026-03-12,10
+378,8,Task 378,14,Stakeholder Update,Not Started,2026-05-11,-10,2026-05-12,11,,4
+379,2,Task 379,11,Quality Review,Done,2026-04-22,9,2026-04-30,-1,2026-05-01,34
+380,5,Task 380,14,Stakeholder Update,Not Started,2026-05-31,-30,2026-06-02,32,,8
+381,6,Task 381,0,DNA Assembly,Done,2026-05-04,-3,2026-05-07,6,2026-05-04,8
+382,8,Task 382,4,Downstream Processing,Done,2026-03-09,53,2026-03-16,-46,2026-03-11,26
+383,7,Task 383,10,Lab Equipment Maintenance,Not Started,2026-05-09,-8,2026-05-14,13,,31
+384,3,Task 384,2,PCR / Cloning,Done,2026-03-27,35,2026-03-29,-33,2026-03-27,2
+385,10,Task 385,5,Assay Development,Done,2026-03-08,54,2026-03-13,-49,2026-03-11,24
+386,0,Task 386,5,Assay Development,Done,2026-03-22,40,2026-03-27,-35,2026-04-03,19
+387,3,Task 387,7,Data Analysis,Done,2026-03-23,39,2026-03-26,-36,2026-03-30,10
+388,11,Task 388,9,Automation Workflow Setup,Done,2026-04-08,23,2026-05-06,5,2026-05-01,88
+389,4,Task 389,14,Stakeholder Update,Done,2026-03-17,45,2026-03-18,-44,2026-03-17,5
+390,9,Task 390,14,Stakeholder Update,In Progress,2026-05-08,-7,2026-05-09,8,,5
+391,7,Task 391,0,DNA Assembly,Done,2026-04-28,3,2026-05-02,1,2026-05-01,26
+392,6,Task 392,4,Downstream Processing,In Progress,2026-03-30,32,2026-04-08,-23,,43
+393,7,Task 393,2,PCR / Cloning,Done,2026-04-07,24,2026-04-08,-23,2026-04-07,7
+394,7,Task 394,14,Stakeholder Update,In Progress,2026-05-07,-6,2026-05-09,8,,4
+395,6,Task 395,2,PCR / Cloning,Done,2026-03-24,38,2026-03-25,-37,2026-04-03,7
+396,5,Task 396,0,DNA Assembly,Done,2026-02-19,71,2026-02-22,-68,2026-03-08,4
+397,1,Task 397,2,PCR / Cloning,Not Started,2026-07-10,-70,2026-07-13,73,,9
+398,7,Task 398,2,PCR / Cloning,Cancelled,2026-04-08,23,2026-04-10,-21,,2
+399,3,Task 399,14,Stakeholder Update,Not Started,2026-06-18,-48,2026-06-19,49,,2
+400,11,Task 400,10,Lab Equipment Maintenance,Done,2026-05-03,-2,2026-05-05,4,2026-05-03,7
+401,4,Task 401,4,Downstream Processing,In Progress,2026-04-17,14,2026-04-30,-1,,46
+402,5,Task 402,6,Sample Testing,Not Started,2026-06-05,-35,2026-06-10,40,,8
+403,11,Task 403,6,Sample Testing,Done,2026-03-15,47,2026-03-19,-43,2026-03-27,5
+404,9,Task 404,13,Project Planning,Done,2026-02-19,71,2026-02-22,-68,2026-03-07,21
+405,11,Task 405,5,Assay Development,Done,2026-03-13,49,2026-03-20,-42,2026-03-27,43
+406,3,Task 406,6,Sample Testing,Not Started,2026-05-13,-12,2026-05-20,19,,38
+407,11,Task 407,10,Lab Equipment Maintenance,Not Started,2026-05-19,-18,2026-05-23,22,,15
+408,2,Task 408,2,PCR / Cloning,In Progress,2026-04-02,29,2026-04-05,-26,,20
+409,10,Task 409,14,Stakeholder Update,Done,2026-01-25,96,2026-01-26,-95,2026-01-25,7
+410,0,Task 410,5,Assay Development,Done,2026-02-27,63,2026-03-07,-55,2026-03-02,21
+411,8,Task 411,6,Sample Testing,Not Started,2026-06-18,-48,2026-06-20,50,,12
+412,10,Task 412,14,Stakeholder Update,Not Started,2026-05-10,-9,2026-05-12,11,,10
+413,8,Task 413,4,Downstream Processing,Not Started,2026-05-26,-25,2026-05-31,30,,28
+414,4,Task 414,7,Data Analysis,Done,2026-01-26,95,2026-02-02,-88,2026-02-10,18
+415,1,Task 415,14,Stakeholder Update,In Progress,2026-04-19,12,2026-04-20,-11,,5
+416,4,Task 416,12,Deviation Investigation,Done,2026-03-15,47,2026-03-24,-38,2026-03-31,38
+417,9,Task 417,2,PCR / Cloning,Done,2026-03-17,45,2026-03-20,-42,2026-03-17,4
+418,1,Task 418,4,Downstream Processing,Not Started,2026-06-18,-48,2026-06-29,59,,18
+419,10,Task 419,0,DNA Assembly,Done,2026-01-27,94,2026-01-30,-91,2026-02-07,13
+420,9,Task 420,14,Stakeholder Update,Done,2026-04-25,6,2026-04-26,-5,2026-04-28,2
+421,11,Task 421,14,Stakeholder Update,Not Started,2026-04-01,30,2026-04-03,-28,,3
+422,10,Task 422,14,Stakeholder Update,Done,2026-02-20,70,2026-02-21,-69,2026-02-26,1
+423,3,Task 423,9,Automation Workflow Setup,Not Started,2026-06-14,-44,2026-07-06,66,,41
+424,4,Task 424,2,PCR / Cloning,Done,2026-04-06,25,2026-04-07,-24,2026-04-14,6
+425,8,Task 425,2,PCR / Cloning,Done,2026-02-15,75,2026-02-18,-72,2026-02-15,19
+426,11,Task 426,14,Stakeholder Update,Done,2026-02-16,74,2026-02-17,-73,2026-02-16,3
+427,9,Task 427,11,Quality Review,Cancelled,2026-04-08,23,2026-04-14,-17,,26
+428,0,Task 428,10,Lab Equipment Maintenance,Not Started,2026-04-22,9,2026-04-26,-5,,21
+429,6,Task 429,5,Assay Development,Done,2026-02-20,70,2026-03-03,-59,2026-03-07,42
+430,11,Task 430,0,DNA Assembly,Done,2026-03-02,60,2026-03-06,-56,2026-03-21,8
+431,11,Task 431,4,Downstream Processing,Done,2026-02-04,86,2026-02-14,-76,2026-02-18,38
+432,5,Task 432,11,Quality Review,Done,2026-03-11,51,2026-03-13,-49,2026-03-21,9
+433,8,Task 433,7,Data Analysis,Done,2026-02-06,84,2026-02-15,-75,2026-02-21,44
+434,1,Task 434,10,Lab Equipment Maintenance,Not Started,2026-05-26,-25,2026-05-29,28,,16
+435,6,Task 435,11,Quality Review,Done,2026-04-22,9,2026-04-29,-2,2026-05-01,43
+436,8,Task 436,2,PCR / Cloning,Done,2026-02-23,67,2026-02-25,-65,2026-03-01,6
+437,7,Task 437,2,PCR / Cloning,Not Started,2026-05-12,-11,2026-05-13,12,,3
+438,7,Task 438,11,Quality Review,Done,2026-03-26,36,2026-03-30,-32,2026-04-14,19
+439,9,Task 439,10,Lab Equipment Maintenance,Done,2026-03-02,60,2026-03-06,-56,2026-03-02,16
+440,5,Task 440,13,Project Planning,In Progress,2026-05-01,0,2026-05-06,5,,18
+441,10,Task 441,14,Stakeholder Update,Done,2026-03-23,39,2026-03-24,-38,2026-03-25,4
+442,5,Task 442,2,PCR / Cloning,Not Started,2026-04-28,3,2026-04-30,-1,,13
+443,10,Task 443,6,Sample Testing,Done,2026-03-09,53,2026-03-15,-47,2026-03-18,31
+444,5,Task 444,1,Strain Construction,Not Started,2026-06-25,-55,2026-07-11,71,,39
+445,10,Task 445,11,Quality Review,Done,2026-05-04,-3,2026-05-06,5,2026-05-04,9
+446,4,Task 446,13,Project Planning,Done,2026-05-05,-4,2026-05-07,6,2026-05-05,4
+447,10,Task 447,2,PCR / Cloning,Done,2026-02-14,76,2026-02-16,-74,2026-02-23,3
+448,7,Task 448,14,Stakeholder Update,Not Started,2026-06-19,-49,2026-06-21,51,,8
+449,8,Task 449,6,Sample Testing,In Progress,2026-04-28,3,2026-05-05,4,,30
+450,11,Task 450,14,Stakeholder Update,Done,2026-02-18,72,2026-02-19,-71,2026-02-25,2
+451,10,Task 451,10,Lab Equipment Maintenance,Done,2026-04-18,13,2026-04-23,-8,2026-04-28,35
+452,6,Task 452,0,DNA Assembly,Done,2026-03-15,47,2026-03-17,-45,2026-03-28,10
+453,9,Task 453,10,Lab Equipment Maintenance,In Progress,2026-04-15,16,2026-04-17,-14,,9
+454,10,Task 454,9,Automation Workflow Setup,Done,2026-02-13,77,2026-03-11,-51,2026-03-06,149
+455,1,Task 455,2,PCR / Cloning,Done,2026-03-18,44,2026-03-19,-43,2026-03-18,3
+456,4,Task 456,3,Fermentation Run,Done,2026-02-19,71,2026-03-10,-52,2026-03-16,79
+457,1,Task 457,5,Assay Development,Not Started,2026-05-09,-8,2026-05-21,20,,17
+458,11,Task 458,1,Strain Construction,Not Started,2026-04-14,17,2026-05-04,3,,122
+459,2,Task 459,14,Stakeholder Update,In Progress,2026-04-06,25,2026-04-07,-24,,2
+460,5,Task 460,8,Model Development,Done,2026-04-06,25,2026-04-20,-11,2026-05-01,37
+461,2,Task 461,10,Lab Equipment Maintenance,Done,2026-03-21,41,2026-03-25,-37,2026-04-08,10
+462,7,Task 462,9,Automation Workflow Setup,Done,2026-01-22,99,2026-02-13,-77,2026-02-14,93
+463,11,Task 463,12,Deviation Investigation,Done,2026-02-17,73,2026-02-23,-67,2026-03-07,17
+464,5,Task 464,2,PCR / Cloning,Done,2026-03-07,55,2026-03-09,-53,2026-03-19,10
+465,10,Task 465,2,PCR / Cloning,Not Started,2026-06-11,-41,2026-06-13,43,,8
+466,9,Task 466,1,Strain Construction,In Progress,2026-04-16,15,2026-05-07,6,,125
+467,10,Task 467,10,Lab Equipment Maintenance,Not Started,2026-06-12,-42,2026-06-15,45,,21
+468,1,Task 468,10,Lab Equipment Maintenance,Done,2026-03-19,43,2026-03-22,-40,2026-03-20,8
+469,5,Task 469,10,Lab Equipment Maintenance,Not Started,2026-05-16,-15,2026-05-21,20,,9
+470,9,Task 470,4,Downstream Processing,In Progress,2026-04-20,11,2026-04-27,-4,,48
+471,2,Task 471,7,Data Analysis,Done,2026-03-07,55,2026-03-17,-45,2026-03-22,63
+472,7,Task 472,10,Lab Equipment Maintenance,Done,2026-01-23,98,2026-01-26,-95,2026-01-27,15
+473,8,Task 473,6,Sample Testing,In Progress,2026-04-25,6,2026-04-30,-1,,18
+474,11,Task 474,13,Project Planning,Done,2026-03-05,57,2026-03-10,-52,2026-03-05,30
+475,3,Task 475,2,PCR / Cloning,Done,2026-04-14,17,2026-04-16,-15,2026-04-16,14
+476,7,Task 476,8,Model Development,Not Started,2026-05-27,-26,2026-06-15,45,,89
+477,8,Task 477,1,Strain Construction,Done,2026-03-20,42,2026-04-02,-29,2026-04-08,82
+478,0,Task 478,11,Quality Review,Not Started,2026-04-29,2,2026-05-04,3,,18
+479,1,Task 479,11,Quality Review,Not Started,2026-04-21,10,2026-04-28,-3,,9
+480,7,Task 480,2,PCR / Cloning,In Progress,2026-05-13,-12,2026-05-14,13,,1
+481,3,Task 481,2,PCR / Cloning,In Progress,2026-05-16,-15,2026-05-19,18,,16
+482,2,Task 482,10,Lab Equipment Maintenance,Done,2026-02-25,65,2026-02-27,-63,2026-03-12,7
+483,8,Task 483,2,PCR / Cloning,Done,2026-02-23,67,2026-02-26,-64,2026-03-02,12
+484,9,Task 484,2,PCR / Cloning,In Progress,2026-05-14,-13,2026-05-17,16,,7
+485,6,Task 485,14,Stakeholder Update,Not Started,2026-05-04,-3,2026-05-06,5,,4
+486,3,Task 486,2,PCR / Cloning,Done,2026-04-20,11,2026-04-22,-9,2026-04-29,9
+487,2,Task 487,9,Automation Workflow Setup,In Progress,2026-04-20,11,2026-05-08,7,,75
+488,1,Task 488,10,Lab Equipment Maintenance,Not Started,2026-05-31,-30,2026-06-01,31,,5
+489,11,Task 489,2,PCR / Cloning,Done,2026-05-18,-17,2026-05-20,19,2026-05-18,11
+490,0,Task 490,13,Project Planning,Done,2026-05-23,-22,2026-05-25,24,2026-05-23,12
+491,11,Task 491,3,Fermentation Run,Not Started,2026-05-03,-2,2026-05-11,10,,21
+492,6,Task 492,12,Deviation Investigation,Done,2026-03-16,46,2026-03-28,-34,2026-04-01,55
+493,8,Task 493,9,Automation Workflow Setup,Not Started,2026-05-15,-14,2026-06-12,42,,115
+494,10,Task 494,11,Quality Review,Done,2026-01-31,90,2026-02-02,-88,2026-02-11,2
+495,1,Task 495,14,Stakeholder Update,Not Started,2026-06-09,-39,2026-06-10,40,,4
+496,0,Task 496,14,Stakeholder Update,Cancelled,2026-03-16,46,2026-03-18,-44,,4
+497,10,Task 497,2,PCR / Cloning,Done,2026-01-29,92,2026-01-31,-90,2026-02-03,3
+498,5,Task 498,10,Lab Equipment Maintenance,Done,2026-02-19,71,2026-02-21,-69,2026-02-25,13
+499,11,Task 499,11,Quality Review,Done,2026-02-14,76,2026-02-19,-71,2026-02-14,11
+500,7,Task 500,0,DNA Assembly,Not Started,2026-06-02,-32,2026-06-05,35,,17
+501,0,Task 501,0,DNA Assembly,Cancelled,2026-03-06,56,2026-03-10,-52,,17
+502,11,Task 502,1,Strain Construction,Done,2026-02-20,70,2026-03-04,-58,2026-03-02,25
+503,5,Task 503,3,Fermentation Run,Done,2026-03-13,49,2026-03-24,-38,2026-03-23,29
+504,1,Task 504,7,Data Analysis,Done,2026-03-31,31,2026-04-03,-28,2026-04-04,7
+505,6,Task 505,10,Lab Equipment Maintenance,Done,2026-03-09,53,2026-03-13,-49,2026-03-11,8
+506,1,Task 506,9,Automation Workflow Setup,Not Started,2026-05-17,-16,2026-06-08,38,,131
+507,5,Task 507,11,Quality Review,Done,2026-04-17,14,2026-04-20,-11,2026-04-22,20
+508,9,Task 508,10,Lab Equipment Maintenance,Done,2026-03-25,37,2026-03-30,-32,2026-03-25,32
+509,10,Task 509,14,Stakeholder Update,Not Started,2026-05-18,-17,2026-05-19,18,,2
+510,11,Task 510,4,Downstream Processing,Done,2026-01-28,93,2026-02-12,-78,2026-02-14,78
+511,6,Task 511,0,DNA Assembly,In Progress,2026-05-02,-1,2026-05-07,6,,21
+512,0,Task 512,14,Stakeholder Update,Done,2026-03-07,55,2026-03-09,-53,2026-03-22,8
+513,5,Task 513,7,Data Analysis,Not Started,2026-06-06,-36,2026-06-11,41,,35
+514,1,Task 514,0,DNA Assembly,Done,2026-02-20,70,2026-02-22,-68,2026-02-20,2
+515,6,Task 515,6,Sample Testing,Not Started,2026-05-12,-11,2026-05-19,18,,33
+516,6,Task 516,10,Lab Equipment Maintenance,In Progress,2026-05-02,-1,2026-05-03,2,,5
+517,2,Task 517,2,PCR / Cloning,Done,2026-02-09,81,2026-02-11,-79,2026-02-12,14
+518,2,Task 518,7,Data Analysis,In Progress,2026-04-15,16,2026-04-24,-7,,62
+519,10,Task 519,10,Lab Equipment Maintenance,Done,2026-03-26,36,2026-03-27,-35,2026-03-29,1
+520,3,Task 520,0,DNA Assembly,Done,2026-03-17,45,2026-03-22,-40,2026-04-05,6
+521,4,Task 521,10,Lab Equipment Maintenance,Done,2026-02-08,82,2026-02-10,-80,2026-02-09,13
+522,0,Task 522,2,PCR / Cloning,In Progress,2026-04-26,5,2026-04-28,-3,,13
+523,4,Task 523,2,PCR / Cloning,Done,2026-04-29,2,2026-04-30,-1,2026-05-01,6
+524,1,Task 524,11,Quality Review,In Progress,2026-05-13,-12,2026-05-15,14,,6
+525,8,Task 525,0,DNA Assembly,Not Started,2026-05-18,-17,2026-05-20,19,,7
+526,0,Task 526,6,Sample Testing,Done,2026-03-12,50,2026-03-18,-44,2026-03-21,12
+527,9,Task 527,10,Lab Equipment Maintenance,Done,2026-03-18,44,2026-03-19,-43,2026-03-18,1
+528,0,Task 528,2,PCR / Cloning,In Progress,2026-04-06,25,2026-04-08,-23,,4
+529,2,Task 529,14,Stakeholder Update,Done,2026-04-10,21,2026-04-11,-20,2026-04-26,4
+530,3,Task 530,2,PCR / Cloning,Not Started,2026-05-08,-7,2026-05-10,9,,3
+531,9,Task 531,4,Downstream Processing,Done,2026-02-23,67,2026-03-08,-54,2026-03-19,18
+532,6,Task 532,0,DNA Assembly,Done,2026-03-18,44,2026-03-23,-39,2026-03-27,15
+533,1,Task 533,7,Data Analysis,Not Started,2026-05-22,-21,2026-05-25,24,,21
+534,4,Task 534,11,Quality Review,Done,2026-03-24,38,2026-03-27,-35,2026-04-06,9
+535,11,Task 535,14,Stakeholder Update,Done,2026-03-01,61,2026-03-02,-60,2026-03-10,1
+536,3,Task 536,7,Data Analysis,Not Started,2026-05-12,-11,2026-05-15,14,,15
+537,11,Task 537,10,Lab Equipment Maintenance,Done,2026-03-15,47,2026-03-16,-46,2026-03-18,4
+538,7,Task 538,14,Stakeholder Update,Not Started,2026-04-02,29,2026-04-03,-28,,2
+539,8,Task 539,5,Assay Development,Done,2026-05-08,-7,2026-05-18,17,2026-05-08,47
+540,1,Task 540,6,Sample Testing,Not Started,2026-05-28,-27,2026-06-04,34,,11
+541,9,Task 541,8,Model Development,Done,2026-03-05,57,2026-03-18,-44,2026-03-21,53
+542,6,Task 542,10,Lab Equipment Maintenance,Done,2026-03-22,40,2026-03-25,-37,2026-03-27,5
+543,3,Task 543,1,Strain Construction,Not Started,2026-03-27,35,2026-04-09,-22,,70
+544,7,Task 544,2,PCR / Cloning,Not Started,2026-06-07,-37,2026-06-08,38,,3
+545,3,Task 545,6,Sample Testing,Done,2026-04-24,7,2026-04-29,-2,2026-04-26,10
+546,10,Task 546,2,PCR / Cloning,Not Started,2026-06-09,-39,2026-06-12,42,,4
+547,3,Task 547,13,Project Planning,Done,2026-03-25,37,2026-03-29,-33,2026-03-31,15
+548,6,Task 548,6,Sample Testing,Done,2026-03-20,42,2026-03-27,-35,2026-03-27,8
+549,6,Task 549,13,Project Planning,Not Started,2026-04-21,10,2026-04-27,-4,,35
+550,1,Task 550,12,Deviation Investigation,Done,2026-03-20,42,2026-03-27,-35,2026-03-29,15
+551,3,Task 551,12,Deviation Investigation,Done,2026-03-09,53,2026-03-19,-43,2026-03-22,68
+552,1,Task 552,0,DNA Assembly,Done,2026-04-08,23,2026-04-10,-21,2026-04-19,14
+553,2,Task 553,0,DNA Assembly,Done,2026-02-14,76,2026-02-18,-72,2026-02-27,5
+554,2,Task 554,14,Stakeholder Update,In Progress,2026-05-02,-1,2026-05-04,3,,2
+555,6,Task 555,10,Lab Equipment Maintenance,Done,2026-03-27,35,2026-03-29,-33,2026-03-29,6
+556,4,Task 556,5,Assay Development,Done,2026-01-28,93,2026-02-04,-86,2026-02-18,22
+557,10,Task 557,2,PCR / Cloning,Not Started,2026-05-26,-25,2026-05-28,27,,3
+558,4,Task 558,4,Downstream Processing,Done,2026-02-18,72,2026-03-01,-61,2026-03-12,42
+559,10,Task 559,14,Stakeholder Update,Done,2026-04-13,18,2026-04-14,-17,2026-04-20,4
+560,8,Task 560,11,Quality Review,Not Started,2026-06-04,-34,2026-06-08,38,,20
+561,5,Task 561,4,Downstream Processing,Done,2026-02-12,78,2026-02-19,-71,2026-02-21,8
+562,4,Task 562,0,DNA Assembly,In Progress,2026-04-01,30,2026-04-06,-25,,23
+563,3,Task 563,14,Stakeholder Update,In Progress,2026-04-20,11,2026-04-21,-10,,3
+564,8,Task 564,12,Deviation Investigation,Done,2026-03-08,54,2026-03-13,-49,2026-03-20,16
+565,2,Task 565,2,PCR / Cloning,Done,2026-03-11,51,2026-03-14,-48,2026-03-20,21
+566,0,Task 566,10,Lab Equipment Maintenance,In Progress,2026-05-02,-1,2026-05-05,4,,21
+567,3,Task 567,13,Project Planning,Not Started,2026-07-04,-64,2026-07-09,69,,14
+568,2,Task 568,6,Sample Testing,Done,2026-02-06,84,2026-02-08,-82,2026-02-10,2
+569,8,Task 569,6,Sample Testing,Not Started,2026-06-17,-47,2026-06-21,51,,10
+570,2,Task 570,3,Fermentation Run,Done,2026-03-12,50,2026-03-21,-41,2026-03-20,46
+571,11,Task 571,14,Stakeholder Update,Done,2026-04-25,6,2026-04-26,-5,2026-05-01,6
+572,10,Task 572,4,Downstream Processing,In Progress,2026-04-02,29,2026-04-08,-23,,14
+573,2,Task 573,11,Quality Review,Done,2026-04-21,10,2026-04-26,-5,2026-05-01,15
+574,2,Task 574,10,Lab Equipment Maintenance,Done,2026-04-28,3,2026-05-03,2,2026-05-01,30
+575,5,Task 575,2,PCR / Cloning,Done,2026-03-22,40,2026-03-25,-37,2026-03-29,7
+576,2,Task 576,10,Lab Equipment Maintenance,Done,2026-03-21,41,2026-03-26,-36,2026-04-08,6
+577,2,Task 577,10,Lab Equipment Maintenance,Done,2026-02-27,63,2026-03-04,-58,2026-03-02,34
+578,7,Task 578,2,PCR / Cloning,Done,2026-02-09,81,2026-02-12,-78,2026-02-17,8
+579,10,Task 579,14,Stakeholder Update,Not Started,2026-06-18,-48,2026-06-19,49,,6
+580,5,Task 580,5,Assay Development,In Progress,2026-03-31,31,2026-04-09,-22,,13
+581,5,Task 581,2,PCR / Cloning,Done,2026-02-06,84,2026-02-07,-83,2026-02-16,6
+582,6,Task 582,14,Stakeholder Update,Done,2026-04-14,17,2026-04-16,-15,2026-04-22,10
+583,6,Task 583,0,DNA Assembly,In Progress,2026-04-24,7,2026-04-29,-2,,26
+584,3,Task 584,2,PCR / Cloning,Done,2026-02-24,66,2026-02-25,-65,2026-03-02,3
+585,1,Task 585,0,DNA Assembly,Not Started,2026-05-24,-23,2026-05-27,26,,5
+586,8,Task 586,14,Stakeholder Update,Done,2026-04-07,24,2026-04-08,-23,2026-04-22,4
+587,11,Task 587,0,DNA Assembly,Not Started,2026-05-13,-12,2026-05-16,15,,6
+588,5,Task 588,2,PCR / Cloning,Not Started,2026-05-21,-20,2026-05-22,21,,6
+589,11,Task 589,7,Data Analysis,In Progress,2026-04-08,23,2026-04-15,-16,,10
+590,6,Task 590,8,Model Development,Not Started,2026-04-13,18,2026-05-03,2,,66
+591,0,Task 591,5,Assay Development,Not Started,2026-05-14,-13,2026-05-23,22,,39
+592,3,Task 592,0,DNA Assembly,Done,2026-03-31,31,2026-04-03,-28,2026-03-31,18
+593,1,Task 593,2,PCR / Cloning,Not Started,2026-06-17,-47,2026-06-19,49,,9
+594,10,Task 594,2,PCR / Cloning,Not Started,2026-05-25,-24,2026-05-28,27,,14
+595,6,Task 595,4,Downstream Processing,Done,2026-02-15,75,2026-02-27,-63,2026-03-08,45
+596,3,Task 596,13,Project Planning,Done,2026-03-03,59,2026-03-09,-53,2026-03-07,11
+597,10,Task 597,3,Fermentation Run,Done,2026-04-21,10,2026-05-06,5,2026-05-01,44
+598,8,Task 598,0,DNA Assembly,Not Started,2026-05-24,-23,2026-05-29,28,,22
+599,10,Task 599,13,Project Planning,Not Started,2026-06-01,-31,2026-06-06,36,,33
+600,3,Task 600,6,Sample Testing,In Progress,2026-05-28,-27,2026-05-30,29,,13
+601,0,Task 601,6,Sample Testing,In Progress,2026-05-03,-2,2026-05-09,8,,15
+602,1,Task 602,14,Stakeholder Update,Done,2026-04-02,29,2026-04-04,-27,2026-04-04,5
+603,3,Task 603,1,Strain Construction,Cancelled,2026-02-26,64,2026-03-21,-41,,134
+604,3,Task 604,14,Stakeholder Update,Not Started,2026-04-23,8,2026-04-24,-7,,6
+605,1,Task 605,0,DNA Assembly,Not Started,2026-07-08,-68,2026-07-13,73,,15
+606,4,Task 606,7,Data Analysis,Done,2026-05-04,-3,2026-05-07,6,2026-05-04,19
+607,6,Task 607,0,DNA Assembly,Done,2026-02-28,62,2026-03-03,-59,2026-03-16,6
+608,1,Task 608,8,Model Development,Done,2026-05-01,0,2026-05-09,8,2026-05-01,34
+609,4,Task 609,4,Downstream Processing,Done,2026-04-07,24,2026-04-19,-12,2026-04-15,34
+610,4,Task 610,4,Downstream Processing,In Progress,2026-04-11,20,2026-04-25,-6,,65
+611,0,Task 611,4,Downstream Processing,Not Started,2026-05-18,-17,2026-05-28,27,,57
+612,7,Task 612,14,Stakeholder Update,Done,2026-01-26,95,2026-01-28,-93,2026-02-01,6
+613,4,Task 613,13,Project Planning,Done,2026-02-22,68,2026-02-24,-66,2026-03-05,14
+614,5,Task 614,2,PCR / Cloning,Not Started,2026-07-10,-70,2026-07-12,72,,12
+615,1,Task 615,2,PCR / Cloning,Not Started,2026-06-01,-31,2026-06-02,32,,6
+616,7,Task 616,11,Quality Review,Done,2026-04-26,5,2026-05-04,3,2026-05-01,18
+617,1,Task 617,2,PCR / Cloning,Not Started,2026-05-31,-30,2026-06-03,33,,7
+618,8,Task 618,14,Stakeholder Update,Done,2026-02-24,66,2026-02-25,-65,2026-02-26,7
+619,0,Task 619,2,PCR / Cloning,Done,2026-02-25,65,2026-02-27,-63,2026-02-28,6
+620,5,Task 620,12,Deviation Investigation,Not Started,2026-05-18,-17,2026-05-31,30,,28
+621,10,Task 621,0,DNA Assembly,Not Started,2026-05-11,-10,2026-05-15,14,,9
+622,7,Task 622,9,Automation Workflow Setup,Not Started,2026-04-19,12,2026-05-10,9,,135
+623,4,Task 623,11,Quality Review,Done,2026-02-04,86,2026-02-11,-79,2026-02-18,10
+624,2,Task 624,13,Project Planning,Done,2026-02-27,63,2026-03-02,-60,2026-03-03,11
+625,10,Task 625,4,Downstream Processing,Done,2026-01-08,113,2026-01-13,-108,2026-01-12,25
+626,2,Task 626,10,Lab Equipment Maintenance,Done,2026-02-27,63,2026-02-28,-62,2026-03-04,6
+627,11,Task 627,10,Lab Equipment Maintenance,Done,2026-04-28,3,2026-05-02,1,2026-05-01,12
+628,3,Task 628,6,Sample Testing,Not Started,2026-06-29,-59,2026-07-06,66,,46
+629,6,Task 629,9,Automation Workflow Setup,Done,2026-04-16,15,2026-04-26,-5,2026-05-01,45
+630,10,Task 630,9,Automation Workflow Setup,Done,2026-03-23,39,2026-04-11,-20,2026-04-21,27
+631,5,Task 631,14,Stakeholder Update,In Progress,2026-04-17,14,2026-04-19,-12,,13
+632,10,Task 632,2,PCR / Cloning,Not Started,2026-05-18,-17,2026-05-19,18,,1
+633,9,Task 633,4,Downstream Processing,Done,2026-03-06,56,2026-03-16,-46,2026-03-31,41
+634,4,Task 634,2,PCR / Cloning,Done,2026-03-16,46,2026-03-18,-44,2026-03-16,11
+635,11,Task 635,14,Stakeholder Update,Done,2026-04-19,12,2026-04-20,-11,2026-04-22,6
+636,8,Task 636,10,Lab Equipment Maintenance,Done,2026-04-12,19,2026-04-16,-15,2026-04-16,25
+637,8,Task 637,2,PCR / Cloning,Not Started,2026-05-11,-10,2026-05-12,11,,3
+638,11,Task 638,12,Deviation Investigation,In Progress,2026-04-17,14,2026-04-24,-7,,21
+639,5,Task 639,2,PCR / Cloning,Not Started,2026-05-24,-23,2026-05-26,25,,7
+640,5,Task 640,2,PCR / Cloning,Not Started,2026-06-04,-34,2026-06-06,36,,3
+641,7,Task 641,0,DNA Assembly,In Progress,2026-05-21,-20,2026-05-23,22,,10
+642,1,Task 642,13,Project Planning,Not Started,2026-07-02,-62,2026-07-07,67,,14
+643,6,Task 643,0,DNA Assembly,Cancelled,2026-02-27,63,2026-03-02,-60,,13
+644,6,Task 644,14,Stakeholder Update,Done,2026-02-28,62,2026-03-02,-60,2026-03-02,14
+645,1,Task 645,6,Sample Testing,In Progress,2026-04-03,28,2026-04-10,-21,,10
+646,0,Task 646,6,Sample Testing,Not Started,2026-05-27,-26,2026-05-30,29,,21
+647,2,Task 647,6,Sample Testing,Done,2026-02-15,75,2026-02-17,-73,2026-03-04,8
+648,6,Task 648,5,Assay Development,Not Started,2026-03-31,31,2026-04-12,-19,,80
+649,3,Task 649,11,Quality Review,Not Started,2026-05-09,-8,2026-05-11,10,,10
+650,3,Task 650,0,DNA Assembly,Not Started,2026-04-20,11,2026-04-22,-9,,7
+651,4,Task 651,1,Strain Construction,Done,2026-03-29,33,2026-04-20,-11,2026-04-20,38
+652,0,Task 652,2,PCR / Cloning,Done,2026-04-18,13,2026-04-20,-11,2026-05-01,10
+653,5,Task 653,5,Assay Development,Done,2026-05-04,-3,2026-05-11,10,2026-05-04,29
+654,3,Task 654,2,PCR / Cloning,Done,2026-02-20,70,2026-02-22,-68,2026-02-21,5
+655,11,Task 655,0,DNA Assembly,Done,2026-02-22,68,2026-02-25,-65,2026-03-12,4
+656,6,Task 656,14,Stakeholder Update,Not Started,2026-05-19,-18,2026-05-21,20,,2
+657,9,Task 657,14,Stakeholder Update,In Progress,2026-05-11,-10,2026-05-12,11,,1
+658,11,Task 658,1,Strain Construction,Not Started,2026-03-11,51,2026-04-04,-27,,88
+659,7,Task 659,10,Lab Equipment Maintenance,Done,2026-01-23,98,2026-01-25,-96,2026-01-23,12
+660,8,Task 660,2,PCR / Cloning,Done,2026-02-15,75,2026-02-18,-72,2026-02-16,19
+661,11,Task 661,10,Lab Equipment Maintenance,Done,2026-02-20,70,2026-02-23,-67,2026-03-05,9
+662,9,Task 662,2,PCR / Cloning,Done,2026-04-24,7,2026-04-26,-5,2026-05-01,13
+663,6,Task 663,2,PCR / Cloning,In Progress,2026-04-21,10,2026-04-22,-9,,2
+664,11,Task 664,14,Stakeholder Update,Done,2026-03-23,39,2026-03-25,-37,2026-03-23,3
+665,9,Task 665,10,Lab Equipment Maintenance,Done,2026-02-28,62,2026-03-02,-60,2026-02-28,13
+666,11,Task 666,0,DNA Assembly,Done,2026-03-22,40,2026-03-26,-36,2026-03-30,12
+667,7,Task 667,0,DNA Assembly,Done,2026-01-31,90,2026-02-03,-87,2026-02-09,13
+668,6,Task 668,11,Quality Review,In Progress,2026-05-18,-17,2026-05-20,19,,2
+669,2,Task 669,10,Lab Equipment Maintenance,Done,2026-03-13,49,2026-03-15,-47,2026-03-24,11
+670,4,Task 670,14,Stakeholder Update,Done,2026-03-12,50,2026-03-13,-49,2026-03-13,1
+671,6,Task 671,4,Downstream Processing,Done,2026-03-16,46,2026-03-28,-34,2026-04-07,65
+672,10,Task 672,14,Stakeholder Update,Done,2026-02-03,87,2026-02-04,-86,2026-02-03,7
+673,2,Task 673,0,DNA Assembly,Done,2026-04-12,19,2026-04-17,-14,2026-04-17,24
+674,6,Task 674,11,Quality Review,Done,2026-02-13,77,2026-02-19,-71,2026-02-18,36
+675,7,Task 675,0,DNA Assembly,Not Started,2026-05-13,-12,2026-05-18,17,,13
+676,10,Task 676,2,PCR / Cloning,Not Started,2026-05-20,-19,2026-05-23,22,,21
+677,11,Task 677,8,Model Development,Not Started,2026-05-13,-12,2026-05-30,29,,83
+678,11,Task 678,10,Lab Equipment Maintenance,Not Started,2026-05-12,-11,2026-05-13,12,,2
+679,7,Task 679,3,Fermentation Run,Not Started,2026-04-29,2,2026-05-16,15,,88
+680,9,Task 680,0,DNA Assembly,Done,2026-04-22,9,2026-04-25,-6,2026-05-01,8
+681,1,Task 681,11,Quality Review,Not Started,2026-04-19,12,2026-04-23,-8,,12
+682,0,Task 682,6,Sample Testing,Not Started,2026-05-12,-11,2026-05-18,17,,21
+683,1,Task 683,6,Sample Testing,Not Started,2026-06-11,-41,2026-06-17,47,,11
+684,7,Task 684,5,Assay Development,Not Started,2026-05-28,-27,2026-06-03,33,,7
+685,1,Task 685,4,Downstream Processing,Not Started,2026-07-09,-69,2026-07-14,74,,22
+686,0,Task 686,12,Deviation Investigation,Not Started,2026-05-09,-8,2026-05-23,22,,79
+687,8,Task 687,2,PCR / Cloning,Done,2026-05-07,-6,2026-05-10,9,2026-05-07,4
+688,3,Task 688,13,Project Planning,Not Started,2026-06-17,-47,2026-06-21,51,,26
+689,10,Task 689,3,Fermentation Run,Done,2026-02-04,86,2026-02-18,-72,2026-02-20,14
+690,5,Task 690,3,Fermentation Run,In Progress,2026-04-21,10,2026-05-08,7,,64
+691,11,Task 691,0,DNA Assembly,Not Started,2026-05-28,-27,2026-05-31,30,,7
+692,11,Task 692,11,Quality Review,Done,2026-02-18,72,2026-02-23,-67,2026-02-24,11
+693,1,Task 693,14,Stakeholder Update,Done,2026-04-13,18,2026-04-15,-16,2026-04-16,13
+694,5,Task 694,0,DNA Assembly,Done,2026-02-17,73,2026-02-22,-68,2026-03-07,8
+695,7,Task 695,6,Sample Testing,Not Started,2026-05-30,-29,2026-06-05,35,,14
+696,7,Task 696,0,DNA Assembly,Not Started,2026-06-11,-41,2026-06-13,43,,8
+697,9,Task 697,6,Sample Testing,Done,2026-03-11,51,2026-03-17,-45,2026-03-17,14
+698,1,Task 698,4,Downstream Processing,Not Started,2026-05-10,-9,2026-05-24,23,,63
+699,6,Task 699,14,Stakeholder Update,Done,2026-03-17,45,2026-03-18,-44,2026-03-23,3
+700,7,Task 700,12,Deviation Investigation,Not Started,2026-05-06,-5,2026-05-13,12,,39
+701,4,Task 701,13,Project Planning,Done,2026-03-05,57,2026-03-11,-51,2026-03-23,19
+702,3,Task 702,2,PCR / Cloning,In Progress,2026-05-01,0,2026-05-04,3,,7
+703,11,Task 703,10,Lab Equipment Maintenance,Not Started,2026-05-30,-29,2026-06-01,31,,10
+704,11,Task 704,10,Lab Equipment Maintenance,In Progress,2026-04-22,9,2026-04-23,-8,,5
+705,9,Task 705,14,Stakeholder Update,Not Started,2026-05-14,-13,2026-05-16,15,,10
+706,4,Task 706,14,Stakeholder Update,Not Started,2026-05-07,-6,2026-05-09,8,,3
+707,0,Task 707,4,Downstream Processing,Not Started,2026-05-15,-14,2026-05-20,19,,13
+708,2,Task 708,14,Stakeholder Update,Done,2026-02-17,73,2026-02-19,-71,2026-02-23,5
+709,8,Task 709,0,DNA Assembly,Done,2026-02-06,84,2026-02-11,-79,2026-02-23,32
+710,3,Task 710,11,Quality Review,Not Started,2026-05-26,-25,2026-06-01,31,,21
+711,8,Task 711,11,Quality Review,Done,2026-03-25,37,2026-04-02,-29,2026-03-29,32
+712,6,Task 712,5,Assay Development,Not Started,2026-04-21,10,2026-05-01,0,,57
+713,4,Task 713,2,PCR / Cloning,Done,2026-02-21,69,2026-02-23,-67,2026-03-10,7
+714,9,Task 714,7,Data Analysis,Done,2026-03-13,49,2026-03-19,-43,2026-03-19,10
+715,2,Task 715,14,Stakeholder Update,Done,2026-03-19,43,2026-03-20,-42,2026-03-23,5
+716,4,Task 716,1,Strain Construction,Done,2026-01-24,97,2026-02-11,-79,2026-02-10,23
+717,2,Task 717,14,Stakeholder Update,Done,2026-05-09,-8,2026-05-10,9,2026-05-09,7
+718,10,Task 718,2,PCR / Cloning,Not Started,2026-05-26,-25,2026-05-29,28,,13
+719,8,Task 719,2,PCR / Cloning,Not Started,2026-05-24,-23,2026-05-25,24,,5
+720,2,Task 720,5,Assay Development,Done,2026-02-10,80,2026-02-21,-69,2026-02-22,53
+721,5,Task 721,3,Fermentation Run,Not Started,2026-06-21,-51,2026-07-01,61,,40
+722,8,Task 722,12,Deviation Investigation,Done,2026-01-13,108,2026-01-28,-93,2026-02-03,72
+723,3,Task 723,14,Stakeholder Update,Done,2026-02-26,64,2026-02-27,-63,2026-03-04,4
+724,1,Task 724,4,Downstream Processing,Not Started,2026-04-30,1,2026-05-13,12,,79
+725,5,Task 725,6,Sample Testing,Not Started,2026-05-31,-30,2026-06-06,36,,37
+726,0,Task 726,2,PCR / Cloning,Done,2026-03-15,47,2026-03-18,-44,2026-03-15,6
+727,2,Task 727,14,Stakeholder Update,Not Started,2026-04-20,11,2026-04-21,-10,,6
+728,10,Task 728,11,Quality Review,Done,2026-04-24,7,2026-05-02,1,2026-05-01,42
+729,11,Task 729,14,Stakeholder Update,Done,2026-02-09,81,2026-02-11,-79,2026-02-10,2
+730,7,Task 730,10,Lab Equipment Maintenance,Done,2026-02-12,78,2026-02-13,-77,2026-02-13,7
+731,4,Task 731,8,Model Development,Done,2026-02-22,68,2026-03-10,-52,2026-03-18,65
+732,7,Task 732,10,Lab Equipment Maintenance,Not Started,2026-04-11,20,2026-04-15,-16,,25
+733,1,Task 733,7,Data Analysis,Done,2026-02-28,62,2026-03-04,-58,2026-03-01,15
+734,8,Task 734,0,DNA Assembly,Not Started,2026-06-15,-45,2026-06-19,49,,6
+735,4,Task 735,11,Quality Review,Done,2026-03-13,49,2026-03-18,-44,2026-03-13,20
+736,2,Task 736,7,Data Analysis,In Progress,2026-05-05,-4,2026-05-10,9,,30
+737,8,Task 737,2,PCR / Cloning,Done,2026-02-16,74,2026-02-19,-71,2026-03-06,14
+738,0,Task 738,7,Data Analysis,Done,2026-03-06,56,2026-03-11,-51,2026-03-24,24
+739,6,Task 739,7,Data Analysis,Done,2026-03-21,41,2026-03-25,-37,2026-03-31,10
+740,6,Task 740,14,Stakeholder Update,Done,2026-03-02,60,2026-03-03,-59,2026-03-17,7
+741,4,Task 741,2,PCR / Cloning,Done,2026-04-19,12,2026-04-20,-11,2026-04-19,7
+742,8,Task 742,6,Sample Testing,Done,2026-01-29,92,2026-02-04,-86,2026-02-01,22
+743,1,Task 743,2,PCR / Cloning,Not Started,2026-06-21,-51,2026-06-24,54,,13
+744,5,Task 744,1,Strain Construction,Done,2026-03-03,59,2026-03-20,-42,2026-03-17,41
+745,5,Task 745,6,Sample Testing,Not Started,2026-07-13,-73,2026-07-17,77,,25
+746,4,Task 746,10,Lab Equipment Maintenance,Done,2026-04-06,25,2026-04-08,-23,2026-04-13,8
+747,2,Task 747,0,DNA Assembly,Done,2026-02-27,63,2026-03-02,-60,2026-03-17,16
+748,4,Task 748,13,Project Planning,Done,2026-04-20,11,2026-04-23,-8,2026-05-01,17
+749,7,Task 749,3,Fermentation Run,Not Started,2026-05-25,-24,2026-06-05,35,,24
+750,2,Task 750,10,Lab Equipment Maintenance,Done,2026-03-06,56,2026-03-07,-55,2026-03-06,5
+751,3,Task 751,2,PCR / Cloning,Done,2026-03-07,55,2026-03-10,-52,2026-03-07,19
+752,10,Task 752,0,DNA Assembly,Not Started,2026-06-06,-36,2026-06-11,41,,11
+753,0,Task 753,7,Data Analysis,Not Started,2026-05-13,-12,2026-05-23,22,,33
+754,6,Task 754,2,PCR / Cloning,In Progress,2026-05-14,-13,2026-05-17,16,,7
+755,7,Task 755,6,Sample Testing,In Progress,2026-05-02,-1,2026-05-04,3,,2
+756,10,Task 756,2,PCR / Cloning,Done,2026-02-17,73,2026-02-20,-70,2026-02-19,17
+757,2,Task 757,2,PCR / Cloning,Done,2026-04-24,7,2026-04-27,-4,2026-04-26,18
+758,5,Task 758,0,DNA Assembly,Not Started,2026-04-06,25,2026-04-11,-20,,16
+759,3,Task 759,0,DNA Assembly,Not Started,2026-06-28,-58,2026-07-01,61,,14
+760,6,Task 760,6,Sample Testing,Done,2026-02-15,75,2026-02-20,-70,2026-03-07,15
+761,1,Task 761,10,Lab Equipment Maintenance,Done,2026-04-28,3,2026-05-03,2,2026-05-01,23
+762,8,Task 762,8,Model Development,In Progress,2026-04-17,14,2026-04-30,-1,,22
+763,8,Task 763,2,PCR / Cloning,Not Started,2026-05-23,-22,2026-05-24,23,,7
+764,5,Task 764,6,Sample Testing,Not Started,2026-07-10,-70,2026-07-15,75,,5
+765,8,Task 765,14,Stakeholder Update,Done,2026-02-22,68,2026-02-24,-66,2026-03-07,12
+766,4,Task 766,2,PCR / Cloning,Done,2026-02-13,77,2026-02-14,-76,2026-02-13,6
+767,3,Task 767,5,Assay Development,Done,2026-03-17,45,2026-03-27,-35,2026-04-06,40
+768,3,Task 768,9,Automation Workflow Setup,Not Started,2026-06-02,-32,2026-07-02,62,,135
+769,0,Task 769,2,PCR / Cloning,In Progress,2026-05-03,-2,2026-05-04,3,,2
+770,10,Task 770,6,Sample Testing,Done,2026-02-12,78,2026-02-18,-72,2026-02-21,17
+771,8,Task 771,14,Stakeholder Update,Not Started,2026-06-29,-59,2026-06-30,60,,7
+772,4,Task 772,14,Stakeholder Update,Done,2026-03-22,40,2026-03-23,-39,2026-04-02,7
+773,7,Task 773,2,PCR / Cloning,Not Started,2026-06-23,-53,2026-06-25,55,,4
+774,9,Task 774,12,Deviation Investigation,Not Started,2026-05-07,-6,2026-05-14,13,,23
+775,2,Task 775,10,Lab Equipment Maintenance,Done,2026-03-29,33,2026-04-01,-30,2026-03-29,10
+776,6,Task 776,4,Downstream Processing,Done,2026-02-12,78,2026-02-18,-72,2026-03-01,32
+777,2,Task 777,10,Lab Equipment Maintenance,Done,2026-03-31,31,2026-04-02,-29,2026-04-16,2
+778,8,Task 778,6,Sample Testing,Done,2026-02-03,87,2026-02-05,-85,2026-02-04,11
+779,8,Task 779,13,Project Planning,Not Started,2026-05-24,-23,2026-05-29,28,,32
+780,0,Task 780,10,Lab Equipment Maintenance,Done,2026-03-20,42,2026-03-24,-38,2026-04-03,28
+781,6,Task 781,3,Fermentation Run,Not Started,2026-04-24,7,2026-05-13,12,,36
+782,4,Task 782,6,Sample Testing,Done,2026-02-03,87,2026-02-06,-84,2026-02-18,16
+783,4,Task 783,2,PCR / Cloning,Done,2026-04-29,2,2026-05-02,1,2026-05-01,19
+784,1,Task 784,7,Data Analysis,Done,2026-04-10,21,2026-04-19,-12,2026-04-24,35
+785,5,Task 785,0,DNA Assembly,Not Started,2026-07-05,-65,2026-07-10,70,,13
+786,4,Task 786,13,Project Planning,In Progress,2026-04-06,25,2026-04-11,-20,,13
+787,10,Task 787,4,Downstream Processing,In Progress,2026-04-21,10,2026-04-29,-2,,43
+788,7,Task 788,2,PCR / Cloning,Not Started,2026-06-12,-42,2026-06-15,45,,18
+789,4,Task 789,14,Stakeholder Update,Done,2026-05-03,-2,2026-05-05,4,2026-05-03,12
+790,1,Task 790,11,Quality Review,Not Started,2026-03-30,32,2026-04-04,-27,,21
+791,6,Task 791,11,Quality Review,In Progress,2026-04-21,10,2026-04-29,-2,,51
+792,11,Task 792,0,DNA Assembly,Done,2026-01-23,98,2026-01-28,-93,2026-01-27,20
+793,9,Task 793,5,Assay Development,Done,2026-03-22,40,2026-03-28,-34,2026-03-25,8
+794,11,Task 794,4,Downstream Processing,In Progress,2026-04-10,21,2026-04-21,-10,,47
+795,11,Task 795,14,Stakeholder Update,Done,2026-03-07,55,2026-03-08,-54,2026-03-17,1
+796,3,Task 796,13,Project Planning,Not Started,2026-04-30,1,2026-05-06,5,,38
+797,8,Task 797,10,Lab Equipment Maintenance,Done,2026-02-23,67,2026-02-28,-62,2026-03-06,12
+798,10,Task 798,0,DNA Assembly,Cancelled,2026-01-28,93,2026-01-31,-90,,15
+799,5,Task 799,10,Lab Equipment Maintenance,Not Started,2026-07-06,-66,2026-07-10,70,,10
+800,8,Task 800,0,DNA Assembly,Done,2026-02-03,87,2026-02-05,-85,2026-02-17,11
+801,5,Task 801,3,Fermentation Run,Not Started,2026-04-17,14,2026-05-07,6,,44
+802,7,Task 802,14,Stakeholder Update,Done,2026-03-28,34,2026-03-29,-33,2026-04-09,1
+803,8,Task 803,0,DNA Assembly,Done,2026-04-08,23,2026-04-12,-19,2026-04-23,12
+804,8,Task 804,12,Deviation Investigation,Done,2026-03-16,46,2026-03-30,-32,2026-04-06,86
+805,7,Task 805,11,Quality Review,Done,2026-04-17,14,2026-04-25,-6,2026-05-01,51
+806,7,Task 806,14,Stakeholder Update,Not Started,2026-05-24,-23,2026-05-25,24,,1
+807,6,Task 807,10,Lab Equipment Maintenance,Done,2026-05-07,-6,2026-05-09,8,2026-05-07,8
+808,5,Task 808,7,Data Analysis,In Progress,2026-04-14,17,2026-04-17,-14,,5
+809,6,Task 809,10,Lab Equipment Maintenance,Done,2026-02-19,71,2026-02-22,-68,2026-02-22,18
+810,5,Task 810,3,Fermentation Run,Not Started,2026-04-15,16,2026-05-01,0,,111
+811,10,Task 811,14,Stakeholder Update,Not Started,2026-05-13,-12,2026-05-14,13,,2
+812,11,Task 812,2,PCR / Cloning,Done,2026-03-15,47,2026-03-17,-45,2026-03-19,11
+813,5,Task 813,2,PCR / Cloning,Done,2026-03-08,54,2026-03-09,-53,2026-03-19,5
+814,0,Task 814,11,Quality Review,Done,2026-02-24,66,2026-03-02,-60,2026-03-08,26
+815,7,Task 815,14,Stakeholder Update,Not Started,2026-05-26,-25,2026-05-28,27,,14
+816,8,Task 816,2,PCR / Cloning,Not Started,2026-06-07,-37,2026-06-08,38,,2
+817,0,Task 817,7,Data Analysis,Done,2026-04-21,10,2026-04-30,-1,2026-04-26,41
+818,5,Task 818,4,Downstream Processing,Done,2026-03-22,40,2026-04-06,-25,2026-04-04,104
+819,8,Task 819,6,Sample Testing,Done,2026-01-13,108,2026-01-20,-101,2026-01-21,31
+820,9,Task 820,0,DNA Assembly,Done,2026-05-06,-5,2026-05-10,9,2026-05-06,21
+821,4,Task 821,2,PCR / Cloning,In Progress,2026-04-12,19,2026-04-14,-17,,4
+822,7,Task 822,5,Assay Development,In Progress,2026-04-26,5,2026-05-07,6,,62
+823,4,Task 823,6,Sample Testing,Cancelled,2026-02-09,81,2026-02-15,-75,,20
+824,1,Task 824,10,Lab Equipment Maintenance,Not Started,2026-07-09,-69,2026-07-11,71,,8
+825,6,Task 825,2,PCR / Cloning,Done,2026-03-01,61,2026-03-04,-58,2026-03-01,8
+826,6,Task 826,6,Sample Testing,In Progress,2026-04-17,14,2026-04-24,-7,,27
+827,7,Task 827,2,PCR / Cloning,Not Started,2026-06-15,-45,2026-06-18,48,,4
+828,6,Task 828,0,DNA Assembly,Done,2026-02-17,73,2026-02-20,-70,2026-02-23,18
+829,10,Task 829,0,DNA Assembly,Done,2026-03-13,49,2026-03-17,-45,2026-03-29,21
+830,4,Task 830,3,Fermentation Run,Done,2026-02-08,82,2026-02-21,-69,2026-03-07,38
+831,9,Task 831,9,Automation Workflow Setup,Cancelled,2026-03-11,51,2026-04-10,-21,,102
+832,5,Task 832,2,PCR / Cloning,Not Started,2026-06-10,-40,2026-06-13,43,,17
+833,1,Task 833,4,Downstream Processing,Not Started,2026-06-15,-45,2026-06-24,54,,49
+834,2,Task 834,13,Project Planning,Done,2026-03-24,38,2026-03-28,-34,2026-04-10,16
+835,1,Task 835,0,DNA Assembly,In Progress,2026-04-16,15,2026-04-20,-11,,24
+836,4,Task 836,10,Lab Equipment Maintenance,In Progress,2026-04-16,15,2026-04-21,-10,,33
+837,7,Task 837,11,Quality Review,Not Started,2026-06-20,-50,2026-06-24,54,,20
+838,7,Task 838,5,Assay Development,Done,2026-01-26,95,2026-02-02,-88,2026-02-04,49
+839,4,Task 839,14,Stakeholder Update,Done,2026-02-19,71,2026-02-20,-70,2026-02-19,1
+840,1,Task 840,14,Stakeholder Update,Not Started,2026-07-07,-67,2026-07-09,69,,2
+841,0,Task 841,11,Quality Review,Done,2026-03-01,61,2026-03-07,-55,2026-03-21,15
+842,1,Task 842,10,Lab Equipment Maintenance,Not Started,2026-05-07,-6,2026-05-11,10,,27
+843,4,Task 843,5,Assay Development,Done,2026-02-09,81,2026-02-16,-74,2026-02-16,8
+844,0,Task 844,10,Lab Equipment Maintenance,In Progress,2026-04-20,11,2026-04-23,-8,,20
+845,4,Task 845,7,Data Analysis,In Progress,2026-04-23,8,2026-04-28,-3,,23
+846,9,Task 846,6,Sample Testing,In Progress,2026-05-09,-8,2026-05-16,15,,34
+847,8,Task 847,10,Lab Equipment Maintenance,Done,2026-03-31,31,2026-04-05,-26,2026-04-15,22
+848,3,Task 848,12,Deviation Investigation,Not Started,2026-05-05,-4,2026-05-17,16,,45
+849,2,Task 849,2,PCR / Cloning,Done,2026-04-06,25,2026-04-07,-24,2026-04-06,3
+850,4,Task 850,6,Sample Testing,Done,2026-04-22,9,2026-04-24,-7,2026-05-01,6
+851,0,Task 851,11,Quality Review,Done,2026-03-28,34,2026-04-05,-26,2026-03-31,43
+852,5,Task 852,2,PCR / Cloning,Not Started,2026-05-28,-27,2026-05-31,30,,15
+853,3,Task 853,2,PCR / Cloning,In Progress,2026-05-26,-25,2026-05-29,28,,10
+854,4,Task 854,0,DNA Assembly,Done,2026-03-31,31,2026-04-03,-28,2026-04-17,11
+855,4,Task 855,10,Lab Equipment Maintenance,Done,2026-02-27,63,2026-03-04,-58,2026-03-01,10
+856,2,Task 856,2,PCR / Cloning,Done,2026-03-29,33,2026-04-01,-30,2026-04-04,18
+857,3,Task 857,2,PCR / Cloning,Cancelled,2026-02-28,62,2026-03-01,-61,,1
+858,2,Task 858,14,Stakeholder Update,Done,2026-03-05,57,2026-03-07,-55,2026-03-16,13
+859,0,Task 859,2,PCR / Cloning,Done,2026-02-20,70,2026-02-21,-69,2026-02-26,4
+860,4,Task 860,11,Quality Review,Done,2026-03-12,50,2026-03-17,-45,2026-03-13,15
+861,1,Task 861,13,Project Planning,Done,2026-03-03,59,2026-03-06,-56,2026-03-13,5
+862,8,Task 862,6,Sample Testing,Done,2026-03-16,46,2026-03-19,-43,2026-03-16,6
+863,11,Task 863,2,PCR / Cloning,Done,2026-03-26,36,2026-03-28,-34,2026-03-26,5
+864,7,Task 864,11,Quality Review,Not Started,2026-06-03,-33,2026-06-05,35,,12
+865,3,Task 865,6,Sample Testing,In Progress,2026-05-06,-5,2026-05-13,12,,17
+866,10,Task 866,10,Lab Equipment Maintenance,Not Started,2026-05-19,-18,2026-05-24,23,,20
+867,10,Task 867,2,PCR / Cloning,Done,2026-01-19,102,2026-01-21,-100,2026-01-22,3
+868,3,Task 868,10,Lab Equipment Maintenance,Done,2026-02-19,71,2026-02-22,-68,2026-02-25,21
+869,1,Task 869,4,Downstream Processing,Cancelled,2026-02-19,71,2026-02-27,-63,,45
+870,11,Task 870,6,Sample Testing,Done,2026-03-02,60,2026-03-08,-54,2026-03-05,21
+871,2,Task 871,6,Sample Testing,Not Started,2026-04-19,12,2026-04-26,-5,,47
+872,0,Task 872,0,DNA Assembly,Not Started,2026-05-19,-18,2026-05-22,21,,6
+873,2,Task 873,6,Sample Testing,Done,2026-04-11,20,2026-04-15,-16,2026-04-21,18
+874,11,Task 874,2,PCR / Cloning,In Progress,2026-04-28,3,2026-05-01,0,,7
+875,4,Task 875,14,Stakeholder Update,In Progress,2026-04-24,7,2026-04-26,-5,,6
+876,8,Task 876,10,Lab Equipment Maintenance,Not Started,2026-06-05,-35,2026-06-07,37,,4
+877,8,Task 877,3,Fermentation Run,Not Started,2026-05-10,-9,2026-05-28,27,,124
+878,9,Task 878,14,Stakeholder Update,Done,2026-02-25,65,2026-02-26,-64,2026-03-07,3
+879,4,Task 879,7,Data Analysis,Done,2026-01-24,97,2026-02-03,-87,2026-02-14,34
+880,11,Task 880,2,PCR / Cloning,Done,2026-04-25,6,2026-04-26,-5,2026-04-28,3
+881,11,Task 881,0,DNA Assembly,Done,2026-03-11,51,2026-03-16,-46,2026-03-26,29
+882,8,Task 882,2,PCR / Cloning,Done,2026-04-03,28,2026-04-05,-26,2026-04-10,3
+883,1,Task 883,7,Data Analysis,Done,2026-02-28,62,2026-03-04,-58,2026-03-03,9
+884,0,Task 884,2,PCR / Cloning,Done,2026-03-15,47,2026-03-17,-45,2026-03-30,12
+885,6,Task 885,10,Lab Equipment Maintenance,Done,2026-04-30,1,2026-05-05,4,2026-05-01,6
+886,5,Task 886,2,PCR / Cloning,Done,2026-02-24,66,2026-02-27,-63,2026-02-28,18
+887,1,Task 887,6,Sample Testing,Done,2026-03-04,58,2026-03-11,-51,2026-03-19,30
+888,11,Task 888,0,DNA Assembly,Done,2026-02-01,89,2026-02-05,-85,2026-02-09,6
+889,3,Task 889,14,Stakeholder Update,Done,2026-03-13,49,2026-03-14,-48,2026-03-26,4
+890,3,Task 890,2,PCR / Cloning,In Progress,2026-04-20,11,2026-04-23,-8,,8
+891,8,Task 891,11,Quality Review,Done,2026-02-07,83,2026-02-12,-78,2026-02-25,16
+892,10,Task 892,6,Sample Testing,Done,2026-04-25,6,2026-05-02,1,2026-05-01,18
+893,8,Task 893,4,Downstream Processing,Done,2026-02-20,70,2026-03-02,-60,2026-03-16,38
+894,5,Task 894,14,Stakeholder Update,Not Started,2026-05-12,-11,2026-05-14,13,,12
+895,6,Task 895,12,Deviation Investigation,Not Started,2026-04-28,3,2026-05-08,7,,44
+896,3,Task 896,4,Downstream Processing,In Progress,2026-04-22,9,2026-05-05,4,,70
+897,7,Task 897,14,Stakeholder Update,Cancelled,2026-01-29,92,2026-01-30,-91,,5
+898,0,Task 898,7,Data Analysis,Done,2026-02-19,71,2026-02-26,-64,2026-02-28,20
+899,5,Task 899,0,DNA Assembly,Not Started,2026-06-27,-57,2026-07-01,61,,20
+900,8,Task 900,8,Model Development,Done,2026-02-19,71,2026-03-07,-55,2026-03-16,61
+901,2,Task 901,1,Strain Construction,Not Started,2026-04-14,17,2026-05-05,4,,53
+902,4,Task 902,0,DNA Assembly,Done,2026-04-06,25,2026-04-11,-20,2026-04-08,28
+903,5,Task 903,11,Quality Review,Not Started,2026-06-10,-40,2026-06-13,43,,21
+904,1,Task 904,10,Lab Equipment Maintenance,Done,2026-02-26,64,2026-03-01,-61,2026-03-14,15
+905,1,Task 905,11,Quality Review,Not Started,2026-05-13,-12,2026-05-21,20,,35
+906,6,Task 906,14,Stakeholder Update,Not Started,2026-05-19,-18,2026-05-20,19,,6
+907,9,Task 907,14,Stakeholder Update,Done,2026-02-23,67,2026-02-25,-65,2026-02-23,7
+908,8,Task 908,8,Model Development,Not Started,2026-05-19,-18,2026-05-31,30,,40
+909,2,Task 909,0,DNA Assembly,Done,2026-03-28,34,2026-04-02,-29,2026-04-15,21
+910,1,Task 910,2,PCR / Cloning,Not Started,2026-05-28,-27,2026-05-30,29,,7
+911,1,Task 911,6,Sample Testing,Done,2026-03-01,61,2026-03-08,-54,2026-03-11,12
+912,6,Task 912,6,Sample Testing,Done,2026-02-26,64,2026-03-05,-57,2026-03-15,42
+913,3,Task 913,6,Sample Testing,Done,2026-04-07,24,2026-04-14,-17,2026-04-25,22
+914,3,Task 914,0,DNA Assembly,Not Started,2026-05-09,-8,2026-05-14,13,,23
+915,1,Task 915,0,DNA Assembly,Not Started,2026-06-05,-35,2026-06-10,40,,16
+916,5,Task 916,2,PCR / Cloning,Not Started,2026-07-08,-68,2026-07-10,70,,12
+917,0,Task 917,11,Quality Review,Done,2026-04-04,27,2026-04-07,-24,2026-04-16,7
+918,7,Task 918,0,DNA Assembly,Done,2026-03-13,49,2026-03-16,-46,2026-03-15,5
+919,1,Task 919,11,Quality Review,Done,2026-03-26,36,2026-03-29,-33,2026-04-02,3
+920,5,Task 920,10,Lab Equipment Maintenance,In Progress,2026-04-25,6,2026-04-26,-5,,1
+921,5,Task 921,2,PCR / Cloning,In Progress,2026-04-01,30,2026-04-04,-27,,19
+922,4,Task 922,7,Data Analysis,In Progress,2026-04-22,9,2026-04-27,-4,,5
+923,6,Task 923,9,Automation Workflow Setup,Done,2026-02-15,75,2026-03-13,-49,2026-03-09,98
+924,3,Task 924,11,Quality Review,Not Started,2026-04-26,5,2026-05-02,1,,6
+925,1,Task 925,4,Downstream Processing,In Progress,2026-05-20,-19,2026-05-29,28,,10
+926,4,Task 926,13,Project Planning,Cancelled,2026-02-22,68,2026-02-27,-63,,21
+927,11,Task 927,0,DNA Assembly,In Progress,2026-05-26,-25,2026-05-30,29,,21
+928,1,Task 928,2,PCR / Cloning,Not Started,2026-06-14,-44,2026-06-17,47,,20
+929,11,Task 929,0,DNA Assembly,In Progress,2026-04-10,21,2026-04-13,-18,,15
+930,11,Task 930,2,PCR / Cloning,In Progress,2026-04-22,9,2026-04-24,-7,,6
+931,3,Task 931,14,Stakeholder Update,Done,2026-03-03,59,2026-03-05,-57,2026-03-12,2
+932,8,Task 932,14,Stakeholder Update,Done,2026-02-18,72,2026-02-19,-71,2026-02-26,6
+933,2,Task 933,0,DNA Assembly,Cancelled,2026-04-06,25,2026-04-11,-20,,24
+934,10,Task 934,10,Lab Equipment Maintenance,Done,2026-03-08,54,2026-03-12,-50,2026-03-20,13
+935,9,Task 935,2,PCR / Cloning,Done,2026-03-05,57,2026-03-08,-54,2026-03-07,21
+936,8,Task 936,10,Lab Equipment Maintenance,Done,2026-02-15,75,2026-02-17,-73,2026-02-28,4
+937,6,Task 937,14,Stakeholder Update,Done,2026-05-04,-3,2026-05-05,4,2026-05-04,3
+938,1,Task 938,8,Model Development,In Progress,2026-03-19,43,2026-04-06,-25,,125
+939,2,Task 939,10,Lab Equipment Maintenance,Cancelled,2026-03-23,39,2026-03-26,-36,,12
+940,7,Task 940,11,Quality Review,In Progress,2026-04-01,30,2026-04-09,-22,,20
+941,1,Task 941,1,Strain Construction,In Progress,2026-04-26,5,2026-05-06,5,,49
+942,3,Task 942,10,Lab Equipment Maintenance,Done,2026-02-22,68,2026-02-24,-66,2026-03-06,4
+943,8,Task 943,13,Project Planning,Not Started,2026-04-16,15,2026-04-21,-10,,17
+944,7,Task 944,6,Sample Testing,Done,2026-03-11,51,2026-03-14,-48,2026-03-22,3
+945,4,Task 945,14,Stakeholder Update,In Progress,2026-04-29,2,2026-04-30,-1,,2
+946,3,Task 946,0,DNA Assembly,Not Started,2026-06-21,-51,2026-06-26,56,,27
+947,5,Task 947,13,Project Planning,Not Started,2026-05-26,-25,2026-05-29,28,,4
+948,9,Task 948,11,Quality Review,In Progress,2026-03-29,33,2026-04-03,-28,,35
+949,11,Task 949,8,Model Development,Done,2026-03-30,32,2026-04-14,-17,2026-04-10,81
+950,1,Task 950,6,Sample Testing,In Progress,2026-04-20,11,2026-04-22,-9,,8
+951,11,Task 951,0,DNA Assembly,Done,2026-02-03,87,2026-02-08,-82,2026-02-17,17
+952,4,Task 952,11,Quality Review,Done,2026-03-24,38,2026-03-28,-34,2026-04-01,23
+953,0,Task 953,10,Lab Equipment Maintenance,Done,2026-04-19,12,2026-04-21,-10,2026-04-30,3
+954,11,Task 954,6,Sample Testing,Done,2026-02-25,65,2026-02-28,-62,2026-03-05,17
+955,0,Task 955,2,PCR / Cloning,In Progress,2026-05-21,-20,2026-05-24,23,,17
+956,1,Task 956,2,PCR / Cloning,Done,2026-03-30,32,2026-04-02,-29,2026-03-31,5
+957,1,Task 957,10,Lab Equipment Maintenance,Done,2026-03-10,52,2026-03-13,-49,2026-03-20,19
+958,9,Task 958,14,Stakeholder Update,In Progress,2026-04-28,3,2026-04-30,-1,,14
+959,2,Task 959,14,Stakeholder Update,Done,2026-02-19,71,2026-02-20,-70,2026-02-20,7
+960,11,Task 960,0,DNA Assembly,Done,2026-04-11,20,2026-04-15,-16,2026-04-24,13
+961,10,Task 961,2,PCR / Cloning,Done,2026-02-26,64,2026-02-27,-63,2026-03-02,1
+962,7,Task 962,6,Sample Testing,Not Started,2026-06-09,-39,2026-06-14,44,,30
+963,0,Task 963,10,Lab Equipment Maintenance,Done,2026-03-21,41,2026-03-25,-37,2026-04-04,18
+964,6,Task 964,5,Assay Development,Done,2026-03-13,49,2026-03-18,-44,2026-03-21,24
+965,10,Task 965,8,Model Development,Done,2026-02-28,62,2026-03-20,-42,2026-03-19,27
+966,10,Task 966,3,Fermentation Run,Done,2026-01-14,107,2026-01-23,-98,2026-02-06,28
+967,5,Task 967,14,Stakeholder Update,Done,2026-03-05,57,2026-03-06,-56,2026-03-06,2
+968,10,Task 968,2,PCR / Cloning,Not Started,2026-06-07,-37,2026-06-10,40,,21
+969,8,Task 969,2,PCR / Cloning,Not Started,2026-06-08,-38,2026-06-10,40,,7
+970,0,Task 970,0,DNA Assembly,In Progress,2026-04-01,30,2026-04-05,-26,,16
+971,1,Task 971,11,Quality Review,Not Started,2026-07-07,-67,2026-07-15,75,,12
+972,4,Task 972,6,Sample Testing,Done,2026-04-22,9,2026-04-24,-7,2026-04-29,10
+973,6,Task 973,7,Data Analysis,Not Started,2026-04-29,2,2026-05-05,4,,42
+974,11,Task 974,14,Stakeholder Update,Not Started,2026-05-25,-24,2026-05-26,25,,5
+975,11,Task 975,2,PCR / Cloning,In Progress,2026-04-13,18,2026-04-16,-15,,21
+976,9,Task 976,3,Fermentation Run,Not Started,2026-05-06,-5,2026-05-15,14,,42
+977,11,Task 977,10,Lab Equipment Maintenance,Done,2026-03-09,53,2026-03-13,-49,2026-03-15,26
+978,4,Task 978,14,Stakeholder Update,Done,2026-02-08,82,2026-02-09,-81,2026-02-24,7
+979,1,Task 979,11,Quality Review,Not Started,2026-06-03,-33,2026-06-06,36,,16
+980,0,Task 980,2,PCR / Cloning,Not Started,2026-05-11,-10,2026-05-14,13,,9
+981,11,Task 981,2,PCR / Cloning,In Progress,2026-04-10,21,2026-04-11,-20,,5
+982,5,Task 982,11,Quality Review,Not Started,2026-05-02,-1,2026-05-04,3,,13
+983,9,Task 983,10,Lab Equipment Maintenance,Done,2026-03-11,51,2026-03-12,-50,2026-03-17,6
+984,7,Task 984,14,Stakeholder Update,Done,2026-02-24,66,2026-02-25,-65,2026-03-12,4
+985,8,Task 985,14,Stakeholder Update,Done,2026-04-26,5,2026-04-28,-3,2026-04-26,10
+986,4,Task 986,8,Model Development,Done,2026-03-05,57,2026-03-22,-40,2026-03-17,43
+987,9,Task 987,10,Lab Equipment Maintenance,Cancelled,2026-02-25,65,2026-02-28,-62,,11
+988,0,Task 988,3,Fermentation Run,Not Started,2026-05-10,-9,2026-05-23,22,,34
+989,9,Task 989,10,Lab Equipment Maintenance,Not Started,2026-05-04,-3,2026-05-06,5,,14
+990,4,Task 990,10,Lab Equipment Maintenance,Not Started,2026-04-24,7,2026-04-27,-4,,16
+991,1,Task 991,6,Sample Testing,Not Started,2026-05-23,-22,2026-05-26,25,,12
+992,3,Task 992,7,Data Analysis,Done,2026-03-16,46,2026-03-21,-41,2026-03-17,29
+993,3,Task 993,14,Stakeholder Update,Not Started,2026-06-25,-55,2026-06-27,57,,2
+994,7,Task 994,14,Stakeholder Update,Done,2026-03-10,52,2026-03-11,-51,2026-03-21,6
+995,8,Task 995,2,PCR / Cloning,Done,2026-02-16,74,2026-02-18,-72,2026-02-16,10
+996,10,Task 996,14,Stakeholder Update,Done,2026-01-15,106,2026-01-16,-105,2026-01-27,1
+997,0,Task 997,2,PCR / Cloning,In Progress,2026-05-17,-16,2026-05-18,17,,7
+998,1,Task 998,2,PCR / Cloning,Done,2026-03-15,47,2026-03-16,-46,2026-03-20,1
+999,9,Task 999,11,Quality Review,Done,2026-03-15,47,2026-03-22,-40,2026-03-23,25
+1000,4,Task 1000,7,Data Analysis,Not Started,2026-04-19,12,2026-04-29,-2,,19
+1001,2,Task 1001,2,PCR / Cloning,Done,2026-04-19,12,2026-04-20,-11,2026-04-19,2
+1002,8,Task 1002,3,Fermentation Run,Not Started,2026-03-21,41,2026-04-02,-29,,48
+1003,9,Task 1003,2,PCR / Cloning,Done,2026-03-28,34,2026-03-29,-33,2026-04-03,5
+1004,7,Task 1004,0,DNA Assembly,In Progress,2026-05-21,-20,2026-05-23,22,,2
+1005,1,Task 1005,4,Downstream Processing,Not Started,2026-06-06,-36,2026-06-12,42,,31
+1006,2,Task 1006,10,Lab Equipment Maintenance,Done,2026-04-20,11,2026-04-25,-6,2026-05-01,24
+1007,5,Task 1007,2,PCR / Cloning,Not Started,2026-06-22,-52,2026-06-23,53,,1
+1008,7,Task 1008,8,Model Development,Not Started,2026-05-20,-19,2026-05-28,27,,27
+1009,10,Task 1009,10,Lab Equipment Maintenance,Not Started,2026-05-06,-5,2026-05-10,9,,11
+1010,2,Task 1010,13,Project Planning,Done,2026-03-04,58,2026-03-10,-52,2026-03-17,17
+1011,11,Task 1011,14,Stakeholder Update,Done,2026-04-15,16,2026-04-17,-14,2026-04-15,3
+1012,7,Task 1012,0,DNA Assembly,In Progress,2026-05-19,-18,2026-05-24,23,,14
+1013,5,Task 1013,10,Lab Equipment Maintenance,Not Started,2026-06-16,-46,2026-06-18,48,,3
+1014,6,Task 1014,12,Deviation Investigation,Done,2026-03-23,39,2026-03-29,-33,2026-03-26,25
+1015,8,Task 1015,6,Sample Testing,Not Started,2026-04-26,5,2026-05-02,1,,21
+1016,8,Task 1016,2,PCR / Cloning,Not Started,2026-04-19,12,2026-04-21,-10,,5
+1017,11,Task 1017,9,Automation Workflow Setup,Done,2026-04-04,27,2026-04-27,-4,2026-05-01,83
+1018,2,Task 1018,10,Lab Equipment Maintenance,Done,2026-05-04,-3,2026-05-05,4,2026-05-04,7
+1019,7,Task 1019,1,Strain Construction,In Progress,2026-04-14,17,2026-05-08,7,,137
+1020,2,Task 1020,2,PCR / Cloning,Done,2026-02-07,83,2026-02-09,-81,2026-02-23,14
+1021,6,Task 1021,2,PCR / Cloning,Not Started,2026-05-05,-4,2026-05-08,7,,9
+1022,2,Task 1022,14,Stakeholder Update,Not Started,2026-05-06,-5,2026-05-07,6,,2
+1023,7,Task 1023,7,Data Analysis,Not Started,2026-06-17,-47,2026-06-26,56,,37
+1024,3,Task 1024,2,PCR / Cloning,In Progress,2026-05-03,-2,2026-05-05,4,,12
+1025,4,Task 1025,14,Stakeholder Update,Done,2026-04-25,6,2026-04-27,-4,2026-05-01,3
+1026,9,Task 1026,0,DNA Assembly,Done,2026-03-05,57,2026-03-10,-52,2026-03-06,16
+1027,8,Task 1027,14,Stakeholder Update,Not Started,2026-06-03,-33,2026-06-04,34,,7
+1028,5,Task 1028,0,DNA Assembly,Done,2026-02-13,77,2026-02-17,-73,2026-03-02,16
+1029,10,Task 1029,2,PCR / Cloning,In Progress,2026-04-19,12,2026-04-21,-10,,10
+1030,3,Task 1030,10,Lab Equipment Maintenance,Done,2026-03-23,39,2026-03-27,-35,2026-04-03,15
+1031,6,Task 1031,2,PCR / Cloning,Done,2026-02-26,64,2026-03-01,-61,2026-02-26,3
+1032,2,Task 1032,10,Lab Equipment Maintenance,In Progress,2026-04-24,7,2026-04-28,-3,,8
+1033,1,Task 1033,1,Strain Construction,Not Started,2026-06-13,-43,2026-07-06,66,,131
+1034,9,Task 1034,2,PCR / Cloning,Done,2026-04-12,19,2026-04-15,-16,2026-04-24,15
+1035,5,Task 1035,2,PCR / Cloning,Not Started,2026-07-10,-70,2026-07-12,72,,2
+1036,9,Task 1036,6,Sample Testing,Done,2026-03-19,43,2026-03-26,-36,2026-03-29,33
+1037,8,Task 1037,9,Automation Workflow Setup,Done,2026-01-20,101,2026-01-31,-90,2026-02-06,25
+1038,9,Task 1038,6,Sample Testing,Done,2026-02-27,63,2026-03-06,-56,2026-03-17,24
+1039,7,Task 1039,7,Data Analysis,Done,2026-03-24,38,2026-03-28,-34,2026-03-25,25
+1040,10,Task 1040,7,Data Analysis,Not Started,2026-06-11,-41,2026-06-18,48,,10
+1041,5,Task 1041,7,Data Analysis,Not Started,2026-06-06,-36,2026-06-09,39,,17
+1042,8,Task 1042,14,Stakeholder Update,In Progress,2026-04-28,3,2026-04-30,-1,,14
+1043,4,Task 1043,2,PCR / Cloning,Done,2026-04-22,9,2026-04-23,-8,2026-04-27,6
+1044,9,Task 1044,2,PCR / Cloning,In Progress,2026-04-18,13,2026-04-21,-10,,21
+1045,0,Task 1045,10,Lab Equipment Maintenance,Not Started,2026-05-24,-23,2026-05-27,26,,12
+1046,7,Task 1046,0,DNA Assembly,In Progress,2026-04-02,29,2026-04-04,-27,,11
+1047,4,Task 1047,2,PCR / Cloning,Done,2026-01-25,96,2026-01-27,-94,2026-02-10,4
+1048,9,Task 1048,11,Quality Review,In Progress,2026-04-15,16,2026-04-22,-9,,18
+1049,4,Task 1049,11,Quality Review,Done,2026-03-27,35,2026-03-30,-32,2026-04-10,4
+1050,5,Task 1050,14,Stakeholder Update,Not Started,2026-07-08,-68,2026-07-09,69,,7
+1051,2,Task 1051,13,Project Planning,Done,2026-03-20,42,2026-03-25,-37,2026-04-03,28
+1052,10,Task 1052,2,PCR / Cloning,Not Started,2026-04-04,27,2026-04-07,-24,,11
+1053,1,Task 1053,0,DNA Assembly,Not Started,2026-05-30,-29,2026-06-04,34,,20
+1054,4,Task 1054,6,Sample Testing,Done,2026-02-22,68,2026-02-28,-62,2026-03-07,36
+1055,4,Task 1055,2,PCR / Cloning,Done,2026-01-25,96,2026-01-27,-94,2026-02-05,8
+1056,10,Task 1056,2,PCR / Cloning,Done,2026-01-16,105,2026-01-19,-102,2026-01-31,14
+1057,6,Task 1057,10,Lab Equipment Maintenance,Done,2026-03-24,38,2026-03-27,-35,2026-03-25,11
+1058,10,Task 1058,9,Automation Workflow Setup,Done,2026-03-08,54,2026-04-01,-30,2026-04-14,73
+1059,8,Task 1059,3,Fermentation Run,Done,2026-02-26,64,2026-03-16,-46,2026-03-11,104
+1060,0,Task 1060,13,Project Planning,Not Started,2026-04-12,19,2026-04-14,-17,,3
+1061,10,Task 1061,5,Assay Development,Done,2026-03-19,43,2026-03-27,-35,2026-03-23,9
+1062,9,Task 1062,0,DNA Assembly,In Progress,2026-05-04,-3,2026-05-07,6,,6
+1063,1,Task 1063,13,Project Planning,Not Started,2026-05-24,-23,2026-05-27,26,,21
+1064,2,Task 1064,14,Stakeholder Update,Done,2026-03-03,59,2026-03-04,-58,2026-03-03,6
+1065,7,Task 1065,14,Stakeholder Update,Not Started,2026-05-10,-9,2026-05-12,11,,12
+1066,5,Task 1066,2,PCR / Cloning,Done,2026-04-17,14,2026-04-18,-13,2026-04-25,4
+1067,5,Task 1067,14,Stakeholder Update,In Progress,2026-04-14,17,2026-04-16,-15,,3
+1068,7,Task 1068,14,Stakeholder Update,Not Started,2026-06-26,-56,2026-06-27,57,,4
+1069,2,Task 1069,10,Lab Equipment Maintenance,Done,2026-02-17,73,2026-02-18,-72,2026-02-26,2
+1070,9,Task 1070,10,Lab Equipment Maintenance,Not Started,2026-05-19,-18,2026-05-23,22,,5
+1071,1,Task 1071,0,DNA Assembly,Not Started,2026-06-11,-41,2026-06-15,45,,4
+1072,7,Task 1072,2,PCR / Cloning,Done,2026-01-21,100,2026-01-24,-97,2026-01-31,11
+1073,2,Task 1073,10,Lab Equipment Maintenance,Not Started,2026-04-13,18,2026-04-17,-14,,26
+1074,7,Task 1074,6,Sample Testing,Done,2026-02-07,83,2026-02-12,-78,2026-02-07,17
+1075,11,Task 1075,12,Deviation Investigation,Done,2026-02-06,84,2026-02-18,-72,2026-02-24,54
+1076,10,Task 1076,2,PCR / Cloning,Not Started,2026-06-16,-46,2026-06-17,47,,6
+1077,1,Task 1077,3,Fermentation Run,Not Started,2026-05-15,-14,2026-06-04,34,,30
+1078,7,Task 1078,11,Quality Review,Done,2026-03-13,49,2026-03-17,-45,2026-03-13,16
+1079,10,Task 1079,2,PCR / Cloning,Done,2026-04-15,16,2026-04-18,-13,2026-05-01,14
+1080,7,Task 1080,0,DNA Assembly,Done,2026-03-10,52,2026-03-15,-47,2026-03-16,5
+1081,11,Task 1081,14,Stakeholder Update,Not Started,2026-05-27,-26,2026-05-28,27,,7
+1082,8,Task 1082,10,Lab Equipment Maintenance,Not Started,2026-05-27,-26,2026-05-31,30,,18
+1083,0,Task 1083,0,DNA Assembly,Done,2026-04-03,28,2026-04-05,-26,2026-04-03,8
+1084,1,Task 1084,2,PCR / Cloning,Not Started,2026-06-30,-60,2026-07-03,63,,17
+1085,10,Task 1085,13,Project Planning,Done,2026-02-13,77,2026-02-19,-71,2026-02-21,10
+1086,0,Task 1086,11,Quality Review,Not Started,2026-05-13,-12,2026-05-18,17,,34
+1087,9,Task 1087,0,DNA Assembly,Done,2026-02-18,72,2026-02-21,-69,2026-02-18,12
+1088,1,Task 1088,6,Sample Testing,Done,2026-03-05,57,2026-03-08,-54,2026-03-06,6
+1089,7,Task 1089,9,Automation Workflow Setup,Not Started,2026-03-18,44,2026-04-16,-15,,80
+1090,6,Task 1090,3,Fermentation Run,Not Started,2026-04-02,29,2026-04-22,-9,,107
+1091,9,Task 1091,7,Data Analysis,Done,2026-03-16,46,2026-03-24,-38,2026-04-06,19
+1092,5,Task 1092,0,DNA Assembly,Done,2026-03-14,48,2026-03-18,-44,2026-03-18,26
+1093,5,Task 1093,7,Data Analysis,Done,2026-04-09,22,2026-04-19,-12,2026-04-15,18
+1094,1,Task 1094,11,Quality Review,Not Started,2026-05-24,-23,2026-05-31,30,,17
+1095,0,Task 1095,14,Stakeholder Update,Done,2026-02-19,71,2026-02-20,-70,2026-02-19,6
+1096,10,Task 1096,9,Automation Workflow Setup,Not Started,2026-04-22,9,2026-05-11,10,,120
+1097,7,Task 1097,10,Lab Equipment Maintenance,Done,2026-02-26,64,2026-02-28,-62,2026-03-11,9
+1098,6,Task 1098,2,PCR / Cloning,In Progress,2026-04-29,2,2026-04-30,-1,,5
+1099,2,Task 1099,10,Lab Equipment Maintenance,Done,2026-02-10,80,2026-02-15,-75,2026-02-19,16
+1100,6,Task 1100,0,DNA Assembly,Done,2026-03-06,56,2026-03-09,-53,2026-03-20,6
+1101,9,Task 1101,3,Fermentation Run,Not Started,2026-04-27,4,2026-05-16,15,,78
+1102,10,Task 1102,10,Lab Equipment Maintenance,Done,2026-01-19,102,2026-01-22,-99,2026-01-21,18
+1103,7,Task 1103,2,PCR / Cloning,Done,2026-02-01,89,2026-02-04,-86,2026-02-10,12
+1104,3,Task 1104,5,Assay Development,Not Started,2026-06-12,-42,2026-06-22,52,,12
+1105,1,Task 1105,11,Quality Review,In Progress,2026-04-03,28,2026-04-09,-22,,7
+1106,7,Task 1106,7,Data Analysis,Done,2026-03-22,40,2026-03-26,-36,2026-04-08,22
+1107,5,Task 1107,5,Assay Development,Done,2026-04-05,26,2026-04-15,-16,2026-04-20,24
+1108,1,Task 1108,2,PCR / Cloning,In Progress,2026-04-09,22,2026-04-11,-20,,5
+1109,1,Task 1109,6,Sample Testing,Done,2026-03-02,60,2026-03-07,-55,2026-03-06,11
+1110,9,Task 1110,6,Sample Testing,Not Started,2026-04-05,26,2026-04-10,-21,,28
+1111,3,Task 1111,10,Lab Equipment Maintenance,In Progress,2026-04-08,23,2026-04-11,-20,,4
+1112,11,Task 1112,8,Model Development,Done,2026-02-08,82,2026-02-19,-71,2026-02-28,69
+1113,6,Task 1113,2,PCR / Cloning,Done,2026-03-10,52,2026-03-12,-50,2026-03-26,4
+1114,10,Task 1114,14,Stakeholder Update,Not Started,2026-06-02,-32,2026-06-03,33,,5
+1115,3,Task 1115,0,DNA Assembly,Done,2026-04-12,19,2026-04-17,-14,2026-04-26,13
+1116,0,Task 1116,11,Quality Review,Done,2026-03-22,40,2026-03-29,-33,2026-04-06,44
+1117,3,Task 1117,14,Stakeholder Update,Done,2026-02-17,73,2026-02-18,-72,2026-02-17,1
+1118,7,Task 1118,11,Quality Review,Done,2026-01-29,92,2026-02-04,-86,2026-02-11,36
+1119,11,Task 1119,12,Deviation Investigation,In Progress,2026-03-26,36,2026-04-07,-24,,83
+1120,0,Task 1120,10,Lab Equipment Maintenance,Done,2026-03-18,44,2026-03-22,-40,2026-03-26,11
+1121,10,Task 1121,14,Stakeholder Update,In Progress,2026-05-08,-7,2026-05-09,8,,2
+1122,11,Task 1122,6,Sample Testing,Cancelled,2026-01-28,93,2026-02-03,-87,,35
+1123,2,Task 1123,13,Project Planning,Done,2026-02-22,68,2026-02-27,-63,2026-03-05,25
+1124,7,Task 1124,10,Lab Equipment Maintenance,Done,2026-02-08,82,2026-02-09,-81,2026-02-14,5
+1125,0,Task 1125,2,PCR / Cloning,In Progress,2026-05-19,-18,2026-05-21,20,,10
+1126,9,Task 1126,11,Quality Review,Not Started,2026-05-15,-14,2026-05-23,22,,29
+1127,11,Task 1127,14,Stakeholder Update,Done,2026-02-04,86,2026-02-06,-84,2026-02-12,9
+1128,9,Task 1128,0,DNA Assembly,Done,2026-03-11,51,2026-03-15,-47,2026-03-12,21
+1129,11,Task 1129,11,Quality Review,In Progress,2026-04-17,14,2026-04-20,-11,,6
+1130,10,Task 1130,6,Sample Testing,Done,2026-02-28,62,2026-03-06,-56,2026-03-08,26
+1131,5,Task 1131,14,Stakeholder Update,Not Started,2026-04-17,14,2026-04-19,-12,,7
+1132,5,Task 1132,6,Sample Testing,Not Started,2026-06-20,-50,2026-06-26,56,,13
+1133,7,Task 1133,10,Lab Equipment Maintenance,Done,2026-04-05,26,2026-04-10,-21,2026-04-16,30
+1134,10,Task 1134,14,Stakeholder Update,Done,2026-02-23,67,2026-02-24,-66,2026-03-05,1
+1135,1,Task 1135,4,Downstream Processing,Done,2026-05-01,0,2026-05-08,7,2026-05-01,13
+1136,2,Task 1136,2,PCR / Cloning,Done,2026-02-17,73,2026-02-20,-70,2026-02-21,19
+1137,10,Task 1137,0,DNA Assembly,In Progress,2026-05-24,-23,2026-05-29,28,,20
+1138,5,Task 1138,5,Assay Development,Not Started,2026-04-21,10,2026-04-26,-5,,5
+1139,3,Task 1139,13,Project Planning,Not Started,2026-05-12,-11,2026-05-18,17,,27
+1140,10,Task 1140,10,Lab Equipment Maintenance,Not Started,2026-05-10,-9,2026-05-13,12,,19
+1141,8,Task 1141,5,Assay Development,Not Started,2026-06-05,-35,2026-06-14,44,,17
+1142,4,Task 1142,2,PCR / Cloning,Done,2026-02-22,68,2026-02-24,-66,2026-02-28,14
+1143,0,Task 1143,2,PCR / Cloning,Cancelled,2026-04-18,13,2026-04-20,-11,,11
+1144,2,Task 1144,10,Lab Equipment Maintenance,Cancelled,2026-02-22,68,2026-02-25,-65,,7
+1145,2,Task 1145,2,PCR / Cloning,Done,2026-03-11,51,2026-03-12,-50,2026-03-21,3
+1146,5,Task 1146,2,PCR / Cloning,Done,2026-02-14,76,2026-02-17,-73,2026-02-23,7
+1147,5,Task 1147,6,Sample Testing,Not Started,2026-06-22,-52,2026-06-25,55,,12
+1148,1,Task 1148,14,Stakeholder Update,Not Started,2026-06-24,-54,2026-06-26,56,,14
+1149,2,Task 1149,14,Stakeholder Update,Done,2026-02-18,72,2026-02-20,-70,2026-03-04,10
+1150,5,Task 1150,10,Lab Equipment Maintenance,Not Started,2026-06-07,-37,2026-06-10,40,,12
+1151,9,Task 1151,10,Lab Equipment Maintenance,In Progress,2026-04-14,17,2026-04-19,-12,,8
+1152,11,Task 1152,6,Sample Testing,Done,2026-02-26,64,2026-02-28,-62,2026-02-26,6
+1153,0,Task 1153,4,Downstream Processing,In Progress,2026-04-17,14,2026-04-25,-6,,28
+1154,0,Task 1154,10,Lab Equipment Maintenance,In Progress,2026-05-04,-3,2026-05-06,5,,14
+1155,4,Task 1155,2,PCR / Cloning,Done,2026-04-02,29,2026-04-03,-28,2026-04-02,5
+1156,6,Task 1156,2,PCR / Cloning,In Progress,2026-04-28,3,2026-04-30,-1,,2
+1157,10,Task 1157,3,Fermentation Run,In Progress,2026-04-25,6,2026-05-04,3,,32
+1158,0,Task 1158,2,PCR / Cloning,Cancelled,2026-03-30,32,2026-04-01,-30,,10
+1159,1,Task 1159,2,PCR / Cloning,Not Started,2026-06-03,-33,2026-06-05,35,,14
+1160,7,Task 1160,2,PCR / Cloning,Not Started,2026-05-09,-8,2026-05-12,11,,16
+1161,2,Task 1161,13,Project Planning,Done,2026-02-10,80,2026-02-16,-74,2026-02-20,36
+1162,8,Task 1162,14,Stakeholder Update,Not Started,2026-06-11,-41,2026-06-12,42,,7
+1163,6,Task 1163,0,DNA Assembly,Done,2026-05-02,-1,2026-05-07,6,2026-05-02,10
+1164,8,Task 1164,6,Sample Testing,Done,2026-02-15,75,2026-02-21,-69,2026-02-28,24
+1165,8,Task 1165,6,Sample Testing,Not Started,2026-06-09,-39,2026-06-13,43,,13
+1166,7,Task 1166,8,Model Development,Not Started,2026-03-19,43,2026-04-02,-29,,14
+1167,2,Task 1167,2,PCR / Cloning,In Progress,2026-04-21,10,2026-04-24,-7,,12
+1168,6,Task 1168,2,PCR / Cloning,Not Started,2026-05-03,-2,2026-05-06,5,,6
+1169,4,Task 1169,6,Sample Testing,Done,2026-04-10,21,2026-04-12,-19,2026-04-25,9
+1170,9,Task 1170,5,Assay Development,Not Started,2026-05-08,-7,2026-05-17,16,,53
+1171,1,Task 1171,4,Downstream Processing,Done,2026-02-21,69,2026-03-07,-55,2026-03-07,88
+1172,0,Task 1172,2,PCR / Cloning,Not Started,2026-05-18,-17,2026-05-20,19,,4
+1173,0,Task 1173,2,PCR / Cloning,In Progress,2026-05-11,-10,2026-05-13,12,,7
+1174,0,Task 1174,2,PCR / Cloning,In Progress,2026-05-11,-10,2026-05-14,13,,19
+1175,3,Task 1175,11,Quality Review,Done,2026-03-12,50,2026-03-15,-47,2026-03-15,20
+1176,5,Task 1176,13,Project Planning,Done,2026-04-16,15,2026-04-20,-11,2026-04-26,7
+1177,8,Task 1177,9,Automation Workflow Setup,Done,2026-01-14,107,2026-01-28,-93,2026-02-01,61
+1178,7,Task 1178,4,Downstream Processing,Done,2026-02-16,74,2026-02-23,-67,2026-03-06,21
+1179,3,Task 1179,12,Deviation Investigation,Done,2026-03-17,45,2026-03-30,-32,2026-03-27,27
+1180,2,Task 1180,14,Stakeholder Update,Done,2026-03-15,47,2026-03-17,-45,2026-03-23,4
+1181,7,Task 1181,14,Stakeholder Update,Done,2026-03-06,56,2026-03-08,-54,2026-03-06,13
+1182,1,Task 1182,2,PCR / Cloning,Done,2026-03-25,37,2026-03-28,-34,2026-04-01,7
+1183,3,Task 1183,1,Strain Construction,Not Started,2026-06-04,-34,2026-06-16,46,,26
+1184,1,Task 1184,0,DNA Assembly,Not Started,2026-06-07,-37,2026-06-12,42,,6
+1185,3,Task 1185,0,DNA Assembly,Not Started,2026-06-16,-46,2026-06-18,48,,3
+1186,4,Task 1186,0,DNA Assembly,Not Started,2026-04-19,12,2026-04-23,-8,,7
+1187,1,Task 1187,14,Stakeholder Update,Not Started,2026-07-17,-77,2026-07-18,78,,2
+1188,2,Task 1188,10,Lab Equipment Maintenance,Done,2026-02-10,80,2026-02-11,-79,2026-02-14,5
+1189,5,Task 1189,3,Fermentation Run,Not Started,2026-06-14,-44,2026-07-04,64,,119
+1190,11,Task 1190,10,Lab Equipment Maintenance,Done,2026-02-08,82,2026-02-13,-77,2026-02-26,29
+1191,0,Task 1191,7,Data Analysis,In Progress,2026-03-27,35,2026-04-02,-29,,40
+1192,0,Task 1192,14,Stakeholder Update,Done,2026-03-18,44,2026-03-19,-43,2026-03-29,3
+1193,11,Task 1193,9,Automation Workflow Setup,Done,2026-04-18,13,2026-05-12,11,2026-05-01,114
+1194,6,Task 1194,5,Assay Development,Not Started,2026-04-03,28,2026-04-11,-20,,28
+1195,1,Task 1195,6,Sample Testing,Done,2026-03-23,39,2026-03-29,-33,2026-04-04,24
+1196,8,Task 1196,10,Lab Equipment Maintenance,Done,2026-04-04,27,2026-04-05,-26,2026-04-12,3
+1197,7,Task 1197,10,Lab Equipment Maintenance,Not Started,2026-05-14,-13,2026-05-17,16,,16
+1198,4,Task 1198,14,Stakeholder Update,Done,2026-02-17,73,2026-02-19,-71,2026-03-01,12
+1199,5,Task 1199,2,PCR / Cloning,Not Started,2026-06-11,-41,2026-06-14,44,,6

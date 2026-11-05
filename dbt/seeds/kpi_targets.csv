@@ -1,0 +1,5 @@
+kpi_name,kpi_short_name,unit,better,baseline,year_goal,upper_limit
+On-Time Milestone Delivery (%),On-Time %,pct,higher,0.40,0.75,
+Resource Utilization (%),Utilization %,pct,higher,0.75,0.85,1.00
+Budget Variance (%),Budget Var %,pct,higher,-0.12,0.00,
+Cycle Time (days),Cycle Time,days,lower,10,8,

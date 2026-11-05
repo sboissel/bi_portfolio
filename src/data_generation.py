@@ -13,7 +13,7 @@ DATA_DIR = REPO_ROOT / "data" / "raw"
 # CONFIG
 # -----------------------
 n_projects = 12
-n_tasks = 200
+n_tasks = 1200  # enough work to keep teams roughly 70-100% utilized
 
 START_DATE = date(2026, 1, 1)
 AS_OF_DATE = START_DATE + timedelta(days=120)  # simulate as if we're 4 months into the projects
@@ -228,6 +228,85 @@ def generate_time_logs(allocation_dict):
     return task_logs
 
 
+
+def task_type_weights(resources_df):
+    """Weight task types so each team's expected workload is proportional to its capacity.
+
+    Long task types and small teams would otherwise be over- or under-loaded.
+    """
+    team_capacity = resources_df.groupby("team")["capacity_hours_per_week"].sum()
+    types_per_team = pd.Series(list(task_types.values())).value_counts()
+    weights = []
+    for name, team in task_types.items():
+        min_dur, max_dur = task_duration_ranges[name]
+        mean_hours = (min_dur + max_dur) / 2 * 4  # mean duration x ~4 h per day
+        weights.append(team_capacity.get(team, 0) / types_per_team[team] / mean_hours)
+    return weights
+
+
+def generate_project_task(task_id, project, weights):
+    """A task that starts and finishes inside its project's start and end dates."""
+    task_type_id = random.choices(range(len(task_types)), weights=weights)[0]
+    task_type_name = list(task_types.keys())[task_type_id]
+    min_dur, max_dur = task_duration_ranges[task_type_name]
+    duration = random.randint(min_dur, max_dur)
+
+    window_days = max(0, (project.end_date - project.start_date).days - duration)
+    s = project.start_date + timedelta(days=random.randint(0, window_days))
+    due = s + timedelta(days=duration)
+    status = status_simulator(due)
+    completion_date = None
+    if status == "Done":
+        completion_date = min(AS_OF_DATE, due + timedelta(days=random.randint(-5, 15)))
+        completion_date = max(completion_date, s)  # never finish before starting
+    estimated_hours = random.randint(duration, duration * 7)
+
+    return [
+        task_id, project.project_id, f"Task {task_id}", task_type_id, task_type_name,
+        status, s, (AS_OF_DATE - s).days, due, (due - AS_OF_DATE).days,
+        completion_date, estimated_hours
+    ]
+
+
+def generate_work(projects_df, resources_df, task_types_df, n=n_tasks, seed=42):
+    """Tasks, allocations and time logs for the portfolio, reproducible from the seed.
+
+    Returns (tasks_df, allocations_df, time_logs_df). Projects and resources are inputs,
+    so the work tables can be regenerated without changing the other tables.
+    """
+    random.seed(seed)
+    np.random.seed(seed)
+    weights = task_type_weights(resources_df)
+    projects = list(projects_df.itertuples(index=False))
+
+    tasks = [generate_project_task(i, random.choice(projects), weights) for i in range(n)]
+    tasks_df = pd.DataFrame(tasks, columns=[
+        "task_id", "project_id", "task_name", "task_type_id",
+        "task_type_name", "status", "start_date", "days_since_start",
+        "due_date", "days_to_due", "completion_date", "estimated_hours"
+    ])
+
+    allocations = []
+    for _, row in tasks_df.iterrows():
+        allocations.extend(
+            generate_resource_allocation(row.to_dict(), task_types_df, resources_df)
+        )
+    alloc_df = pd.DataFrame(allocations, columns=[
+        "resource_id", "task_id", "project_id", "task_type_name",
+        "team", "start_date", "completion_date", "status", "allocation",
+        "planned_hours"
+    ])
+
+    time_logs = []
+    for _, row in alloc_df.iterrows():
+        time_logs.extend(generate_time_logs(row.to_dict()))
+    time_logs_df = pd.DataFrame(time_logs, columns=[
+        "resource_id", "project_id", "task_id",
+        "date", "actual_hours"
+    ])
+
+    return tasks_df, alloc_df, time_logs_df
+
 @dataclass
 class ProjectEntry:
     name: str
@@ -378,44 +457,11 @@ def generate_data(output_dir=None):
     ], columns=["task_type_id", "task_type_name", "default_team"])
 
     # -----------------------
-    # TASKS
+    # TASKS, ALLOCATIONS, TIME LOGS
     # -----------------------
-    tasks = []
-    for i in range(n_tasks):
-        tasks.append(generate_task(i))
-
-    tasks_df = pd.DataFrame(tasks, columns=[
-        "task_id", "project_id", "task_name", "task_type_id",
-        "task_type_name", "status", "start_date", "days_since_start",
-        "due_date", "days_to_due", "completion_date", "estimated_hours"
-    ])
-
-    # -----------------------
-    # ALLOCATIONS
-    # -----------------------
-    allocations = []
-    for _, row in tasks_df.iterrows():
-        allocations.extend(
-            generate_resource_allocation(row.to_dict(), task_types_df, resources_df)
-        )
-
-    alloc_df = pd.DataFrame(allocations, columns=[
-        "resource_id", "task_id", "project_id", "task_type_name",
-        "team", "start_date", "completion_date", "status", "allocation",
-        "planned_hours"
-    ])
-
-    # -----------------------
-    # TIME LOGS (actuals)
-    # -----------------------
-    time_logs = []
-    for _, row in alloc_df.iterrows():
-        time_logs.extend(generate_time_logs(row.to_dict()))
-
-    time_logs_df = pd.DataFrame(time_logs, columns=[
-        "resource_id", "project_id", "task_id",
-        "date", "actual_hours"
-    ])
+    tasks_df, alloc_df, time_logs_df = generate_work(
+        projects_df, resources_df, task_types_df
+    )
 
     # -----------------------
     # BUDGET & SPEND

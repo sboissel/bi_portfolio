@@ -12,3 +12,11 @@ dbt/logs/
 dbt/.user.yml
 dbt/*.duckdb
 dbt/*.duckdb.wal
+.DS_Store
+data/.DS_Store
+dbt/.DS_Store
+dbt/models/.DS_Store
+dbt/models/marts/.DS_Store
+src/__pycache__/data_generation.cpython-310.pyc
+src/__pycache__/data_generation.cpython-314.pyc
+tests/__pycache__/test_data_generation.cpython-314-pytest-9.0.3.pyc

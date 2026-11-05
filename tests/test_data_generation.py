@@ -13,6 +13,7 @@ from data_generation import (
     generate_targets,
     generate_task,
     generate_time_logs,
+    generate_work,
     kpi_list,
     n_projects,
     n_tasks,
@@ -259,3 +260,26 @@ class TestGenerateData:
         months = pd.to_datetime(period_rows["month"])
         assert period_rows.loc[months >= "2026-04-01", "actual_value"].isna().all()
         assert period_rows.loc[months < "2026-04-01", "actual_value"].notna().all()
+
+
+class TestGenerateWork:
+    @pytest.fixture
+    def projects_df(self):
+        return pd.DataFrame([
+            [0, "Project 0", date(2026, 1, 10), date(2026, 4, 30)],
+            [1, "Project 1", date(2026, 2, 1), date(2026, 6, 30)],
+        ], columns=["project_id", "project_name", "start_date", "end_date"])
+
+    def test_tasks_stay_inside_their_project(self, projects_df, resources_df, task_types_df):
+        tasks, _, _ = generate_work(projects_df, resources_df, task_types_df, n=200)
+        merged = tasks.merge(projects_df, on="project_id", suffixes=("", "_project"))
+        assert (merged["start_date"] >= merged["start_date_project"]).all()
+        assert (merged["due_date"] <= merged["end_date"]).all()
+        done = merged["completion_date"].notna()
+        assert (merged.loc[done, "completion_date"] >= merged.loc[done, "start_date"]).all()
+
+    def test_same_seed_gives_same_work(self, projects_df, resources_df, task_types_df):
+        first = generate_work(projects_df, resources_df, task_types_df, n=50, seed=7)
+        second = generate_work(projects_df, resources_df, task_types_df, n=50, seed=7)
+        for a, b in zip(first, second):
+            pd.testing.assert_frame_equal(a, b)

@@ -9,6 +9,7 @@ All data is fictional. It is meant for BI prototypes, dashboard mockups, and ana
 ```
 src/data_generation.py   # CSV generator
 src/create_database.py   # load CSVs into DuckDB
+src/export_for_tableau.py # export dbt models to CSV for Tableau Public
 tests/                   # pytest for the Python scripts
 dbt/                     # staging views and mart tables (dims + facts)
 data/raw/                # exported CSVs
@@ -25,7 +26,7 @@ The snapshot is frozen as of **2026-05-01** (about four months after the portfol
 | `projects.csv` | 12 projects: type, priority, status, dates, total budget |
 | `resources.csv` | People by team and role, with weekly capacity (hours) |
 | `task_types.csv` | Work types (e.g. DNA Assembly, Fermentation Run) and default team |
-| `tasks.csv` | 200 tasks with status, dates, and estimated hours |
+| `tasks.csv` | 1,200 tasks with status, dates, and estimated hours (each inside its project's dates) |
 | `allocations.csv` | Resource assignments to tasks (fraction of effort and planned hours) |
 | `time_logs.csv` | Weekday actual hours for in-progress and completed work |
 | `budgets.csv` | Planned Labor vs External spend per project |
@@ -57,6 +58,16 @@ Load those CSVs into DuckDB (one table per file, named after the CSV stem):
 ```bash
 python src/create_database.py
 ```
+
+## Export for Tableau
+
+Tableau Public Edition connects to files, not DuckDB. After `dbt build`, export the models the dashboards use:
+
+```bash
+python src/export_for_tableau.py
+```
+
+This writes `int_project_health.csv`, `stg_milestones.csv` and `int_kpi_scorecard.csv` to `data/exports/`. The staging views shift dates relative to today, so each export is a snapshot as of the day it runs: re-run it, then refresh the data in Tableau, before republishing.
 
 This replaces `data/biotech_ops.duckdb`.
 

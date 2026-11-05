@@ -180,7 +180,10 @@ models:
                 values: ['Labor', 'External']
 
   - name: stg_milestones
-    description: Staged project milestones with planned vs actual dates.
+    description: >
+      Staged project milestones with planned vs actual dates. status is
+      derived against today: On Time or Delayed once delivered, Overdue when
+      the planned date has passed without delivery, otherwise Upcoming.
     columns:
       - name: milestone_id
         data_tests:
@@ -275,3 +278,46 @@ models:
         description: Not delivered by today, with a planned date before today.
       - name: late_days_total
         description: Sum of days late across milestones_delivered_late; divide by that count for average slip.
+
+  - name: int_kpi_scorecard
+    description: >
+      Monthly KPI scorecard. One row per KPI and month of a 12-month target year.
+      Actuals are calculated from the operational tables on raw dates (so month
+      boundaries match how the data was generated), then relabelled forward by
+      whole months to line up with the shifted dashboards. Only finished months
+      get an actual. Targets come from the kpi_targets seed.
+    columns:
+      - name: kpi_scorecard_sk
+        data_tests:
+          - unique
+          - not_null
+      - name: kpi_short_name
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['On-Time %', 'Utilization %', 'Budget Var %', 'Cycle Time']
+      - name: month
+        description: First of the month, shifted to line up with the other dashboards.
+        data_tests:
+          - not_null
+      - name: actual
+        description: >
+          On-Time %: share of milestones due (planned) that month that were delivered
+          on or before plan; undelivered milestones count as misses.
+          Utilization %: logged hours / (team weekly capacity x working weeks in the month). Budget Var %: cumulative (planned to date - spent to date) / planned
+          to date, negative = over budget. Cycle Time: average working days from start
+          to completion for tasks completed that month.
+      - name: sample_size
+        description: Milestones due or tasks completed in the month (null for budget variance).
+      - name: monthly_target
+        description: Straight line from baseline to year_goal across the 12 plan months.
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Ahead', 'Behind', 'Over limit']
+      - name: progress_to_goal
+        description: (actual - baseline) / (year_goal - baseline); 1 = goal reached.
+      - name: is_latest_actual
+        description: True on each KPI's most recent month with an actual.
